@@ -1,0 +1,1486 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit">
+<meta name="keywords" content=""/>
+<meta name="description" content="" />
+<link rel="shortcut icon" href="https://www.xiaozhu.com/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="icon" href="https://www.xiaozhu.com/favicon.ico" type="image/vnd.microsoft.icon">
+<title>发布您的房间</title>        <link rel="stylesheet" type="text/css" href="//jci.xiaozhustatic1.com/e19061101/xzcss?css=base,header,footer,publishRoomV2,photoScroll,jquery-ui,nyroModal,mysite" />
+    </head>
+    <body>
+            <div class="header height56">
+                <div class="top"></div>
+                 
+<!--[if lte IE 7]>
+<div style="background:#f16b80;  width:100%; height:50px; line-height:50px; text-align:center; font-size:14px; color:#fff; font-family:"微软雅黑";>
+    温馨提示：您目前的浏览器版本过低，网站部分功能无法正常使用，建议尽快升级：
+        <a href="http://www.microsoft.com/china/windows/IE/upgrade/index.aspx" name="升级ie浏览器" id="upgrade_ie" target="_blank" style=" display:inline-block;width:154px; height:40px;  vertical-align:middle;  margin:0 18px 0 12px;_margin-top:4px;"><img src="/images/ie.jpg" width="154" height="40"/></a>
+             或安装
+        <a href="http://www.firefox.com.cn" target="_blank" name="升级火狐浏览器" id="upgrade_firefox" style="display:inline-block;width:154px; height:40px;  vertical-align:middle;  margin:0 18px 0 12px;_margin-top:4px;"><img src="/images/firefox.jpg" width="154" height="40"/></a>
+</div>
+<![endif]-->
+
+<div class="detail_wrapper">
+    <div class="detail_head clearfix">
+        <a href="http://www.xiaozhu.com" class="xz_logo_detail">小猪</a><span class="slogan_v2 slogan_black"></span>
+        <ul class="nav_R nav_commen">
+                        <input type="hidden" value="landlord" id="userCurrentRole"/>
+            <input type="hidden" value="106084124101" id="loginUserId"/>
+                        <li class="current">
+                <a href="#ongo" class="openTri_R" rel="nofollow">ufumqs</a>
+                <div class="head_pop top40">
+                    <div class="pop_column">
+                        <a class="pop_T" href="http://www.xiaozhu.com/xzweb.php?op=FangDong_Index">房东中心</a>
+                        <span>
+                            <a class="fl" href="http://www.xiaozhu.com/xz_web2/order/pages/landlord/orderList.html">订单管理</a>
+                            <a class="fr" href="http://www.xiaozhu.com/xzweb.php?op=FangDong_SettlementInfo">结算统计</a>
+                        </span>
+                        <span>
+                            <a class="fl" href="http://www.xiaozhu.com/xzweb.php?op=FangDong_ShowLetter">聊天记录</a>
+                            <a class="fr" href="http://www.xiaozhu.com/xzweb.php?op=FangDong_Comment&filterType=waitComment&fkCmtFilter=all">我的点评</a>
+                        </span>
+                        <span>
+                            <a class="fl" href="http://www.xiaozhu.com/xzweb.php?op=FangDong_MyRooms">房源信息</a>
+                            <a class="fr" href="http://www.xiaozhu.com/xzweb.php?op=FangDong_MyRentCalendarList">价格房态</a>
+                        </span>
+                        <span>
+                            <a class="fl" href="http://www.xiaozhu.com/xzweb.php?op=FD_DiaryList">短租日记</a>
+                            <a class="fr" href="http://www.xiaozhu.com/xzweb.php?op=FangDong_UserInfo">个人资料</a>
+                        </span>
+                    </div>
+                    <div class="pop_column">
+                        <a class="pop_T pop_bor" href="http://www.xiaozhu.com/xzweb.php?op=FangKe_Index">房客中心</a>
+                        <span>
+                            <a class="fl" href="http://www.xiaozhu.com/xz_web2/order/pages/lodger/list.html">我的订单</a>
+                            <a class="fr" href="http://www.xiaozhu.com/xzweb.php?op=FangKe_ShowLetter">聊天记录</a>
+                        </span>
+                        <span>
+                            <a class="fl" href="http://www.xiaozhu.com/xzweb.php?op=FangKe_Comment">我的点评</a>
+                            <a class="fr" href="http://www.xiaozhu.com/xzweb.php?op=FangKe_UserInfo">个人资料</a>
+                        </span>
+                        <span class="textCt"><a href="http://www.xiaozhu.com/logout" id="IM-Logout">退出</a></span>
+                    </div>
+                </div>
+            </li>
+                                    <li class="current">
+                <a href="#ongo" class="openTri_R">短租指南</a>
+                <div class="head_pop width_58 top40">
+                    <div class="pop_column">
+                        <span><a class="fl" href="http://www.xiaozhu.com/xzweb.php?op=Help_UserGuide&type=tenant">房客指南</a><a class="fr" href="http://www.xiaozhu.com/xzweb.php?op=Help_UserGuide&type=landlord">房东指南</a></span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#ongo" class="icon_iphone">手机小猪</a>
+                  <div class="head_pop w_120 top40">
+                   <div><img src="/images/code_pic.png" alt="小猪" title="小猪"/></div>
+                   <a href="http://www.xiaozhu.com/appdownload/fk"  target="_blank">了解更多</a>
+              </div>
+            </li>
+                        <li><a rel="nofollow" data-href="http://www.xiaozhu.com/publish" class="btn_free" id = "Pub_Btn">免费发布房源</a></li>
+                    </ul>
+    </div>
+    <div id="userlogindialog" class="login_register_box" style="display:none;">
+    <div class="w_698"> 
+        <div class="r_colsed" id="closeUserLoginDialog"><span></span></div>
+        <div class="clearfix">
+            <div class="r_main_l">
+                <ul class="r_tab clearfix">
+                    <li class="percent_50 tc cur underL1" id="generalLi">普通登录</li>
+                    <li class="percent_50 tc cur" id="mobileLi">短信快捷登录</li>
+                </ul>
+                <div id="generalLogin">
+                    <ul class="register_list">
+                        <li>
+                            <div class="h_30">&nbsp;</div>
+                            <div class="pr">
+                                <div class="r_tel_ico"></div>
+                                <input type="text" class="r_input_small" id="input-username" autocomplete="off" placeholder="手机号、邮箱" disabled="true">
+    </li>
+                        <li>
+                            <div class="h_30"><div class="r_error_tip" id="input-username-tip"><span class="icon-wrong" id=""></span>手机号未注册</div></div>
+                            <div class="pr">
+                                <div class="r_password_ico"></div>
+                                <input type="password" class="r_input_1" id="password" autocomplete="off"  placeholder="密码" disabled="true">
+                                <div class="h_30">
+                                    <div class="r_error_tip" id="password-tip"><span class="ipt-text-pass"></span></div>
+                                </div>    
+                            </div>
+                        </li>
+                        <span  style="display:none"  id="verify-show">
+                        <li>
+                            <div class="pr">
+                                <div class="r_pho_ico"></div>
+                                <input type="text" class="r_input_small" id="image-verify-code" disabled="true" autocomplete="off"  placeholder="图片验证码">
+                                <span><img class="r_code change-verify-image" width="101px" height="33px" id="img_imagecodes" title="点击更换验证码" /></span>
+                                <div class="h_30">
+                                    <div class="r_error_tip" id="image-verify-code-tip"></div>
+                                </div>
+                            </div>
+                        </li>
+                        </span>
+                    </ul>
+                    <a href="###" class="r_input mt_10" id="orgBtn">登录</a>
+                    <div class="r_login_space clearfix"><span class="fl cur "><input class="ipt-checkbox2" type="checkbox" id="setcookie" checked="checked" />自动登录</span>
+                    <span class="fr col_gray"><a href="http://www.xiaozhu.com/findpwdbyphone">忘记密码?</a></span></div>
+                </div>
+                <div id="mobileLogin" style="display:none">
+                    <ul class="register_list">
+                        <li>
+                            <div class="h_30">&nbsp;</div>
+                            <div class="pr">
+                                <div class="r_telepho_ico"></div>
+                                <input type="text" class="r_input_1" id="quick-input-mobile" autocomplete="off" placeholder="手机号" disabled="true" >
+                            </div>
+                        </li>
+                        <li>
+                            <div class="h_30">
+                                <div class="r_error_tip" id="quick-input-mobile-tip"><span class="icon-ok"></span></div>
+                            </div>
+                            <div class="pr">
+                                <div class="r_pho_ico"></div>
+                                <input type="text" class="r_input_small" id="quick-image-code" autocomplete="off" placeholder="图片验证码" disabled="true" >
+                                <span ><img class="r_code change-verify-image" width="104px" height="33px" id="img_imagecodeMobile" title="点击更换验证码" /></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="h_30">
+                                <div class="r_error_tip" id="quick-image-code-tip"></div>
+                            </div>
+                            <div class="pr">
+                                <div class="r_vali_ico"></div>
+                                <input type="text" class="r_input_small" id="quick-activate-code" autocomplete="off" placeholder="动态验证码" disabled="true" >
+                                <span class="btn have-nb"  id="quick-get-code-btn">获取动态验证码</span>    
+                                <div class="h_30">
+                                    <div class="r_error_tip"  id="quick-activate-code-tip"><span class="icon-ok"></span></div> 
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="###" class="r_input mt_10" id="orgBtnMobile">登录</a>
+                    <p class="mt_10 mt_20">＊验证即登录，未注册将自动创建小猪账号</p>
+                </div>
+            </div>
+            <div class="r_main_r">
+                <h5>合作网站账户登录</h5>
+<ul class="r_wedsitev1">
+    <li>
+    <a class="hz_qqv1" href="http://www.xiaozhu.com/xzweb.php?op=GetOpenSnsAuthUrl&snsType=qqzone&state=login&next=http%3A%2F%2Fwww.xiaozhu.com%2Fxzweb.php%3Fop%3DPub_Index"><i></i>QQ登录</a>
+    </li>
+    <li>
+    <a class="hz_weibov1" href="http://www.xiaozhu.com/xzweb.php?op=GetOpenSnsAuthUrl&snsType=sinaweibo&state=login&next=http%3A%2F%2Fwww.xiaozhu.com%2Fxzweb.php%3Fop%3DPub_Index"><i></i>微博登录</a>
+    </li>
+    <li>
+    <a class="hz_weixinv1" href="http://www.xiaozhu.com/xzweb.php?op=GetOpenSnsAuthUrl&snsType=weixinopen&state=login&next=http%3A%2F%2Fwww.xiaozhu.com%2Fxzweb.php%3Fop%3DPub_Index"><i></i>微信登录</a>
+    </li>
+</ul>                <p>还没有注册？<a href="#" class="col_pink show-register-box" >注册账号&gt;&gt;</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="mobilePerfeactInfoDialog" style="display:none;">
+    <div class="w_400"> 
+        <div class="perfeact-info-content" style="display:none;">
+            <div class="r_colsed" id="mobilePerfeactInfoBtn"><span></span></div>
+        <div class="r_top_logo">
+            <p>首次登录，请完善资料后，开启小猪住宿之旅！</p>
+        </div>
+        <ul class="register_list">
+            <li>
+                <div class="h_30">
+                    <p class="r_error_tip" style="display:none;"></p>&nbsp;
+                </div>
+                <div class="pr">
+                    <div class="r_tel_ico"></div>
+                    <input id="quick-input-username" type="text" placeholder="用户名" autocomplete="off" class="r_input_1">
+                </div>
+            </li>
+            <li>
+                <div class="h_30">
+                    <p class="r_error_tip" id="quick-input-username-tip">请输入用户名</p>&nbsp;
+                </div>
+                <div class="pr">
+                    <div class="r_password_ico"></div>
+                    <input type="password" id="quick-regpassword" autocomplete="off" placeholder="密码" class="r_input_1">
+                </div>
+            </li>
+            <li>
+                <div class="h_30">
+                    <p class="r_error_tip" id="quick-regpassword-tip">请输入密码</p>&nbsp;
+                </div>
+                <div class="pr">
+                    <div class="r_num_ico"></div>
+                    <input id="quick-invitecode" type="text" autocomplete="off" placeholder="邀请码(选填)" class="r_input_1">
+                </div>
+                <div class="h_30" style="display:none;">
+                    <p id="quick-invitecode-tip" class="r_error_tip">邀请码输入有误</p>&nbsp;
+                </div>
+                <p class="col_fgray r_tip_text">使用朋友给您的邀请码注册后，均可获得300元</p>
+            </li>
+        </ul>
+        <a class="r_input" id="mobileInfoPerfeactBtn" href="#">确定</a>
+        <p class="tc mt_20">
+            <span class="check_css3 agreeResBox">
+                <input type="checkbox"  class="input_check" id="check3">
+                <label for="check3"></label>
+            </span> 我同意  <a href="http://www.xiaozhu.com/help/service" class="r-service-protocol" target="_blank">《服务协议》、</a><a href="http://www.xiaozhu.com/help/privacy" class="r-service-protocol" target="_blank">《隐私保护声明》</a></p>
+        </div>
+    </div>
+</div>
+    <div class="w_698 login_register_box "  style="display:none;" id="registerDialog">
+    <div class="r_colsed" id="closeRegiserDialog"><span></span></div>
+    <div class="clearfix">
+        <div class="r_main_l">
+            <ul class="r_tab1 clearfix">
+                <li class="fl cur">注册小猪账号</li>
+                            </ul>
+            <ul class="register_list">
+                <li>
+                    <div class="h_30">&nbsp;</div>
+
+                    <div class="pr" id="reg">
+                        <div class=" r_telepho_ico"></div>
+                        <input type="text" id="input-mobile" autocomplete="off" placeholder="手机号" class="r_input_small col_input" value="">
+                </li>
+                <li>
+                    <div class="h_30">
+                        <p class="r_error_tip" id="input-mobile-tip">请输入手机号</p>&nbsp;
+                    </div>
+                    <!--<div class="pr">-->
+                        <!--<div class="r_pho_ico"></div>-->
+                        <!--<input type="text" placeholder="图片验证码" id="reg-image-code" autocomplete="off" class="r_input_small">-->
+                        <!--<span class="r_code"><img class="change-verify-image" id="img_imagecode" title="点击更换验证码" width="101" height="33" /></span>-->
+                    <!--</div>-->
+                </li>
+                <li>
+                    <!--<div class="h_30">-->
+                        <!--<p class="r_error_tip" id="reg-image-code-tip">请输入图片验证码</p>&nbsp;-->
+                    <!--</div>-->
+                    <div class="pr">
+                        <div class="r_num_ico"></div>
+                        <input id="invitecode" type="text"  autocomplete="off" placeholder="邀请码(选填)"  class="r_input_1">
+                    </div>
+                    <div class="h_30" style="display:none;">
+                        <p id="input-invitecode-tip" class="r_error_tip">邀请码输入有误</p>&nbsp;
+                    </div>
+                    <p class="col_fgray r_tip_text">使用朋友给您的邀请码注册后，你们均可获得300元</p>
+                </li>
+               <li>
+                  <div id="safeCheck"></div>
+                  <p id="input-slidecode-tip" class="r_error_tip" style="margin-bottom: 10px">请拖动滑块完成验证</p>
+               </li>
+            </ul>
+            
+            <a href="#" id="reg-btn" class="r_input">立即注册</a>
+            <p class="mt_20">
+                <span class="check_css3 agreeResBox">
+                    <input type="checkbox"  class="input_check" id="check3">
+                    <label for="check3"></label>
+                </span>
+                我同意  <a href="http://www.xiaozhu.com/help/service" class="r-service-protocol" target="_blank">《服务协议》、</a><a href="http://www.xiaozhu.com/help/privacy" class="r-service-protocol" target="_blank">《隐私保护声明》</a></p>
+        </div>
+        <div class="r_main_r">
+            <h5>合作网站账户登录</h5>
+<ul class="r_wedsitev1">
+    <li>
+    <a class="hz_qqv1" href="http://www.xiaozhu.com/xzweb.php?op=GetOpenSnsAuthUrl&snsType=qqzone&state=login&next=http%3A%2F%2Fwww.xiaozhu.com%2Fxzweb.php%3Fop%3DPub_Index"><i></i>QQ登录</a>
+    </li>
+    <li>
+    <a class="hz_weibov1" href="http://www.xiaozhu.com/xzweb.php?op=GetOpenSnsAuthUrl&snsType=sinaweibo&state=login&next=http%3A%2F%2Fwww.xiaozhu.com%2Fxzweb.php%3Fop%3DPub_Index"><i></i>微博登录</a>
+    </li>
+    <li>
+    <a class="hz_weixinv1" href="http://www.xiaozhu.com/xzweb.php?op=GetOpenSnsAuthUrl&snsType=weixinopen&state=login&next=http%3A%2F%2Fwww.xiaozhu.com%2Fxzweb.php%3Fop%3DPub_Index"><i></i>微信登录</a>
+    </li>
+</ul>            <p class="">已有账号？<a href="http://www.xiaozhu.com/login?next=http%3A%2F%2Fwww.xiaozhu.com%2Fxzweb.php%3Fop%3DPub_Index" id="loginDialogBtn" class="col_pink logindialog">登录&gt;&gt;</a></p>
+        </div>
+    </div>
+</div>
+<div class="w_400 login_register_box" id='mobileRegisterInfoDialog' style="display:none;"> 
+    <div class="r_colsed" id="closeMobileRegisterInfoDialog"><span></span></div>
+    <div class="r_top_tit">
+        <h6>验证短信已发送至手机号码</h6>
+        <p><span id="codeRecivePhone"></span><span class="col_pink"><a href="#" id="modifyRegisterBtn">(修改)</a></span></p>
+    </div>
+    <ul class="register_list">
+        <li>
+            <div class="h_30">&nbsp;</div>
+            <div class="pr">
+                <div class="r_pho_ico"></div>
+                <input type="text" id="activate-code" placeholder="手机验证码" autocomplete="off" class="r_input_small">
+                <a href="#ongo" id="get-code-btn" class="have-nb">重新发送</a>
+            </div>
+        </li>
+        <li>
+            <div class="h_30">
+                <p id="activate-code-tip" class="r_error_tip">请输入手机验证码</p>&nbsp;
+            </div>
+            <div class="pr">
+                <div class=" r_tel_ico"></div>
+                <input id="reginput-username" type="text" placeholder="用户名" autocomplete="off" class="r_input_1">
+            </div>
+        </li>
+        <li>
+            <div class="h_30">
+                <p class="r_error_tip" id="reginput-username-tip">请输入用户名</p>&nbsp;
+            </div>
+            <div class="pr">
+                <div class="r_password_ico"></div>
+                <input type="password" id="regpassword" placeholder="密码" autocomplete="off" class="r_input_1">
+            </div>
+            <div class="h_30">
+                <p class="r_error_tip" id="regpassword-tip">请输入密码</p>&nbsp;
+            </div>
+        </li>
+    </ul>
+    <a href="#" id="regConfirmBtn" class="r_input mt_10">确认</a>
+</div>
+<div id="regSuccessDialog" class="reg_success_box login_register_box" style="display:none;">
+    <div class="">
+        <div class="r_colsed_1" id="closeRegSuccDialogBtn"><span></span></div>
+        <div id="regSuccInfo">
+        </div>
+    </div>
+</div></div>            </div>
+            <div class='h_top_box'>
+                <div class="h_step_box">
+                                        <ul class="clearfix">
+                                                                                                                    </ul>
+                                        <div class="h_step_cur h_pos1">
+                                                <span class="h_step1_cur"></span>
+                                                <p>房源信息</p>
+                    </div>
+                    <div class="h_step h_pos2">
+                                                <span class="h_step2"></span>
+                                                <p>房源描述</p>
+                    </div>
+                    <div class="h_step h_pos3">
+                                                <span class="h_step3"></span>
+                                                <p>配套设施</p>
+                    </div>
+                    <div class="h_step h_pos4">
+                                                <span class="h_step4"></span>
+                                                <p>真实照片</p>
+                    </div>
+                    <div class="h_step h_pos5">
+                                                <span class="h_step5"></span>
+                                                <p>价格规则</p>
+                    </div>
+                </div>
+            </div>
+                        <div class="h_wrap mt20">
+                <h4 class="h_tit">房源地址</h4>
+                <div class="address_box" >
+            <div class="clearfix">
+                <div class="address_text">房源位于：</div>
+                <div class="address_list">
+                    <ul id="address_ul">
+                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                        
+                        <li class="clearfix " key="106085354400"  data-lock="0" data-nationid="0">
+                                                        <span class=" "></span>
+                                                                                                                                                                                                    <div class="select_text" title="河南郑州二七政通路大学路交叉口，262">
+                                河南郑州二七政通路大学路交叉口，262
+                                                                <div>
+                                    <i><img src="/images/pubsysV2/rel_room_icon.png">含2个房源</i>
+                                                                    </div>
+                            </div>
+                        </li>
+                                                                        </ul>
+                         
+                                                <p class="open_all" key="open" style="display:none">显示全部地址<span></span></p>
+                    <div class="address_btm clearfix">
+                        <a href="#ongo" class="add_btn fl" id="add_site"><span></span>位于新地址</a>
+                        <input type="hidden"  id="address"  value="0"></input>
+                        <p class="h_check_tip simsun mt2" id="tip_address" style="display:none">请您填写房源地址</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="no_address clearfix"  style="display:none;">
+            <p class="no_address_text">暂无地址</p>
+            <div class="new_address clearfix">
+                <a class="add_btn fl" href="#ongo" id="add_new_site"><span></span>位于新地址</a>
+                <input type="hidden"  id="add_address"  value=""></input>
+                <p class="h_check_tip simsun mt2 " id="tip_add_address" style="display:none">请您填写房源地址</p>
+            </div>
+        </div>
+        <input type="hidden" name="address_id" id="address_id"  value="0"></input>
+        <input type="hidden" name="address_nation" id="address_nation"  value=""></input>
+        <input type="hidden" name="address_province" id="address_province"  value=""></input>
+        <input type="hidden" name="address_city" id="address_city"  value=""></input>
+        <input type="hidden" name="address_district" id="address_district"  value=""></input>
+        <input type="hidden" name="address_street" id="address_street"  value=""></input>
+        <input type="hidden" name="address_address" id="address_address"  value=""></input>
+        <input type="hidden" name="address_lnglat" id="address_lnglat"  value=""></input>
+        <input type="hidden" name="address_doorNumber" id="address_doorNumber"  value=""></input>
+        <input type="hidden" name="ori_address_id" id="ori_address_id"  value="0"></input>
+        <input type="hidden" name="ori_nationid" id="ori_nationid"  value=""></input>
+</div>            <div class="h_wrap mt20">
+
+
+
+
+<h4 class="h_tit">房源基本情况</h4>
+        <div  class="h_house_info">
+            <ul>
+                                <li class="clearfix pb15" >
+                    <label class="type w_103" style="width: 100px;color:#000;">房屋类型：</label>
+                    <div class="h_input_box house_type" id="houseType" style="width: 120px;">
+                        <div class="s_arrow_top s_arrow_down cursorPointer"></div>
+                        <input type="text" class="roomtype tantnum_box cursorPointer" id="houseTypeText" style="width: 106px;" data="" value="" readonly/>
+                        <p class="no_select_tip tip_house_type" id="tipHouseType" style="display: none"></p>
+                        <ul class="select_list_box"  style="z-index: 99;">
+                        </ul>
+                    </div>
+                </li>
+                                <li class="clearfix pb15" >
+                    <label class="type w_103" style="width: 100px;color:#000;">出租类型：</label>
+                    <div class="h_house_r pr">
+                        <ul class="h_house_type">
+                                                        <li style="margin: 10px 0;" class="leasetype_red_err " id="whole_red_err" key="whole" >
+                                <span class="select_leasetype "></span>
+                                <!--<span class="set " style="background: url(./images/pubsysV2/pot_gray_06.png) no-repeat center"></span><p style="font-weight: bold;">整套出租</p>-->
+                                <span style="background: url(./images/pubsysV2/house_type_03.png) no-repeat center;height: 21px;width: 24px;margin-left: 15px;margin-bottom: 5px;"></span>
+                                <p style="display: inline-block;margin-left: 15px;font-size: 12px;color: #757575;">
+                                    <span style="display: block;font-size: 14px;font-weight: bold;color: #212121;">整套出租</span>
+                                    房客独享整套房屋
+                                </p>
+                            </li>
+                                                                                    <li style="margin: 10px 0;" class="leasetype_red_err " id="part_red_err" key="room" >
+                                <span class="select_leasetype "></span>
+                                <!--<span class="alone_room "  ></span><p style="font-weight: bold;">独立单间</p>-->
+                                <span style="background: url(./images/pubsysV2/house_type_10.png) no-repeat center;height: 21px;width: 24px;margin-left: 15px;margin-bottom: 5px;"></span>
+                                <p style="display: inline-block;margin-left: 15px;font-size: 12px;color: #757575;">
+                                    <span style="display: block;font-size: 14px;font-weight: bold;color: #212121;">独立单间</span>
+                                    房客拥有一个独立的房间，但部分空间与他人分享
+                                </p>
+                            </li>
+                                                                                    <li style="margin: 10px 0;" class="leasetype_red_err " id="sharedRoom_red_err" key="sharedroom"  >
+                                <span class="select_leasetype "></span>
+                                <!--<span class="sharedRoom "></span><p style="font-weight: bold;">合住房间</p>-->
+                                <span style="background: url(./images/pubsysV2/house_type_14.png) no-repeat center;height: 21px;width: 24px;margin-left: 15px;margin-bottom: 5px;"></span>
+                                <p style="display: inline-block;margin-left: 15px;font-size: 12px;color: #757575;">
+                                    <span style="display: block;font-size: 14px;font-weight: bold;color: #212121;">合住房间</span>
+                                    房客与他人共住一个房间，没有独立的卧室（如：床位、沙发等）
+                                </p>
+                            </li>
+                                                    </ul>
+                        <input type="hidden"  id="leasetype"  value=""></input>
+                        <p class="no_select_tip simsun" id="tip_leasetype" style="display:none">请选择出租类型</p>
+                    </div>
+                </li>
+                <li class="clearfix pb15">
+                    <label class="type1 w_103" style="color:#000;">房屋户型：</label>
+                    <span id="roomTypeDesc" style="line-height: 40px;font-size:12px;color:#757575">
+                                        </span>
+                    <div class="h_house_r clearfix" style="margin-left: 103px;">
+                        <div class="h_input_box " id="room_shi_err" style="width: 120px;">
+                            <div class="s_arrow_top s_arrow_down cursorPointer"></div>
+                            <input type="text" class="roomtype tantnum_box cursorPointer" style="width: 106px;"  style="color: #c2cacd;" name ="roomtype_shi" id="roomtype_shi" value="请选择" readonly/>
+                            <ul class="select_list_box tantnum_box" id="roomtype_shi_num" style="display: none;z-index: 99;">
+                                                                <li key ="1" class="tantnum_box">1</li>
+                                                                <li key ="2" class="tantnum_box">2</li>
+                                                                <li key ="3" class="tantnum_box">3</li>
+                                                                <li key ="4" class="tantnum_box">4</li>
+                                                                <li key ="5" class="tantnum_box">5</li>
+                                                                <li key ="6" class="tantnum_box">6</li>
+                                                                <li key ="7" class="tantnum_box">7</li>
+                                                                <li key ="8" class="tantnum_box">8</li>
+                                                                <li key ="9" class="tantnum_box">9</li>
+                                                                <li key ="10" class="tantnum_box">10</li>
+                                                                <li key ="11" class="tantnum_box">11</li>
+                                                                <li key ="12" class="tantnum_box">12</li>
+                                                                <li key ="13" class="tantnum_box">13</li>
+                                                                <li key ="14" class="tantnum_box">14</li>
+                                                                <li key ="15" class="tantnum_box">15</li>
+                                                                <li key ="16" class="tantnum_box">16</li>
+                                                                <li key ="17" class="tantnum_box">17</li>
+                                                                <li key ="18" class="tantnum_box">18</li>
+                                                                <li key ="19" class="tantnum_box">19</li>
+                                                                <li key ="20" class="tantnum_box">20</li>
+                                                                <li key ="21" class="tantnum_box">21</li>
+                                                                <li key ="22" class="tantnum_box">22</li>
+                                                                <li key ="23" class="tantnum_box">23</li>
+                                                                <li key ="24" class="tantnum_box">24</li>
+                                                                <li key ="25" class="tantnum_box">25</li>
+                                                                <li key ="26" class="tantnum_box">26</li>
+                                                                <li key ="27" class="tantnum_box">27</li>
+                                                                <li key ="28" class="tantnum_box">28</li>
+                                                                <li key ="29" class="tantnum_box">29</li>
+                                                                <li key ="30" class="tantnum_box">30</li>
+                                                                <li key ="31" class="tantnum_box">31</li>
+                                                                <li key ="32" class="tantnum_box">32</li>
+                                                                <li key ="33" class="tantnum_box">33</li>
+                                                                <li key ="34" class="tantnum_box">34</li>
+                                                                <li key ="35" class="tantnum_box">35</li>
+                                                                <li key ="36" class="tantnum_box">36</li>
+                                                                <li key ="37" class="tantnum_box">37</li>
+                                                                <li key ="38" class="tantnum_box">38</li>
+                                                                <li key ="39" class="tantnum_box">39</li>
+                                                                <li key ="40" class="tantnum_box">40</li>
+                                                                <li key ="41" class="tantnum_box">41</li>
+                                                                <li key ="42" class="tantnum_box">42</li>
+                                                                <li key ="43" class="tantnum_box">43</li>
+                                                                <li key ="44" class="tantnum_box">44</li>
+                                                                <li key ="45" class="tantnum_box">45</li>
+                                                                <li key ="46" class="tantnum_box">46</li>
+                                                                <li key ="47" class="tantnum_box">47</li>
+                                                                <li key ="48" class="tantnum_box">48</li>
+                                                                <li key ="49" class="tantnum_box">49</li>
+                                                                <li key ="50" class="tantnum_box">50</li>
+                                                                <li key ="51" class="tantnum_box">51</li>
+                                                                <li key ="52" class="tantnum_box">52</li>
+                                                                <li key ="53" class="tantnum_box">53</li>
+                                                                <li key ="54" class="tantnum_box">54</li>
+                                                                <li key ="55" class="tantnum_box">55</li>
+                                                                <li key ="56" class="tantnum_box">56</li>
+                                                                <li key ="57" class="tantnum_box">57</li>
+                                                                <li key ="58" class="tantnum_box">58</li>
+                                                                <li key ="59" class="tantnum_box">59</li>
+                                                                <li key ="60" class="tantnum_box">60</li>
+                                                                <li key ="61" class="tantnum_box">61</li>
+                                                                <li key ="62" class="tantnum_box">62</li>
+                                                                <li key ="63" class="tantnum_box">63</li>
+                                                                <li key ="64" class="tantnum_box">64</li>
+                                                                <li key ="65" class="tantnum_box">65</li>
+                                                                <li key ="66" class="tantnum_box">66</li>
+                                                                <li key ="67" class="tantnum_box">67</li>
+                                                                <li key ="68" class="tantnum_box">68</li>
+                                                                <li key ="69" class="tantnum_box">69</li>
+                                                                <li key ="70" class="tantnum_box">70</li>
+                                                                <li key ="71" class="tantnum_box">71</li>
+                                                                <li key ="72" class="tantnum_box">72</li>
+                                                                <li key ="73" class="tantnum_box">73</li>
+                                                                <li key ="74" class="tantnum_box">74</li>
+                                                                <li key ="75" class="tantnum_box">75</li>
+                                                                <li key ="76" class="tantnum_box">76</li>
+                                                                <li key ="77" class="tantnum_box">77</li>
+                                                                <li key ="78" class="tantnum_box">78</li>
+                                                                <li key ="79" class="tantnum_box">79</li>
+                                                                <li key ="80" class="tantnum_box">80</li>
+                                                                <li key ="81" class="tantnum_box">81</li>
+                                                                <li key ="82" class="tantnum_box">82</li>
+                                                                <li key ="83" class="tantnum_box">83</li>
+                                                                <li key ="84" class="tantnum_box">84</li>
+                                                                <li key ="85" class="tantnum_box">85</li>
+                                                                <li key ="86" class="tantnum_box">86</li>
+                                                                <li key ="87" class="tantnum_box">87</li>
+                                                                <li key ="88" class="tantnum_box">88</li>
+                                                                <li key ="89" class="tantnum_box">89</li>
+                                                                <li key ="90" class="tantnum_box">90</li>
+                                                                <li key ="91" class="tantnum_box">91</li>
+                                                                <li key ="92" class="tantnum_box">92</li>
+                                                                <li key ="93" class="tantnum_box">93</li>
+                                                                <li key ="94" class="tantnum_box">94</li>
+                                                                <li key ="95" class="tantnum_box">95</li>
+                                                                <li key ="96" class="tantnum_box">96</li>
+                                                                <li key ="97" class="tantnum_box">97</li>
+                                                                <li key ="98" class="tantnum_box">98</li>
+                                                                <li key ="99" class="tantnum_box">99</li>
+                                                            </ul>
+                        </div>
+                        <span class="" style="position: relative;float: left;display: block;height: 38px;line-height: 38px;margin-right: 5px;">室</span>
+
+
+                        <div class="h_input_box  " id="room_ting_err" style="width: 120px;">
+                            <div class="s_arrow_top s_arrow_down cursorPointer"></div>
+                            <input type="text" class="roomtype tantnum_box cursorPointer" style="width: 106px;"  style="color: #c2cacd;" name="roomtype_ting" id="roomtype_ting" value="请选择" readonly/>
+                            <ul class="select_list_box tantnum_box" id="roomtype_ting_num" style="display: none;">
+                                                                <li key ="0" class="tantnum_box">0</li>
+                                                                <li key ="1" class="tantnum_box">1</li>
+                                                                <li key ="2" class="tantnum_box">2</li>
+                                                                <li key ="3" class="tantnum_box">3</li>
+                                                                <li key ="4" class="tantnum_box">4</li>
+                                                                <li key ="5" class="tantnum_box">5</li>
+                                                                <li key ="6" class="tantnum_box">6</li>
+                                                                <li key ="7" class="tantnum_box">7</li>
+                                                                <li key ="8" class="tantnum_box">8</li>
+                                                                <li key ="9" class="tantnum_box">9</li>
+                                                                <li key ="10" class="tantnum_box">10</li>
+                                                                <li key ="11" class="tantnum_box">11</li>
+                                                                <li key ="12" class="tantnum_box">12</li>
+                                                                <li key ="13" class="tantnum_box">13</li>
+                                                                <li key ="14" class="tantnum_box">14</li>
+                                                                <li key ="15" class="tantnum_box">15</li>
+                                                                <li key ="16" class="tantnum_box">16</li>
+                                                                <li key ="17" class="tantnum_box">17</li>
+                                                                <li key ="18" class="tantnum_box">18</li>
+                                                                <li key ="19" class="tantnum_box">19</li>
+                                                                <li key ="20" class="tantnum_box">20</li>
+                                                                <li key ="21" class="tantnum_box">21</li>
+                                                                <li key ="22" class="tantnum_box">22</li>
+                                                                <li key ="23" class="tantnum_box">23</li>
+                                                                <li key ="24" class="tantnum_box">24</li>
+                                                                <li key ="25" class="tantnum_box">25</li>
+                                                                <li key ="26" class="tantnum_box">26</li>
+                                                                <li key ="27" class="tantnum_box">27</li>
+                                                                <li key ="28" class="tantnum_box">28</li>
+                                                                <li key ="29" class="tantnum_box">29</li>
+                                                                <li key ="30" class="tantnum_box">30</li>
+                                                                <li key ="31" class="tantnum_box">31</li>
+                                                                <li key ="32" class="tantnum_box">32</li>
+                                                                <li key ="33" class="tantnum_box">33</li>
+                                                                <li key ="34" class="tantnum_box">34</li>
+                                                                <li key ="35" class="tantnum_box">35</li>
+                                                                <li key ="36" class="tantnum_box">36</li>
+                                                                <li key ="37" class="tantnum_box">37</li>
+                                                                <li key ="38" class="tantnum_box">38</li>
+                                                                <li key ="39" class="tantnum_box">39</li>
+                                                                <li key ="40" class="tantnum_box">40</li>
+                                                                <li key ="41" class="tantnum_box">41</li>
+                                                                <li key ="42" class="tantnum_box">42</li>
+                                                                <li key ="43" class="tantnum_box">43</li>
+                                                                <li key ="44" class="tantnum_box">44</li>
+                                                                <li key ="45" class="tantnum_box">45</li>
+                                                                <li key ="46" class="tantnum_box">46</li>
+                                                                <li key ="47" class="tantnum_box">47</li>
+                                                                <li key ="48" class="tantnum_box">48</li>
+                                                                <li key ="49" class="tantnum_box">49</li>
+                                                                <li key ="50" class="tantnum_box">50</li>
+                                                                <li key ="51" class="tantnum_box">51</li>
+                                                                <li key ="52" class="tantnum_box">52</li>
+                                                                <li key ="53" class="tantnum_box">53</li>
+                                                                <li key ="54" class="tantnum_box">54</li>
+                                                                <li key ="55" class="tantnum_box">55</li>
+                                                                <li key ="56" class="tantnum_box">56</li>
+                                                                <li key ="57" class="tantnum_box">57</li>
+                                                                <li key ="58" class="tantnum_box">58</li>
+                                                                <li key ="59" class="tantnum_box">59</li>
+                                                                <li key ="60" class="tantnum_box">60</li>
+                                                                <li key ="61" class="tantnum_box">61</li>
+                                                                <li key ="62" class="tantnum_box">62</li>
+                                                                <li key ="63" class="tantnum_box">63</li>
+                                                                <li key ="64" class="tantnum_box">64</li>
+                                                                <li key ="65" class="tantnum_box">65</li>
+                                                                <li key ="66" class="tantnum_box">66</li>
+                                                                <li key ="67" class="tantnum_box">67</li>
+                                                                <li key ="68" class="tantnum_box">68</li>
+                                                                <li key ="69" class="tantnum_box">69</li>
+                                                                <li key ="70" class="tantnum_box">70</li>
+                                                                <li key ="71" class="tantnum_box">71</li>
+                                                                <li key ="72" class="tantnum_box">72</li>
+                                                                <li key ="73" class="tantnum_box">73</li>
+                                                                <li key ="74" class="tantnum_box">74</li>
+                                                                <li key ="75" class="tantnum_box">75</li>
+                                                                <li key ="76" class="tantnum_box">76</li>
+                                                                <li key ="77" class="tantnum_box">77</li>
+                                                                <li key ="78" class="tantnum_box">78</li>
+                                                                <li key ="79" class="tantnum_box">79</li>
+                                                                <li key ="80" class="tantnum_box">80</li>
+                                                                <li key ="81" class="tantnum_box">81</li>
+                                                                <li key ="82" class="tantnum_box">82</li>
+                                                                <li key ="83" class="tantnum_box">83</li>
+                                                                <li key ="84" class="tantnum_box">84</li>
+                                                                <li key ="85" class="tantnum_box">85</li>
+                                                                <li key ="86" class="tantnum_box">86</li>
+                                                                <li key ="87" class="tantnum_box">87</li>
+                                                                <li key ="88" class="tantnum_box">88</li>
+                                                                <li key ="89" class="tantnum_box">89</li>
+                                                                <li key ="90" class="tantnum_box">90</li>
+                                                                <li key ="91" class="tantnum_box">91</li>
+                                                                <li key ="92" class="tantnum_box">92</li>
+                                                                <li key ="93" class="tantnum_box">93</li>
+                                                                <li key ="94" class="tantnum_box">94</li>
+                                                                <li key ="95" class="tantnum_box">95</li>
+                                                                <li key ="96" class="tantnum_box">96</li>
+                                                                <li key ="97" class="tantnum_box">97</li>
+                                                                <li key ="98" class="tantnum_box">98</li>
+                                                                <li key ="99" class="tantnum_box">99</li>
+                                                            </ul>
+                        </div>
+                        <span class="" style="position: relative;float: left;display: block;height: 38px;line-height: 38px;margin-right: 5px;">厅</span>
+                        <div class="h_input_box  " id="room_wei_err" style="width: 120px;">
+                            <div class="s_arrow_top s_arrow_down cursorPointer"></div>
+                            <input type="text" class="roomtype tantnum_box cursorPointer" style="width: 106px;"  style="color: #c2cacd;" name="roomtype_wei" id="roomtype_wei" value="请选择" readonly/>
+                            <ul class="select_list_box tantnum_box" id="roomtype_wei_num" style="display: none;">
+                                                                <li key ="0" class="tantnum_box">0</li>
+                                                                <li key ="1" class="tantnum_box">1</li>
+                                                                <li key ="2" class="tantnum_box">2</li>
+                                                                <li key ="3" class="tantnum_box">3</li>
+                                                                <li key ="4" class="tantnum_box">4</li>
+                                                                <li key ="5" class="tantnum_box">5</li>
+                                                                <li key ="6" class="tantnum_box">6</li>
+                                                                <li key ="7" class="tantnum_box">7</li>
+                                                                <li key ="8" class="tantnum_box">8</li>
+                                                                <li key ="9" class="tantnum_box">9</li>
+                                                                <li key ="10" class="tantnum_box">10</li>
+                                                                <li key ="11" class="tantnum_box">11</li>
+                                                                <li key ="12" class="tantnum_box">12</li>
+                                                                <li key ="13" class="tantnum_box">13</li>
+                                                                <li key ="14" class="tantnum_box">14</li>
+                                                                <li key ="15" class="tantnum_box">15</li>
+                                                                <li key ="16" class="tantnum_box">16</li>
+                                                                <li key ="17" class="tantnum_box">17</li>
+                                                                <li key ="18" class="tantnum_box">18</li>
+                                                                <li key ="19" class="tantnum_box">19</li>
+                                                                <li key ="20" class="tantnum_box">20</li>
+                                                                <li key ="21" class="tantnum_box">21</li>
+                                                                <li key ="22" class="tantnum_box">22</li>
+                                                                <li key ="23" class="tantnum_box">23</li>
+                                                                <li key ="24" class="tantnum_box">24</li>
+                                                                <li key ="25" class="tantnum_box">25</li>
+                                                                <li key ="26" class="tantnum_box">26</li>
+                                                                <li key ="27" class="tantnum_box">27</li>
+                                                                <li key ="28" class="tantnum_box">28</li>
+                                                                <li key ="29" class="tantnum_box">29</li>
+                                                                <li key ="30" class="tantnum_box">30</li>
+                                                                <li key ="31" class="tantnum_box">31</li>
+                                                                <li key ="32" class="tantnum_box">32</li>
+                                                                <li key ="33" class="tantnum_box">33</li>
+                                                                <li key ="34" class="tantnum_box">34</li>
+                                                                <li key ="35" class="tantnum_box">35</li>
+                                                                <li key ="36" class="tantnum_box">36</li>
+                                                                <li key ="37" class="tantnum_box">37</li>
+                                                                <li key ="38" class="tantnum_box">38</li>
+                                                                <li key ="39" class="tantnum_box">39</li>
+                                                                <li key ="40" class="tantnum_box">40</li>
+                                                                <li key ="41" class="tantnum_box">41</li>
+                                                                <li key ="42" class="tantnum_box">42</li>
+                                                                <li key ="43" class="tantnum_box">43</li>
+                                                                <li key ="44" class="tantnum_box">44</li>
+                                                                <li key ="45" class="tantnum_box">45</li>
+                                                                <li key ="46" class="tantnum_box">46</li>
+                                                                <li key ="47" class="tantnum_box">47</li>
+                                                                <li key ="48" class="tantnum_box">48</li>
+                                                                <li key ="49" class="tantnum_box">49</li>
+                                                                <li key ="50" class="tantnum_box">50</li>
+                                                                <li key ="51" class="tantnum_box">51</li>
+                                                                <li key ="52" class="tantnum_box">52</li>
+                                                                <li key ="53" class="tantnum_box">53</li>
+                                                                <li key ="54" class="tantnum_box">54</li>
+                                                                <li key ="55" class="tantnum_box">55</li>
+                                                                <li key ="56" class="tantnum_box">56</li>
+                                                                <li key ="57" class="tantnum_box">57</li>
+                                                                <li key ="58" class="tantnum_box">58</li>
+                                                                <li key ="59" class="tantnum_box">59</li>
+                                                                <li key ="60" class="tantnum_box">60</li>
+                                                                <li key ="61" class="tantnum_box">61</li>
+                                                                <li key ="62" class="tantnum_box">62</li>
+                                                                <li key ="63" class="tantnum_box">63</li>
+                                                                <li key ="64" class="tantnum_box">64</li>
+                                                                <li key ="65" class="tantnum_box">65</li>
+                                                                <li key ="66" class="tantnum_box">66</li>
+                                                                <li key ="67" class="tantnum_box">67</li>
+                                                                <li key ="68" class="tantnum_box">68</li>
+                                                                <li key ="69" class="tantnum_box">69</li>
+                                                                <li key ="70" class="tantnum_box">70</li>
+                                                                <li key ="71" class="tantnum_box">71</li>
+                                                                <li key ="72" class="tantnum_box">72</li>
+                                                                <li key ="73" class="tantnum_box">73</li>
+                                                                <li key ="74" class="tantnum_box">74</li>
+                                                                <li key ="75" class="tantnum_box">75</li>
+                                                                <li key ="76" class="tantnum_box">76</li>
+                                                                <li key ="77" class="tantnum_box">77</li>
+                                                                <li key ="78" class="tantnum_box">78</li>
+                                                                <li key ="79" class="tantnum_box">79</li>
+                                                                <li key ="80" class="tantnum_box">80</li>
+                                                                <li key ="81" class="tantnum_box">81</li>
+                                                                <li key ="82" class="tantnum_box">82</li>
+                                                                <li key ="83" class="tantnum_box">83</li>
+                                                                <li key ="84" class="tantnum_box">84</li>
+                                                                <li key ="85" class="tantnum_box">85</li>
+                                                                <li key ="86" class="tantnum_box">86</li>
+                                                                <li key ="87" class="tantnum_box">87</li>
+                                                                <li key ="88" class="tantnum_box">88</li>
+                                                                <li key ="89" class="tantnum_box">89</li>
+                                                                <li key ="90" class="tantnum_box">90</li>
+                                                                <li key ="91" class="tantnum_box">91</li>
+                                                                <li key ="92" class="tantnum_box">92</li>
+                                                                <li key ="93" class="tantnum_box">93</li>
+                                                                <li key ="94" class="tantnum_box">94</li>
+                                                                <li key ="95" class="tantnum_box">95</li>
+                                                                <li key ="96" class="tantnum_box">96</li>
+                                                                <li key ="97" class="tantnum_box">97</li>
+                                                                <li key ="98" class="tantnum_box">98</li>
+                                                                <li key ="99" class="tantnum_box">99</li>
+                                                            </ul>
+                        </div>
+                        <span class="" style="position: relative;float: left;display: block;height: 38px;line-height: 38px;margin-right: 5px;">卫</span>
+                        <div class="h_input_box  " id="room_chu_err" style="width: 120px;">
+                            <div class="s_arrow_top s_arrow_down cursorPointer"></div>
+                            <input type="text" class="roomtype tantnum_box cursorPointer" style="width: 106px;"  style="color: #c2cacd;" name="roomtype_chu" id="roomtype_chu" value="请选择" readonly/>
+                            <ul class="select_list_box tantnum_box" id="roomtype_chu_num" style="display: none;">
+                                                                <li key ="0" class="tantnum_box">0</li>
+                                                                <li key ="1" class="tantnum_box">1</li>
+                                                                <li key ="2" class="tantnum_box">2</li>
+                                                                <li key ="3" class="tantnum_box">3</li>
+                                                                <li key ="4" class="tantnum_box">4</li>
+                                                                <li key ="5" class="tantnum_box">5</li>
+                                                                <li key ="6" class="tantnum_box">6</li>
+                                                                <li key ="7" class="tantnum_box">7</li>
+                                                                <li key ="8" class="tantnum_box">8</li>
+                                                                <li key ="9" class="tantnum_box">9</li>
+                                                                <li key ="10" class="tantnum_box">10</li>
+                                                                <li key ="11" class="tantnum_box">11</li>
+                                                                <li key ="12" class="tantnum_box">12</li>
+                                                                <li key ="13" class="tantnum_box">13</li>
+                                                                <li key ="14" class="tantnum_box">14</li>
+                                                                <li key ="15" class="tantnum_box">15</li>
+                                                                <li key ="16" class="tantnum_box">16</li>
+                                                                <li key ="17" class="tantnum_box">17</li>
+                                                                <li key ="18" class="tantnum_box">18</li>
+                                                                <li key ="19" class="tantnum_box">19</li>
+                                                                <li key ="20" class="tantnum_box">20</li>
+                                                                <li key ="21" class="tantnum_box">21</li>
+                                                                <li key ="22" class="tantnum_box">22</li>
+                                                                <li key ="23" class="tantnum_box">23</li>
+                                                                <li key ="24" class="tantnum_box">24</li>
+                                                                <li key ="25" class="tantnum_box">25</li>
+                                                                <li key ="26" class="tantnum_box">26</li>
+                                                                <li key ="27" class="tantnum_box">27</li>
+                                                                <li key ="28" class="tantnum_box">28</li>
+                                                                <li key ="29" class="tantnum_box">29</li>
+                                                                <li key ="30" class="tantnum_box">30</li>
+                                                                <li key ="31" class="tantnum_box">31</li>
+                                                                <li key ="32" class="tantnum_box">32</li>
+                                                                <li key ="33" class="tantnum_box">33</li>
+                                                                <li key ="34" class="tantnum_box">34</li>
+                                                                <li key ="35" class="tantnum_box">35</li>
+                                                                <li key ="36" class="tantnum_box">36</li>
+                                                                <li key ="37" class="tantnum_box">37</li>
+                                                                <li key ="38" class="tantnum_box">38</li>
+                                                                <li key ="39" class="tantnum_box">39</li>
+                                                                <li key ="40" class="tantnum_box">40</li>
+                                                                <li key ="41" class="tantnum_box">41</li>
+                                                                <li key ="42" class="tantnum_box">42</li>
+                                                                <li key ="43" class="tantnum_box">43</li>
+                                                                <li key ="44" class="tantnum_box">44</li>
+                                                                <li key ="45" class="tantnum_box">45</li>
+                                                                <li key ="46" class="tantnum_box">46</li>
+                                                                <li key ="47" class="tantnum_box">47</li>
+                                                                <li key ="48" class="tantnum_box">48</li>
+                                                                <li key ="49" class="tantnum_box">49</li>
+                                                                <li key ="50" class="tantnum_box">50</li>
+                                                                <li key ="51" class="tantnum_box">51</li>
+                                                                <li key ="52" class="tantnum_box">52</li>
+                                                                <li key ="53" class="tantnum_box">53</li>
+                                                                <li key ="54" class="tantnum_box">54</li>
+                                                                <li key ="55" class="tantnum_box">55</li>
+                                                                <li key ="56" class="tantnum_box">56</li>
+                                                                <li key ="57" class="tantnum_box">57</li>
+                                                                <li key ="58" class="tantnum_box">58</li>
+                                                                <li key ="59" class="tantnum_box">59</li>
+                                                                <li key ="60" class="tantnum_box">60</li>
+                                                                <li key ="61" class="tantnum_box">61</li>
+                                                                <li key ="62" class="tantnum_box">62</li>
+                                                                <li key ="63" class="tantnum_box">63</li>
+                                                                <li key ="64" class="tantnum_box">64</li>
+                                                                <li key ="65" class="tantnum_box">65</li>
+                                                                <li key ="66" class="tantnum_box">66</li>
+                                                                <li key ="67" class="tantnum_box">67</li>
+                                                                <li key ="68" class="tantnum_box">68</li>
+                                                                <li key ="69" class="tantnum_box">69</li>
+                                                                <li key ="70" class="tantnum_box">70</li>
+                                                                <li key ="71" class="tantnum_box">71</li>
+                                                                <li key ="72" class="tantnum_box">72</li>
+                                                                <li key ="73" class="tantnum_box">73</li>
+                                                                <li key ="74" class="tantnum_box">74</li>
+                                                                <li key ="75" class="tantnum_box">75</li>
+                                                                <li key ="76" class="tantnum_box">76</li>
+                                                                <li key ="77" class="tantnum_box">77</li>
+                                                                <li key ="78" class="tantnum_box">78</li>
+                                                                <li key ="79" class="tantnum_box">79</li>
+                                                                <li key ="80" class="tantnum_box">80</li>
+                                                                <li key ="81" class="tantnum_box">81</li>
+                                                                <li key ="82" class="tantnum_box">82</li>
+                                                                <li key ="83" class="tantnum_box">83</li>
+                                                                <li key ="84" class="tantnum_box">84</li>
+                                                                <li key ="85" class="tantnum_box">85</li>
+                                                                <li key ="86" class="tantnum_box">86</li>
+                                                                <li key ="87" class="tantnum_box">87</li>
+                                                                <li key ="88" class="tantnum_box">88</li>
+                                                                <li key ="89" class="tantnum_box">89</li>
+                                                                <li key ="90" class="tantnum_box">90</li>
+                                                                <li key ="91" class="tantnum_box">91</li>
+                                                                <li key ="92" class="tantnum_box">92</li>
+                                                                <li key ="93" class="tantnum_box">93</li>
+                                                                <li key ="94" class="tantnum_box">94</li>
+                                                                <li key ="95" class="tantnum_box">95</li>
+                                                                <li key ="96" class="tantnum_box">96</li>
+                                                                <li key ="97" class="tantnum_box">97</li>
+                                                                <li key ="98" class="tantnum_box">98</li>
+                                                                <li key ="99" class="tantnum_box">99</li>
+                                                            </ul>
+                        </div>
+                        <span class="" style="position: relative;float: left;display: block;height: 38px;line-height: 38px;margin-right: 5px;">厨</span>
+                        <div class="h_input_box  " id="room_yt_err" style="width: 120px;">
+                            <div class="s_arrow_top s_arrow_down cursorPointer"></div>
+                            <input type="text" class="roomtype tantnum_box cursorPointer" style="width: 106px;"  style="color: #c2cacd;" name="roomtype_yt" id="roomtype_yt" value="请选择" readonly"/>
+                            <ul class="select_list_box tantnum_box" id="roomtype_yt_num" style="display: none;">
+                                                                <li key ="0" class="tantnum_box">0</li>
+                                                                <li key ="1" class="tantnum_box">1</li>
+                                                                <li key ="2" class="tantnum_box">2</li>
+                                                                <li key ="3" class="tantnum_box">3</li>
+                                                                <li key ="4" class="tantnum_box">4</li>
+                                                                <li key ="5" class="tantnum_box">5</li>
+                                                                <li key ="6" class="tantnum_box">6</li>
+                                                                <li key ="7" class="tantnum_box">7</li>
+                                                                <li key ="8" class="tantnum_box">8</li>
+                                                                <li key ="9" class="tantnum_box">9</li>
+                                                                <li key ="10" class="tantnum_box">10</li>
+                                                                <li key ="11" class="tantnum_box">11</li>
+                                                                <li key ="12" class="tantnum_box">12</li>
+                                                                <li key ="13" class="tantnum_box">13</li>
+                                                                <li key ="14" class="tantnum_box">14</li>
+                                                                <li key ="15" class="tantnum_box">15</li>
+                                                                <li key ="16" class="tantnum_box">16</li>
+                                                                <li key ="17" class="tantnum_box">17</li>
+                                                                <li key ="18" class="tantnum_box">18</li>
+                                                                <li key ="19" class="tantnum_box">19</li>
+                                                                <li key ="20" class="tantnum_box">20</li>
+                                                                <li key ="21" class="tantnum_box">21</li>
+                                                                <li key ="22" class="tantnum_box">22</li>
+                                                                <li key ="23" class="tantnum_box">23</li>
+                                                                <li key ="24" class="tantnum_box">24</li>
+                                                                <li key ="25" class="tantnum_box">25</li>
+                                                                <li key ="26" class="tantnum_box">26</li>
+                                                                <li key ="27" class="tantnum_box">27</li>
+                                                                <li key ="28" class="tantnum_box">28</li>
+                                                                <li key ="29" class="tantnum_box">29</li>
+                                                                <li key ="30" class="tantnum_box">30</li>
+                                                                <li key ="31" class="tantnum_box">31</li>
+                                                                <li key ="32" class="tantnum_box">32</li>
+                                                                <li key ="33" class="tantnum_box">33</li>
+                                                                <li key ="34" class="tantnum_box">34</li>
+                                                                <li key ="35" class="tantnum_box">35</li>
+                                                                <li key ="36" class="tantnum_box">36</li>
+                                                                <li key ="37" class="tantnum_box">37</li>
+                                                                <li key ="38" class="tantnum_box">38</li>
+                                                                <li key ="39" class="tantnum_box">39</li>
+                                                                <li key ="40" class="tantnum_box">40</li>
+                                                                <li key ="41" class="tantnum_box">41</li>
+                                                                <li key ="42" class="tantnum_box">42</li>
+                                                                <li key ="43" class="tantnum_box">43</li>
+                                                                <li key ="44" class="tantnum_box">44</li>
+                                                                <li key ="45" class="tantnum_box">45</li>
+                                                                <li key ="46" class="tantnum_box">46</li>
+                                                                <li key ="47" class="tantnum_box">47</li>
+                                                                <li key ="48" class="tantnum_box">48</li>
+                                                                <li key ="49" class="tantnum_box">49</li>
+                                                                <li key ="50" class="tantnum_box">50</li>
+                                                                <li key ="51" class="tantnum_box">51</li>
+                                                                <li key ="52" class="tantnum_box">52</li>
+                                                                <li key ="53" class="tantnum_box">53</li>
+                                                                <li key ="54" class="tantnum_box">54</li>
+                                                                <li key ="55" class="tantnum_box">55</li>
+                                                                <li key ="56" class="tantnum_box">56</li>
+                                                                <li key ="57" class="tantnum_box">57</li>
+                                                                <li key ="58" class="tantnum_box">58</li>
+                                                                <li key ="59" class="tantnum_box">59</li>
+                                                                <li key ="60" class="tantnum_box">60</li>
+                                                                <li key ="61" class="tantnum_box">61</li>
+                                                                <li key ="62" class="tantnum_box">62</li>
+                                                                <li key ="63" class="tantnum_box">63</li>
+                                                                <li key ="64" class="tantnum_box">64</li>
+                                                                <li key ="65" class="tantnum_box">65</li>
+                                                                <li key ="66" class="tantnum_box">66</li>
+                                                                <li key ="67" class="tantnum_box">67</li>
+                                                                <li key ="68" class="tantnum_box">68</li>
+                                                                <li key ="69" class="tantnum_box">69</li>
+                                                                <li key ="70" class="tantnum_box">70</li>
+                                                                <li key ="71" class="tantnum_box">71</li>
+                                                                <li key ="72" class="tantnum_box">72</li>
+                                                                <li key ="73" class="tantnum_box">73</li>
+                                                                <li key ="74" class="tantnum_box">74</li>
+                                                                <li key ="75" class="tantnum_box">75</li>
+                                                                <li key ="76" class="tantnum_box">76</li>
+                                                                <li key ="77" class="tantnum_box">77</li>
+                                                                <li key ="78" class="tantnum_box">78</li>
+                                                                <li key ="79" class="tantnum_box">79</li>
+                                                                <li key ="80" class="tantnum_box">80</li>
+                                                                <li key ="81" class="tantnum_box">81</li>
+                                                                <li key ="82" class="tantnum_box">82</li>
+                                                                <li key ="83" class="tantnum_box">83</li>
+                                                                <li key ="84" class="tantnum_box">84</li>
+                                                                <li key ="85" class="tantnum_box">85</li>
+                                                                <li key ="86" class="tantnum_box">86</li>
+                                                                <li key ="87" class="tantnum_box">87</li>
+                                                                <li key ="88" class="tantnum_box">88</li>
+                                                                <li key ="89" class="tantnum_box">89</li>
+                                                                <li key ="90" class="tantnum_box">90</li>
+                                                                <li key ="91" class="tantnum_box">91</li>
+                                                                <li key ="92" class="tantnum_box">92</li>
+                                                                <li key ="93" class="tantnum_box">93</li>
+                                                                <li key ="94" class="tantnum_box">94</li>
+                                                                <li key ="95" class="tantnum_box">95</li>
+                                                                <li key ="96" class="tantnum_box">96</li>
+                                                                <li key ="97" class="tantnum_box">97</li>
+                                                                <li key ="98" class="tantnum_box">98</li>
+                                                                <li key ="99" class="tantnum_box">99</li>
+                                                            </ul>
+                        </div>
+                        <span class="" style="position: relative;float: left;display: block;height: 38px;line-height: 38px;margin-right: 5px;">阳台</span>
+                        <p class="h_check_tip ml10 simsun" id="tip_roomtype" style="display:none">请完善房屋户型</p>
+                        <p class="h_check_tip ml10 simsun" id="tip_roomtype_zero" style="display:none"></p>
+                    </div>
+                </li>
+                <!--
+                <li class="pb15" style="display:none" id="pleaseNum">
+                    <p class="h_num_tip">请填写整套房屋的户型（如果没有请填写0）</p>
+                </li>
+                -->
+                <li class="clearfix pb15">
+                    <label class="type1 w_103" id="room_area_title" style="color:#000;">出租面积：</label>
+                    <span id="room_area_titleDesc" style="line-height: 40px;font-size:12px;color:#757575">
+                                        </span>
+                    <div class="h_house_r clearfix" style="margin-left: 103px;">
+                        <div class="h_input_box " id="area_red_err" style="width: 120px;">
+                            <input type="text" name="area" class="area" id="area" value="" placeholder="请填写" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onafterpaste="this.value=this.value.replace(/[^\d]/g,'') " maxlength="4"/>
+                        </div>
+                        <!--
+                        <p class="h_tip_text" id="tip_area_gray">请填写房间的使用面积</p>
+                        -->
+                        <span class="" style="position: relative;float: left;display: block;height: 38px;line-height: 38px;margin-right: 5px;"> m&sup2</span>
+                        <p class="h_check_tip ml10 simsun" id="tip_area"  style="display:none">请填写出租面积</p>
+                    </div>
+
+                </li>
+                <li class="clearfix pb15" id="luToilet" >
+                    <label class="type1 w_103" style="color:#000;">卫生间类型：</label>
+                    <div class="h_house_r clearfix " id="toilet">
+                        <ul class="h_toliet_type">
+                            <li style="margin: 10px 0;" class="leasetype_red_err  " value="2">
+                                <span class="select_leasetype "></span>
+                                <p style="display: inline-block;margin-left: 15px;font-size: 12px;color: #757575;">
+                                    <span style="display: block;font-size: 14px;font-weight: bold;color: #212121;">独立卫生间</span>
+                                    房客独享的卫生间
+                                </p>
+                            </li>
+                            <li style="margin: 10px 0;" class="leasetype_red_err  " value="1">
+                                <span class="select_leasetype "></span>
+                                <p style="display: inline-block;margin-left: 15px;font-size: 12px;color: #757575;">
+                                    <span style="display: block;font-size: 14px;font-weight: bold;color: #212121;">共用卫生间</span>
+                                    可能与他人分享的卫生间
+                                </p>
+                            </li>
+                        </ul>
+                        <input type="hidden"  id="toilettype" key="y" value=""></input>
+                        <p class="h_check_tip simsun" id="tip_toilettype"  style="display:none">请选择卫生间类型</p>
+                    </div>
+                </li>
+                <li class="clearfix pb15">
+                    <label class="type1 w_103" style="color:#000;">床铺信息：</label>
+                    <span style="line-height: 40px;font-size:12px;color:#757575">为保证房客体验，小猪要求床品至少<span style="color:#ff4081;">每客一换</span></span>
+                    <div class="h_house_r" id="room_bed" style="margin-left: 103px;">
+                                                <div class="pb20 clearfix room_bed_c room_bed_box" id="bed1" key="">
+                            <div class="select_box fl mr10 room_bed_box " id="bed1_type_div">
+                                <div class="s_arrow_top s_arrow_down room_bed_box"></div>
+                                <input type="text"  name="bed1_type" class="bed_list room_bed_box h_col_gray getRoomBed" id='bed1_type' value="请选择" key = "" readonly/>
+                                                                <ul class="select_list_box bed_list_box room_bed_box" style="display:none">
+                                                                        <li key ="double" class="room_bed_box">双人床</li>
+                                                                        <li key ="single" class="room_bed_box">单人床</li>
+                                                                        <li key ="canopy" class="room_bed_box">双层床</li>
+                                                                        <li key ="sofa" class="room_bed_box">沙发</li>
+                                                                        <li key ="tatami" class="room_bed_box">榻榻米</li>
+                                                                        <li key ="other" class="room_bed_box">其他</li>
+                                                                    </ul>
+                            </div>
+                            <div class="h_input_box" id="bed1_length_div" style="width: 120px;">
+                                <input type="text" name="bed1_length" class="bed_list_f" id='bed1_length' placeholder="请填写"/>
+                            </div>
+                            <span class="bedDetailInfo">m长</span>
+                            <div class="h_input_box" id="bed1_weight_div" style="width: 120px;">
+                                <input type="text" name="bed1_weight" class="bed_list_f" id='bed1_weight' placeholder="请填写"/>
+                            </div>
+                            <span class="bedDetailInfo">m宽</span>
+                            <div class="h_input_box" id="bed1_num_div" style="width: 120px;">
+                                <input type="text" name="bed1_num" class="bed_list_n" id='bed1_num' maxlength="2" placeholder="请填写"/>
+                            </div>
+                            <span class="bedDetailInfo">张同规格床铺</span>
+                            <p class="h_check_tip simsun" id="tip_bed1" style="display:none">请完善床铺信息</p>
+                        </div>
+                                                <a class="add_btn" href="#ongo" id="add_bed"><span></span>继续添加</a>
+                    </div>
+                </li>
+                <li class="clearfix pb15">
+                    <label class="type1 w_103" style="color:#000;">宜居人数：</label>
+                    <span style="line-height: 40px;font-size:12px;color:#757575">请填写<span style="color:#ff4081;">最适宜居住的人数</span>，而不是最多入住人数。（如有需要，请在“加客设置”中填写）
+                    <p id="tantnumDesc" style="margin-left: 103px;font-size:12px;color:#757575"></p>
+                    </span>
+                    <div class="h_house_r" style="margin-left: 103px;margin-top: 10px;">
+                        <div class=" select_box fl mr10 tantnum_box" id="select_red_err">
+                            <div class="s_arrow_top s_arrow_down tantnum_box"></div>
+                            <input type="text" class="tantnum_box h_col_gray" id="tantnum" name="tantnum" key='' value="请选择" readonly/>
+                                                        <ul class="select_list_box tantnum_box" id="tantnum_select" style="display:none">
+                                                                <li value="1" class="tantnum_box">1</li>
+                                                                <li value="2" class="tantnum_box">2</li>
+                                                                <li value="3" class="tantnum_box">3</li>
+                                                                <li value="4" class="tantnum_box">4</li>
+                                                                <li value="5" class="tantnum_box">5</li>
+                                                                <li value="6" class="tantnum_box">6</li>
+                                                                <li value="7" class="tantnum_box">7</li>
+                                                                <li value="8" class="tantnum_box">8</li>
+                                                                <li value="9" class="tantnum_box">9</li>
+                                                                <li value="10" class="tantnum_box">10</li>
+                                                                <li value="11" class="tantnum_box">11</li>
+                                                                <li value="12" class="tantnum_box">12</li>
+                                                                <li value="13" class="tantnum_box">13</li>
+                                                                <li value="14" class="tantnum_box">14</li>
+                                                                <li value="15" class="tantnum_box">15</li>
+                                                                <li value="16" class="tantnum_box">16</li>
+                                                                <li value="17" class="tantnum_box">17</li>
+                                                                <li value="18" class="tantnum_box">18</li>
+                                                                <li value="19" class="tantnum_box">19</li>
+                                                                <li value="20" class="tantnum_box">20</li>
+                                                                <li value="21" class="tantnum_box">21</li>
+                                                                <li value="22" class="tantnum_box">22</li>
+                                                                <li value="23" class="tantnum_box">23</li>
+                                                                <li value="24" class="tantnum_box">24</li>
+                                                                <li value="25" class="tantnum_box">25</li>
+                                                                <li value="26" class="tantnum_box">26</li>
+                                                                <li value="27" class="tantnum_box">27</li>
+                                                                <li value="28" class="tantnum_box">28</li>
+                                                                <li value="29" class="tantnum_box">29</li>
+                                                                <li value="30" class="tantnum_box">30</li>
+                                                                <li value="31" class="tantnum_box">31</li>
+                                                                <li value="32" class="tantnum_box">32</li>
+                                                                <li value="33" class="tantnum_box">33</li>
+                                                                <li value="34" class="tantnum_box">34</li>
+                                                                <li value="35" class="tantnum_box">35</li>
+                                                                <li value="36" class="tantnum_box">36</li>
+                                                                <li value="37" class="tantnum_box">37</li>
+                                                                <li value="38" class="tantnum_box">38</li>
+                                                                <li value="39" class="tantnum_box">39</li>
+                                                                <li value="40" class="tantnum_box">40</li>
+                                                                <li value="41" class="tantnum_box">41</li>
+                                                                <li value="42" class="tantnum_box">42</li>
+                                                                <li value="43" class="tantnum_box">43</li>
+                                                                <li value="44" class="tantnum_box">44</li>
+                                                                <li value="45" class="tantnum_box">45</li>
+                                                                <li value="46" class="tantnum_box">46</li>
+                                                                <li value="47" class="tantnum_box">47</li>
+                                                                <li value="48" class="tantnum_box">48</li>
+                                                                <li value="49" class="tantnum_box">49</li>
+                                                                <li value="50" class="tantnum_box">50</li>
+                                                                <li value="51" class="tantnum_box">51</li>
+                                                                <li value="52" class="tantnum_box">52</li>
+                                                                <li value="53" class="tantnum_box">53</li>
+                                                                <li value="54" class="tantnum_box">54</li>
+                                                                <li value="55" class="tantnum_box">55</li>
+                                                                <li value="56" class="tantnum_box">56</li>
+                                                                <li value="57" class="tantnum_box">57</li>
+                                                                <li value="58" class="tantnum_box">58</li>
+                                                                <li value="59" class="tantnum_box">59</li>
+                                                                <li value="60" class="tantnum_box">60</li>
+                                                                <li value="61" class="tantnum_box">61</li>
+                                                                <li value="62" class="tantnum_box">62</li>
+                                                                <li value="63" class="tantnum_box">63</li>
+                                                                <li value="64" class="tantnum_box">64</li>
+                                                                <li value="65" class="tantnum_box">65</li>
+                                                                <li value="66" class="tantnum_box">66</li>
+                                                                <li value="67" class="tantnum_box">67</li>
+                                                                <li value="68" class="tantnum_box">68</li>
+                                                                <li value="69" class="tantnum_box">69</li>
+                                                                <li value="70" class="tantnum_box">70</li>
+                                                                <li value="71" class="tantnum_box">71</li>
+                                                                <li value="72" class="tantnum_box">72</li>
+                                                                <li value="73" class="tantnum_box">73</li>
+                                                                <li value="74" class="tantnum_box">74</li>
+                                                                <li value="75" class="tantnum_box">75</li>
+                                                                <li value="76" class="tantnum_box">76</li>
+                                                                <li value="77" class="tantnum_box">77</li>
+                                                                <li value="78" class="tantnum_box">78</li>
+                                                                <li value="79" class="tantnum_box">79</li>
+                                                                <li value="80" class="tantnum_box">80</li>
+                                                                <li value="81" class="tantnum_box">81</li>
+                                                                <li value="82" class="tantnum_box">82</li>
+                                                                <li value="83" class="tantnum_box">83</li>
+                                                                <li value="84" class="tantnum_box">84</li>
+                                                                <li value="85" class="tantnum_box">85</li>
+                                                                <li value="86" class="tantnum_box">86</li>
+                                                                <li value="87" class="tantnum_box">87</li>
+                                                                <li value="88" class="tantnum_box">88</li>
+                                                                <li value="89" class="tantnum_box">89</li>
+                                                                <li value="90" class="tantnum_box">90</li>
+                                                                <li value="91" class="tantnum_box">91</li>
+                                                                <li value="92" class="tantnum_box">92</li>
+                                                                <li value="93" class="tantnum_box">93</li>
+                                                                <li value="94" class="tantnum_box">94</li>
+                                                                <li value="95" class="tantnum_box">95</li>
+                                                                <li value="96" class="tantnum_box">96</li>
+                                                                <li value="97" class="tantnum_box">97</li>
+                                                                <li value="98" class="tantnum_box">98</li>
+                                                                <li value="99" class="tantnum_box">99</li>
+                                                            </ul>
+                        </div>
+                        <span class="bedDetailInfo">人</span>
+                        <p class="h_check_tip ml10 simsun" id="tip_tantnum" value="" style="display:none">请选择宜居人数</p>
+                    </div>
+                </li>
+                <li class="clearfix pb15" id="luLivewith" >
+                    <label class="type1 w_234" style="color:#000;">与房东共居在一套房屋内：</label>
+                    <div class="h_bed_r clearfix" id="livewith">
+                        <div class="livetogether h_check " value="yes">是</div>
+                        <div class="livetogether h_check ml90 " value="no">否</div>
+                        <p class="h_check_tip simsun" id="tip_livetogether" style="display:none">请选择是否和房东共居在一套房屋内</p>
+                        <input type="hidden"  id="livetogether" key="y" value=""></input>
+                    </div>
+                </li>
+                <!--<li class="clearfix pb15" id="luRoomNum" >-->
+
+                <li class="clearfix pb15" id="luRoomNum" style="display:block">
+                    <!--<label class="type1 w_103" id="sameRoomTitle">同类房源：</label>-->
+                    <label class="type1 w_103" id="sameRoomTitle" style="color:#000;">同类房源数：</label>
+                    <div class="h_house_r  clearfix">
+                                                <p class="h_tip_text" id="roomDesc"></p>
+                                                <div class="h_input_box" style="width: 120px;">
+                            <div class="s_arrow_top s_arrow_down cursorPointer"></div>
+                            <!--<input type="text" value='1' id="sameroom" name="sameroom" maxlength="2"/>-->
+                            <input type="text" class="roomtype tantnum_box cursorPointer" name="sameroom" id="sameroom" style="width: 106px;" value="1" readonly/>
+                            <ul class="select_list_box tantnum_box" id="sameroom_num" style="display: none;">
+                                                                <li key ="1" class="tantnum_box">1</li>
+                                                                <li key ="2" class="tantnum_box">2</li>
+                                                                <li key ="3" class="tantnum_box">3</li>
+                                                                <li key ="4" class="tantnum_box">4</li>
+                                                                <li key ="5" class="tantnum_box">5</li>
+                                                                <li key ="6" class="tantnum_box">6</li>
+                                                                <li key ="7" class="tantnum_box">7</li>
+                                                                <li key ="8" class="tantnum_box">8</li>
+                                                                <li key ="9" class="tantnum_box">9</li>
+                                                                <li key ="10" class="tantnum_box">10</li>
+                                                                <li key ="11" class="tantnum_box">11</li>
+                                                                <li key ="12" class="tantnum_box">12</li>
+                                                                <li key ="13" class="tantnum_box">13</li>
+                                                                <li key ="14" class="tantnum_box">14</li>
+                                                                <li key ="15" class="tantnum_box">15</li>
+                                                                <li key ="16" class="tantnum_box">16</li>
+                                                                <li key ="17" class="tantnum_box">17</li>
+                                                                <li key ="18" class="tantnum_box">18</li>
+                                                                <li key ="19" class="tantnum_box">19</li>
+                                                                <li key ="20" class="tantnum_box">20</li>
+                                                                <li key ="21" class="tantnum_box">21</li>
+                                                                <li key ="22" class="tantnum_box">22</li>
+                                                                <li key ="23" class="tantnum_box">23</li>
+                                                                <li key ="24" class="tantnum_box">24</li>
+                                                                <li key ="25" class="tantnum_box">25</li>
+                                                                <li key ="26" class="tantnum_box">26</li>
+                                                                <li key ="27" class="tantnum_box">27</li>
+                                                                <li key ="28" class="tantnum_box">28</li>
+                                                                <li key ="29" class="tantnum_box">29</li>
+                                                                <li key ="30" class="tantnum_box">30</li>
+                                                                <li key ="31" class="tantnum_box">31</li>
+                                                                <li key ="32" class="tantnum_box">32</li>
+                                                                <li key ="33" class="tantnum_box">33</li>
+                                                                <li key ="34" class="tantnum_box">34</li>
+                                                                <li key ="35" class="tantnum_box">35</li>
+                                                                <li key ="36" class="tantnum_box">36</li>
+                                                                <li key ="37" class="tantnum_box">37</li>
+                                                                <li key ="38" class="tantnum_box">38</li>
+                                                                <li key ="39" class="tantnum_box">39</li>
+                                                                <li key ="40" class="tantnum_box">40</li>
+                                                                <li key ="41" class="tantnum_box">41</li>
+                                                                <li key ="42" class="tantnum_box">42</li>
+                                                                <li key ="43" class="tantnum_box">43</li>
+                                                                <li key ="44" class="tantnum_box">44</li>
+                                                                <li key ="45" class="tantnum_box">45</li>
+                                                                <li key ="46" class="tantnum_box">46</li>
+                                                                <li key ="47" class="tantnum_box">47</li>
+                                                                <li key ="48" class="tantnum_box">48</li>
+                                                                <li key ="49" class="tantnum_box">49</li>
+                                                                <li key ="50" class="tantnum_box">50</li>
+                                                                <li key ="51" class="tantnum_box">51</li>
+                                                                <li key ="52" class="tantnum_box">52</li>
+                                                                <li key ="53" class="tantnum_box">53</li>
+                                                                <li key ="54" class="tantnum_box">54</li>
+                                                                <li key ="55" class="tantnum_box">55</li>
+                                                                <li key ="56" class="tantnum_box">56</li>
+                                                                <li key ="57" class="tantnum_box">57</li>
+                                                                <li key ="58" class="tantnum_box">58</li>
+                                                                <li key ="59" class="tantnum_box">59</li>
+                                                                <li key ="60" class="tantnum_box">60</li>
+                                                                <li key ="61" class="tantnum_box">61</li>
+                                                                <li key ="62" class="tantnum_box">62</li>
+                                                                <li key ="63" class="tantnum_box">63</li>
+                                                                <li key ="64" class="tantnum_box">64</li>
+                                                                <li key ="65" class="tantnum_box">65</li>
+                                                                <li key ="66" class="tantnum_box">66</li>
+                                                                <li key ="67" class="tantnum_box">67</li>
+                                                                <li key ="68" class="tantnum_box">68</li>
+                                                                <li key ="69" class="tantnum_box">69</li>
+                                                                <li key ="70" class="tantnum_box">70</li>
+                                                                <li key ="71" class="tantnum_box">71</li>
+                                                                <li key ="72" class="tantnum_box">72</li>
+                                                                <li key ="73" class="tantnum_box">73</li>
+                                                                <li key ="74" class="tantnum_box">74</li>
+                                                                <li key ="75" class="tantnum_box">75</li>
+                                                                <li key ="76" class="tantnum_box">76</li>
+                                                                <li key ="77" class="tantnum_box">77</li>
+                                                                <li key ="78" class="tantnum_box">78</li>
+                                                                <li key ="79" class="tantnum_box">79</li>
+                                                                <li key ="80" class="tantnum_box">80</li>
+                                                                <li key ="81" class="tantnum_box">81</li>
+                                                                <li key ="82" class="tantnum_box">82</li>
+                                                                <li key ="83" class="tantnum_box">83</li>
+                                                                <li key ="84" class="tantnum_box">84</li>
+                                                                <li key ="85" class="tantnum_box">85</li>
+                                                                <li key ="86" class="tantnum_box">86</li>
+                                                                <li key ="87" class="tantnum_box">87</li>
+                                                                <li key ="88" class="tantnum_box">88</li>
+                                                                <li key ="89" class="tantnum_box">89</li>
+                                                                <li key ="90" class="tantnum_box">90</li>
+                                                                <li key ="91" class="tantnum_box">91</li>
+                                                                <li key ="92" class="tantnum_box">92</li>
+                                                                <li key ="93" class="tantnum_box">93</li>
+                                                                <li key ="94" class="tantnum_box">94</li>
+                                                                <li key ="95" class="tantnum_box">95</li>
+                                                                <li key ="96" class="tantnum_box">96</li>
+                                                                <li key ="97" class="tantnum_box">97</li>
+                                                                <li key ="98" class="tantnum_box">98</li>
+                                                            </ul>
+                        </div>
+                        <span style="position: relative;float: left;display: block;height: 38px;line-height: 38px;margin-right: 5px;" id='leaseNameType'>套</span>
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="w_960 pb15 clearfix">
+        <a class="keep_btn" href="#ongo" id="saveSub">保存并继续</a>
+            </div>
+
+<div id="requestDeleteReasonsDiv" class="requestDeleteReasons" style="display: none;" lodgeunitOnline="">
+    <div class="requestDeleteReasonsTitle">删除房源</div>
+        <div class="ReasonsListTitle">请选择想要删除房源的原因：</div>
+    <ul class="optionSelected">
+        <li id="lodgeunitInputerror">
+            <span class="select_leasetype"></span>
+            <span>房源信息填写有误</span>
+        </li>
+        <li id="lodgeunitwait">
+            <span class="select_leasetype "></span>
+            <span>接下来一段时间没有办法接待</span>
+        </li>
+        <li id="lodgeunitWorkMuch">
+            <span class="select_leasetype "></span>
+            <span>做房东工作量太大</span>
+        </li>
+        <li id="lodgeunitGetless">
+            <span class="select_leasetype "></span>
+            <span>做房东赚得不够多</span>
+        </li>
+        <li id="lodgeunitNoHappy">
+            <span class="select_leasetype "></span>
+            <span>不愉快的接待经历</span>
+        </li>
+        <li id="lodgeunitLost">
+            <span class="select_leasetype "></span>
+            <span>没有了房屋的所有权</span>
+        </li>
+        <li id="lodgeunitOthers">
+            <span class="select_leasetype "></span>
+            <span>其他原因</span>
+        </li>
+    </ul>
+    <div class="lodgeunitCl"> </div>
+    <div id="lodgeunitReasonDesc" class="lodgeunitReasonDescChange"></div>
+    <div class="confirmDeleteLodgeunit cursorPointer" id="deleteLodgeunit" lodgeunitId="" route="" style="display: none"><a href="javascript:void(0)">确认永久删除，不再恢复</a></div>
+    <div class="btnLine">
+        <div id="operateBtnText" route="" style="display: none;cursor: pointer;"></div>
+        <div id="cancleDeleteLodgunit" style="margin-left: 230px;cursor: pointer;">取消</div>
+    </div>
+</div>                        <div class="o_mask" id='mask'  style="display:none;"></div>
+        <div class="o_warp" id="dialog"  style="display:none;border:none;"></div>   
+        <input type="hidden" value="0" id="houseId"/>
+        <input type="hidden" value="" id="roomId"/>
+        <input type="hidden" value="" id="userRole">
+        <input type="hidden" value="1" id="step">
+        <input type="hidden" value="Pub_Index" id="action">
+        <input type="hidden" value="no" id="commercialLandlord">
+            <input type="hidden" value="" id="luId">
+
+        <div class='h_body'>
+             
+<div class="foot_v2">
+        <ul class="foot_ul">
+        <li><a class="guide" href="http://www.xiaozhu.com/xzweb.php?op=Help_UserGuide&type=tenant" target="_blank">房客指南</a></li>
+        <li><a class="guide icon_fk" href="http://www.xiaozhu.com/xzweb.php?op=Help_UserGuide&type=landlord" target="_blank">房东指南</a></li>
+        <li>
+            <span class="guide_T">关于我们</span>
+            <a href="http://www.xiaozhu.com/aboutus" target="_blank">关于小猪</a>
+            <a href="http://app.mokahr.com/apply/xiaozhu/4514" target="_blank">加入我们</a>
+            <a href="http://www.xiaozhu.com/contactus" target="_blank">联系我们</a>
+        </li>
+        <li>
+            <span class="guide_T">网站帮助</span>
+            <a href="http://www.xiaozhu.com/help/index" target="_blank" >帮助中心</a>
+            <a href="http://www.xiaozhu.com/sitemap.html" target="_blank">网站地图</a> 
+        </li>
+        <li class="width_280">
+            <span class="guide_T">网站协议</span><br/>
+            <a href="http://www.xiaozhu.com/help/service" target="_blank">服务协议</a> 
+            <a href="http://www.xiaozhu.com/help/landlordRule" target="_blank">房东规则</a>
+            <a href="http://www.xiaozhu.com/help/tenantRule" target="_blank">房客规则</a>
+            <a href="http://www.xiaozhu.com/help/auditRule" target="_blank">房源上线标准</a>
+            <a href="http://www.xiaozhu.com/help/privacy" target="_blank">隐私保护</a>
+            <a href="http://www.xiaozhu.com/help/copyright" target="_blank">版权声明</a>
+            <a href="http://www.xiaozhu.com/help/disclaimer" target="_blank">免责声明</a>
+            <a href="http://www.xiaozhu.com/help/intellectualProperty" target="_blank">知识产权声明</a>
+            <a href="http://www.xiaozhu.com/help/commentRule" target="_blank">点评发布规则</a>
+            <a href="http://www.xiaozhu.com/help/japanReservationRule" target="_blank">日本标准住宅宿泊仲介业约款</a>
+        </li>
+        <li class="bigFont online_kf">
+            <span class=""   onclick='window.open("https://yiconnect.wezhuiyi.com/chat?t=Cks3pxv2eMBfA3BZvdOhS6Pa1am5fygsIHyQRXc0D7U&uid=106084124101&customer=%7B%22cID%22%3A%22106084124101%22%7D","_blank");' ><i></i>在线客服</span>
+            <p>客服电话  400 - 010 - 7890</p>
+            <p>客服邮箱  service@xiaozhu.com</p>
+        </li>
+            </ul>
+        <dl class="link_dl">
+        <dt>城市导航</dt>
+        <dd>
+            <a target="_blank" href="//bj.xiaozhu.com/">北京短租房</a>
+            <a target="_blank" href="//sh.xiaozhu.com/">上海短租房</a>
+            <a target="_blank" href="//nj.xiaozhu.com/">南京短租房</a>
+            <a target="_blank" href="//cd.xiaozhu.com/">成都短租房</a>
+            <a target="_blank" href="//gz.xiaozhu.com/">广州短租房</a>
+            <a target="_blank" href="//cq.xiaozhu.com/">重庆短租房</a>
+            <a target="_blank" href="//wh.xiaozhu.com/">武汉短租房</a>
+            <a target="_blank" href="//dl.xiaozhu.com/">大连短租房</a>
+            <a target="_blank" href="//sanya.xiaozhu.com/">三亚短租房</a>
+            <a target="_blank" href="//lijiang.xiaozhu.com/">丽江短租房</a>
+            <a target="_blank" href="//tj.xiaozhu.com/">天津短租房</a>
+            <a target="_blank" href="//xianggang.xiaozhu.com/">香港短租房</a>
+            <a target="_blank" href="//cs.xiaozhu.com/">长沙短租房</a>
+            <a target="_blank" href="//wx.xiaozhu.com/">无锡短租房</a>
+            <a target="_blank" href="//km.xiaozhu.com/">昆明短租房</a>
+            <a target="_blank" href="//jn.xiaozhu.com/">济南短租房</a>
+            <a target="_blank" href="//xm.xiaozhu.com/">厦门短租房</a>
+            <a target="_blank" href="//qd.xiaozhu.com/">青岛短租房</a>
+            <a target="_blank" href="//zz.xiaozhu.com/">郑州短租房</a>
+            <a target="_blank" href="//xa.xiaozhu.com/">西安短租房</a>
+            <a target="_blank" href="//hz.xiaozhu.com/">杭州短租房</a>
+            <a target="_blank" href="//sz.xiaozhu.com/">深圳短租房</a>
+            <a target="_blank" href="//sy.xiaozhu.com/">沈阳短租房</a> 
+            <a target="_blank" href="//su.xiaozhu.com/">苏州短租房</a>
+        </dd>
+    </dl>
+    <dl class="link_dl">
+         
+    </dl>
+                <div class="foot_btm">许可证号：京ICP证140510号 &nbsp;&nbsp; <a href="//www.anquan.org/s/www.xiaozhu.com" |="" name="mt8SMvYyRDI92b06nuDs8dPFapllCJYidqhM1WlOoGRZ9DWpbo" rel="nofollow" target="_blank">安全联盟</a> &nbsp;&nbsp; 北京快跑信息科技有限公司 &nbsp;&nbsp; <a href="http://www.xiaozhu.com/images/yingye.jpg" |="" name="yingyezhizhao" rel="nofollow" target="_blank">营业执照号 103613118</a> <span style="display:none">  &nbsp;&nbsp; 地址：北京市海淀区知春路56号   &nbsp;&nbsp;电话：010-62961978</span>
+    </div>
+    <div style="margin:0 auto;color:#bdc3c7;">
+        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020380" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/images/govRecord_icon.png"/><p style="display:inline-block;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#bdc3c7;">京公网安备 11010802020380号</p></a>
+        &nbsp;&nbsp; 违法和不良信息举报电话：4000107890（1号转6号） &nbsp;&nbsp; 举报邮箱：jubao@xiaozhu.com
+    </div>
+</div>
+
+<input type="hidden" name="actionName" id="actionName" value="Pub_Index"/>
+<input type="hidden" name="xz_srf_token" id="xz_srf_token" value="3f10d77d2f5133b424e36414e0db323e"/>
+
+<script type="text/javascript" src="//jci.xiaozhustatic3.com/e19061101/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="//jci.xiaozhustatic1.com/e19061101/xzjs?k=Footer&httphost=www.xiaozhu.com"></script>
+<link rel="stylesheet" type="text/css" href="//jci.xiaozhustatic1.com/e19061101/xzcss?css=jquery.mCustomScrollbar,nyroModal,uploadify,shadepage" />
+<script type="text/javascript" src="//jci.xiaozhustatic1.com/e19061101/js/jquery/lazyload.js"></script>
+<script type="text/javascript" src="http://www.xiaozhu.com/e19061101/js/webimv4/application/xzim4.js?source=xiaozhu&dm=xiaozhu.com" id="webimSource"></script>
+
+        </div>
+        <script type="text/javascript" src="//jci.xiaozhustatic1.com/e19061101/xzjs?k=Pub_Index&httphost=www.xiaozhu.com"></script>
+</body>
+<!-- Google Tag Manager -->
+<!-- End Google Tag Manager -->
+</html>

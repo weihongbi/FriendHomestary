@@ -1,0 +1,37 @@
+/*法务弹层*/
+.dialogRoom div,p,a,h1,img{margin:0;padding: 0;}
+.dialogRoom a{text-decoration: none;}
+.dialogRoom html{width: 100%;height: 100%;}
+.dialogRoom .dis{display: block; }
+.dialogRoom .unDis{display: none; }
+.dialogRoom .shedowColor{background: rgba(0,0,0,0.3); position: relative; width: 100%; height: 100%; overflow: hidden; z-index: 9999;}
+.dialogRoom{width: 100%; height: 100%; overflow: hidden; background: rgba(0,0,0,0.5); display: none; position: fixed; top: 0; left:0; z-index: 9999;}
+.dialogRoom .xzDialog{width: 580px; height: 500px; overflow: hidden; position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: auto; background: #fff; border-radius: 4px; overflow-x: hidden; font-size: 16px; padding: 0 45px; box-sizing: border-box; }
+.dialogRoom .title{text-align: center; width: 100%; height: 80px; line-height: 80px; }
+.dialogRoom .topBar{position: relative; }
+.dialogRoom .closeBtn{color: #c8c8c8; position: absolute; right: -20px; top:10px; font-size: 30px; cursor: pointer; }
+.dialogRoom .xzDialog img{display: inline-block; margin-bottom: 20px; width: 100%; }
+.dialogRoom .xzRemaind{height: 330px; width: 100%; overflow-y: scroll; padding: 0 20px 0 0; font-size: 14px; }
+.dialogRoom .xzRemaind p{line-height: 1.5; margin-bottom: 30px; }
+.dialogRoom p.fontWeight{font-size: 16px; margin-bottom: 20px; }
+.dialogRoom /*滚动条样式*/ .xzRemaind::-webkit-scrollbar {/*滚动条整体样式*/ width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/ height: 4px; }
+.dialogRoom .xzRemaind::-webkit-scrollbar-thumb {/*滚动条里面小方块*/ border-radius: 10px; -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.1); background: rgba(0,0,0,0.1); }
+.dialogRoom .xzRemaind::-webkit-scrollbar-track {/*滚动条里面轨道*/ -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0); border-radius: 0; background: rgba(0,0,0,0); }
+.dialogRoom .dialogFooter{height: 90px; width: 100%; /*line-height: 90px;*/ text-align: center; position: relative; font-size: 14px; padding: 25px 0; box-sizing: border-box;}
+.dialogRoom .dialogFooter button{width: 90px; height: 40px; line-height: 40px; text-align: center; background: #ff4b81; border-radius: 2px; color: #fff; display: inline-block; cursor: pointer; border: none; outline: none }
+.dialogRoom .dialogFooter .agreeBtn{background: #ff4b81; color: #fff; margin-right: 20px; }
+.dialogRoom .dialogFooter .agreeBtnDis{background: #bdbdbd; }
+.dialogRoom .dialogFooter .disAgreeBtn{position: relative; background: #ffdbe6; color: #ff4b81; }
+.dialogRoom .shedowRemind{background: #212121; min-width: 180px; color: #fff; font-size: 12px; line-height: 2; padding: 5px 10px 5px 10px; box-sizing: border-box; border-radius: 4px; }
+.dialogRoom .agreeRemain{text-align: center; line-height: 55px; height: 55px; }
+.dialogRoom .shewF{position: absolute; bottom: 50px; left: -45px }
+.dialogRoom .shewF i{display:block; width: 0; height: 0; border-left: 8px solid transparent; border-right: 8px solid transparent; border-top: 10px solid #212121; margin: auto }
+/*复选框*/
+/*input.checkedBox{width:16px; height:16px; display: inline-block; text-align: center; vertical-align: middle; line-height: 16px; position: relative; margin-right: 5px; cursor: pointer;}*/
+/*input.checkedBox::before{content: ""; position: absolute; top: -3px; left: 0; background: #fff; width: 100%; height: 100%; border: 1px solid #bdbdbd; border-radius: 2px }*/
+/*input.checkedBox:checked::before{content: "\2713"; background-color: #ff4181; position: absolute;top: 0; left: 0;width:100%; border: none; color:#fff; font-size: 15px; font-weight: bold; border: 1px solid #ff4181; border-radius: 2px }*/
+.check_css3 {margin: 20px auto; position: relative;margin-right: 10px;top: 4px;}
+.check_css3 .input_check {position: absolute; width: 20px; height: 20px; opacity:0; z-index: 9999; cursor: pointer;}
+.check_css3 .input_check+label {cursor:pointer;border-radius:2px;display: inline-block;width: 16px;height: 16px;border: 1px solid #bdbdbd;}
+.check_css3 .input_check:checked+label{background: #f05b72;border: 1px solid #f05b72;}
+.check_css3 .input_check:checked+label:after {content: "";position: absolute;left: 4px;bottom: 12px;width: 9px;height: 4px; border: 1px solid #fff;border-top-color: transparent;border-right-color: transparent; -ms-transform: rotate(-60deg); -moz-transform: rotate(-60deg); -webkit-transform: rotate(-60deg); transform: rotate(-45deg);}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd" >
+<mapper namespace="com.dao.whb.NavigationDao">
+  	<resultMap type="com.entity.whb.Navigation" id="getNav">
+  		<id column="id" property="id"></id>
+  		<result column="text" property="text"/>
+  		<result column="iconCls" property="iconCls"/>
+  		<result column="url" property="url"/>
+  		<result column="oprationEid" property="oprationEid"/>
+  		<result column="oprationTime" property="oprationTime"/>
+  		<result column="parentId" property="parentId"/>
+  		<collection property="children" ofType="com.entity.whb.Navigation">
+  			<id column="id" property="id"></id>
+	  		<result column="text" property="text"/>
+	  		<result column="iconCls" property="iconCls"/>
+	  		<result column="url" property="url"/>
+	  		<result column="oprationEid" property="oprationEid"/>
+	  		<result column="oprationTime" property="oprationTime"/>
+	  		<result column="parentId" property="parentId"/>
+  		</collection>
+  	</resultMap>  	
+</mapper>
