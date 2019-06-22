@@ -12,9 +12,6 @@ public class Navigation implements Serializable {
 	private Integer oprationEid;	
 	private String oprationTime;	
 	private Integer parentId;
-	
-	@OneToMany
-	@JoinColumn(name = "parentId")
 	private List<Navigation> children;
 	public Integer getId() {
 		return id;

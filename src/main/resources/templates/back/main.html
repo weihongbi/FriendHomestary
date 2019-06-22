@@ -12,9 +12,8 @@
     <script type="text/javascript">
         $(function(){
             // 初始化导航栏
-            $("#tr").tree({
-            	//tree/getTreeByRid?rid=1
-                url:"",
+            $("#tr").tree({            	
+                url:"tree/getTreeByRid?rid=1",
                 onClick:function(node){
                     // 判断是否有子节点
                     if(node.children != null){

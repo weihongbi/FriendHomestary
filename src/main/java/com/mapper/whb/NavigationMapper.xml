@@ -10,13 +10,17 @@
   		<result column="oprationTime" property="oprationTime"/>
   		<result column="parentId" property="parentId"/>
   		<collection property="children" ofType="com.entity.whb.Navigation">
-  			<id column="id" property="id"></id>
-	  		<result column="text" property="text"/>
-	  		<result column="iconCls" property="iconCls"/>
-	  		<result column="url" property="url"/>
-	  		<result column="oprationEid" property="oprationEid"/>
-	  		<result column="oprationTime" property="oprationTime"/>
-	  		<result column="parentId" property="parentId"/>
+  			<id column="id1" property="id"></id>
+	  		<result column="text1" property="text"/>
+	  		<result column="iconCls1" property="iconCls"/>
+	  		<result column="url1" property="url"/>
+	  		<result column="oprationEid1" property="oprationEid"/>
+	  		<result column="oprationTime1" property="oprationTime"/>
+	  		<result column="parentId1" property="parentId"/>
   		</collection>
   	</resultMap>  	
+  	<select id="queryByRid" resultMap="getNav">
+  		select n.*,nn.id id1,nn.text text1,nn.iconCls iconCls1,nn.url url1,nn.oprationEid oprationEid1,nn.oprationTime oprationTime1,nn.parentId parentId1
+  		from navigation n LEFT JOIN navigation nn on n.id = nn.parentid where n.id in (SELECT nid FROM r_n WHERE rid=1) and n.parentid=0 and nn.id in (SELECT nid FROM r_n WHERE rid=#{id})
+  	</select>
 </mapper>
