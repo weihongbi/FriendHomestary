@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>短租房</title>
+<meta content="no-transform " http-equiv="Cache-Control" />
+<link href="../img/xzcss-css=jquery-ui,global,page,city,suggest,calendar,sc.css"rel="stylesheet" />
+<!-- <script src="img/tingyun-rum.js"></script> -->
+</head>
+
+<body>
+
+
+<div class="head_wrapper">
+    <a href="#"  class="logo_v2">小猪</a>
+    <span class="slogan_v2 slogan_black"></span>
+    <ul class="nav_R nav_commen">
+                <li>	
+                	<a rel="nofollow" title="" class="show-register-box" href="#">注册</a>
+                </li>
+        <li>&middot;</li>
+        <li><a rel="nofollow" href="#" class="logindialog">登录</a></li>
+        <li>&middot;</li>
+                <li class="current">
+            <a href="#ongo" class="openTri_R">短租指南</a>
+            <div class="head_pop width_58 top40">
+                <div class="pop_column">
+                    <span><a class="fl" href="#">房客指南</a>
+                    <a class="fr" href="#">房东指南</a></span>
+                </div>
+            </div>
+        </li>
+        <li><a rel="nofollow" data-href="#" class="btn_free show-register-box" id="Pub_Btn">免费发布房源</a></li>
+     </ul>
+</div>
+
+<!--/header-->
+    <!--city top-->
+    <form action="query2">
+    <div class="city_top_box clearfix" id="list_filter">
+        <div class="city_l">
+		    <div class="clearfix mb_14">
+			    <div class="city_select city_bg">
+			    	<input type="text" id="searchcityd" name="city" placeholder="城市或目的地">        
+				</div>
+			    <div class="date_box city_bg city_search_index" id="filter-calendar-box">
+			       <input class="ipt_list1" type="text" id="startenddate" name="startenddate" value="入住离开日期" />
+			    </div>
+		    </div>
+		    <div class="type_bg clearfix" id="rentType">
+		      <h6 class="type_tit1">出租类型</h6>
+		       <ul class="type_list">
+		        		<li class="rentType">
+		          			<span class="type_ico1">整套出租</span>                          
+		         		</li>
+		              	<li class="rentType">
+		                	<span class="type_ico2" >独立单间</span>                           
+		               	</li>
+						<li class="rentType">
+		                 	<span class="type_ico3"  >合住房间</span>
+		                </li>
+		   		</ul>
+		  	</div>
+		    <div class="type_bg clearfix">
+		       <h6 class="type_tit1">最多宜居</h6>
+		          <div class="select_box1">
+		             <input class="s_int " type="text" key='未选择' value="未选择" readonly />
+		          </div>
+		     </div>
+        </div>
+        <div class="city_r">
+	               <div class="type_bg clearfix">
+	                  <h6 class="type_tit">价格</h6>
+		                <div class="select_box"> 
+				            <input class="ipt_list hiddenTxt " type="text" value="" id="keyword" placeholder="短租一晚价格"/>
+			         	</div>
+	               </div>
+	              
+	        <div class="type_bg clearfix">
+	           <h6 class="type_tit2">户型</h6>
+	              <div class="info_box"  id="housetyperoomcnt">
+		             <label >
+		               <input class="checkbox" 
+		                 type="checkbox" id="yiju" value="yiju" onclick=""/>一居                
+		              </label>
+	              </div>
+	        </div>
+	               <div class="type_bg clearfix">
+	                  <h6 class="type_tit2">类型</h6>
+	                  <div class="info_box" id="facilities">                                     
+	                    <label th:each="l:${listhouseType }">
+	                    	<input type="checkbox" name="houseTypeName" 
+	                      	value="facility_Shower"/>
+	                      	<span th:text="${l.houseTypeName }"></span>
+	                    </label> 
+	                  </div>
+	               </div>
+	  	
+  </div>
+  <input type="submit" class="btn_pink4search" id="filter_confirm" value="确定" />
+  
+  <span th:text="${listHouse }"></span>
+</div> 
+</form>
+  <div id="page_list">
+               
+	    <ul class="pic_list clearfix">
+	    	<li th:each="lh:${listHouse }">
+		       	<a target="_blank" href="#" class="resule_img_a">
+		          <img th:title="@{${lh.hname}}" 
+		          th:src="@{${lh.bedroom }}"
+		           th:alt="@{${lh.hname}}" />
+		    	</a>
+	    		<div class="favorite  lodge_104336911103 wsc_ico" al="104336911103"  title="收藏"></div>
+	    
+	    
+	    	<div class="result_btm_con lodgeunitname" style="cursor:pointer">
+		        <div>
+		        	<span class="result_price">&#165;<i>238</i>起/晚</span>
+		        </div>   
+		        <span class="result_img">
+		           <a class="search_result_gridsum" href="#" target="_blank">
+		             <img class="landlordimage" width="42" height="42"
+		              th:src="@{${lh.picture}}"/></a>
+		        </span>
+		        <div class="result_intro">
+		            <a class="sTitle">
+		           		<span class="result_title hiddenTxt" th:text="@{${lh.hname}}"></span>
+		            </a>
+		            <em class="hiddenTxt">
+		                	 整套出租/1室0厅/1张床/宜住2人 
+		            	<span class="commenthref">- 1条点评</span>
+		            </em>
+		            <p>
+					 <span class="suding_ico" title="速订：下单即可入住，无需房东确认"></span>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             <span class="mianyajin_ico" title="免押金：小猪在线担保、无需支付押金"></span>
+				     <span class="yanzhen_ico" title="验真：小猪实地考察，确保房源真实性"></span>
+					  &nbsp;
+					</p>
+		        </div>
+	    	</div>
+		</li>
+	    </ul>
+	 <div class="pagination_v2 pb0_vou">
+	 	<span class="active_link">1</span>
+	 	  <a target="_self" href="#">2</a>
+	 	  <a target="_self" href="#">3</a>
+	 	  <a target="_self" href="#">4</a>
+	 	  <a target="_self" href="#">5</a>
+	 	  <a class="font_st" target="_self"href="#" >&gt;</a>
+	</div> 
+	 <div class="list_adpic"  style="background-color:#02AC8D;" >
+	    <a href="#" style="cursor:auto">
+	    	<img src="../img/search_adpic1.png" />
+	    </a>
+	</div> 
+</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>list.html</title>
+	
+	<base href="http://localhost:8081/"/>
+    <meta name="keywords" content="keyword1,keyword2,keyword3"/>
+    <meta name="description" content="this is my page"/>
+    <meta name="content-type" content="text/html; charset=UTF-8"/>
+    
+    
+	<script type="text/javascript" src="easyui/jquery.min.js"></script>
+	<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="easyui/locale/easyui-lang-zh_CN.js"></script>
+	<script type="text/javascript" src="easyui/myvalidate.js"></script>
+	<link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css"/>
+	<link rel="stylesheet" type="text/css" href="easyui/themes/icon.css"/>
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <!-- 	<script type="text/javascript">
+		function showImage(value,row,index){
+  			if(value){
+  				return "<img src='images/"+value+"' style='width:100px;height:80px'/>";
+  			}else{
+  				return null;
+  			}
+  		}
+  	</script> -->
+  
+  <body>
+    
+    <table class="easyui-datagrid" height="500px" style="width:100%" id="tb"
+   		 	data-options="url:'CusQueryPage',fitColumns:'true',toolbar:'#tools',singleSelect:true,nowrap:false,pagination:true,pageList:[2,4,6],pageSize:2">
+   			<thead>
+   				<tr>
+   					<th data-options="field:'cname',width:100">名字</th>
+   					<th data-options="field:'password',width:150">密码</th>
+   					<th data-options="field:'idcard',width:150">身份证号</th>
+   					<th data-options="field:'phone',width:150">电话</th>
+   					<th data-options="field:'picture',width:150">头像</th>
+   					<th data-options="field:'email',width:150">邮箱</th>
+   					<th data-options="field:'sex',width:150">性别</th>
+   					<th data-options="field:'city',width:150">城市</th>
+   					<th data-options="field:'birthday',width:150">生日</th>
+   				</tr>
+   			</thead>
+   	</table>
+  </body>
+</html>

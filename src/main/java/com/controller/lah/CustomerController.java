@@ -48,7 +48,7 @@ public class CustomerController {
                 if(list.size()==1){
                 	request.getSession().setAttribute("Loginname",cname);
                     System.out.println(cname);
-                    return "front/index";
+                    return "front/list";
                 }else {
                     return "front/error";
                 }
@@ -56,7 +56,7 @@ public class CustomerController {
                 e.printStackTrace();
             }
 
-        return "front/index";
+        return "front/list";
     }
     
     @RequestMapping("custadd")

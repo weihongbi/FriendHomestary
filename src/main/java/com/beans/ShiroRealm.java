@@ -10,8 +10,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
+import javax.annotation.Resource;
+
 public class ShiroRealm extends AuthenticatingRealm {
-    @Autowired
+    @Resource
     private UsersService service;
     private SimpleAuthenticationInfo info = null;
 

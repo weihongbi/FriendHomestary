@@ -8,4 +8,5 @@ import org.apache.ibatis.annotations.Mapper;
 public interface houseDao {
 	
 	List<Map<String,Object>> queryId();
+	List<Map<String,Object>> queryAll();
 }

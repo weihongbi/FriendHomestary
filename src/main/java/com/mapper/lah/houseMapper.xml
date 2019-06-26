@@ -8,4 +8,10 @@
 		join customers c on h.hid=c.cid
 		where hd.homedid=1
 	</select>
+	<select id="queryAll" resultType="com.entity.lah.house">
+		select * from house h 
+		join homedetails hd on h.homedid=hd.homedid 
+		join homephoto hp on h.hpid=hp.hpid
+		join customers c on h.hid=c.cid
+	</select>
 </mapper>

@@ -19,4 +19,10 @@ public class HtmlController {
     public String indexhtml(){
         return "front/index";
     }
+    
+    @RequestMapping("duanzufanghtml")
+    public String duanzufanghtml(){
+        return "/front/duanzufang";
+    }
+    
 }

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.annotation.Resource;
 
 @Controller
-@RequestMapping("/apart")
+@RequestMapping("apart")
 public class ApartContoller {
     @Resource
     ApartmentDAO dao;
