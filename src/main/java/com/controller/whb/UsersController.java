@@ -1,13 +1,18 @@
 package com.controller.whb;
 
+import com.entity.whb.Users;
+import com.google.gson.Gson;
 import com.service.whb.UsersService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.List;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
@@ -24,8 +29,10 @@ public class UsersController {
         UsernamePasswordToken token = new UsernamePasswordToken(uname,upwd);
         try {
             currentUser.login(token);
+            List<Users> users = service.find(uname);
             String u = (String) currentUser.getPrincipal();
-            session.setAttribute("user", u);
+            session.setAttribute("username", u);
+            session.setAttribute("user",users);
             // 判断当前用户是否登录
             if (currentUser.isAuthenticated() == true) {
                 return "/back/main";
@@ -34,5 +41,16 @@ public class UsersController {
             System.out.println("登录失败");
         }
         return "/back/login";
+    }
+    @RequestMapping("queryUsers")
+	@ResponseBody
+	public String queryUsers(Model m) {
+		Gson g = new Gson();
+		return g.toJson(service.queryUsers());
+	}
+    @RequestMapping("addUsers")
+    public String addUsers(Users u) {
+    	service.addUsers(u);
+    	return "redirect:queryUsers";
     }
 }

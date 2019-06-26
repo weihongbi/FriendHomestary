@@ -1,13 +1,15 @@
 package com.service.whb;
 
+import java.io.Serializable;
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+
 import com.dao.whb.RolsDAO;
 import com.entity.whb.R_N;
 import com.entity.whb.Rols;
-import org.springframework.stereotype.Service;
-
-import javax.annotation.Resource;
-import java.io.Serializable;
-import java.util.List;
 
 @Service
 public class RolsService{
@@ -22,10 +24,10 @@ public class RolsService{
 	public int delrols(Integer rid) {							
 		return dao.delrols(rid);
 	}
-	public List<Rols> query() {
-		return dao.query();
+	public List<Rols> queryRols() {
+		return dao.queryRols();		
 	}
-	public List<R_N> query(Integer rid) {
+	public List<R_N> query(Integer rid) {		
 		return dao.query(rid);
 	}
 }

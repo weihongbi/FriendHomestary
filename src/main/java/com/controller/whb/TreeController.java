@@ -19,4 +19,10 @@ public class TreeController {
         Gson g = new Gson();        
         return g.toJson(serivce.getTreeByRid(rid));
     }
+    @RequestMapping("getTree")
+    @ResponseBody
+    public String getTree() {
+        Gson g = new Gson();        
+        return g.toJson(serivce.getTree());
+    }
 }

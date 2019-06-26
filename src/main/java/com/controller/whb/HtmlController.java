@@ -4,19 +4,33 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/html")
 public class HtmlController {
     @RequestMapping("loginhtml")
     public String loginhtml(){
-        return "/back/login";
+        return "back/login";
     }
     @RequestMapping("mainhtml")
     public String mainhtml(){
-        return "/back/main";
+        return "back/main";
     }
-    //前台
+    @RequestMapping("queryEmp")
+    public String queryEmp(){
+        return "back/queryEmp";
+    } 
+    @RequestMapping("queryUsershtml")
+    public String queryUsershtml(){
+        return "back/queryUsers";
+    }
+    @RequestMapping("rolsManagerhtml")
+    public String rolsManagerhtml(){
+        return "back/rolsManager";
+    } 
+    
+    
+    
+    
     @RequestMapping("indexhtml")
     public String indexhtml(){
-        return "/front/index";
+        return "front/index";
     }
 }

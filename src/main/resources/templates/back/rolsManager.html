@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript" src="../easyui/jquery.min.js"></script>
+    <script type="text/javascript" src="../easyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../easyui/locale/easyui-lang-zh_CN.js"></script>
+    <script type="text/javascript" src="../easyui/myvalidate.js"></script>
+    <link rel="stylesheet" type="text/css" href="../easyui/themes/default/easyui.css">    
+    <link rel="stylesheet" type="text/css" href="../easyui/themes/icon.css">
+    <!-- 在easyui页面中,script执行easyui自己的方法要加入: -->
+    <script type="text/javascript" th:inline="none">
+		var action = "";
+		$(function(){
+			$("#tb").datagrid({
+				width:"100%",
+				url:"rols/queryRols",
+				fitColumns:true, 
+				singleSelect:true,
+				columns:[[
+				    {field:'rid',width:50,title:'编号'},
+				    {field:'rname',width:100,title:'角色名称'}
+				   ]],
+				toolbar:[{text:"权限设置",
+						  iconCls:"icon-print",
+						  handler:function(){
+							var row = $("#tb").datagrid("getSelected");							
+							if(row != null){
+								$("#tree").tree({
+									url:"tree/getTree",
+									checkbox:true,
+									onLoadSuccess:function(data){										
+										$.post("nav/queryNid",{"rid":row.rid},function(d){	
+											var ds = d.substring(1,(d.length-1));
+											var result=ds.split(",");											
+											for(var i=0;i<result.length;i++){													
+												var node = $("#tree").tree("find",result[i]);												
+												if($("#tree").tree("getChildren",node.target).length==0){
+													$("#tree").tree("check",node.target);
+												}
+											}
+
+										});
+										
+									}
+								});
+								$("#tree-dl").dialog("open");
+							}else{
+								$.messager.alert("提示","请选择要设置得数据");
+							}
+						  }
+				   },'-',{text:"添加",
+						  iconCls:"icon-add",
+						  handler:function(){
+							  $("#ff").form("reset");
+							  $("#dl").dialog("setTitle","添加").dialog("open");
+							  action="rols/addrols";
+						  }
+				   },'-',{text:"删除",
+						  iconCls:"icon-remove",
+						  handler:function(){
+							var row = $("#tb").datagrid("getSelected");
+							if(row != null){							
+								$.post("rols/delrols",{"rid":row.rid},function(data){									
+									if(data==1){
+										$.messager.show({
+											title:"提示",
+											msg:"删除成功"
+										});			
+										$("#tb").datagrid("reload");
+									}else{
+										$.messager.show({
+											title:"提示",
+											msg:"删除失败"
+										});
+									}
+								});
+							}else{
+								$.messager.alert("提示","请选择要删除得数据");
+							}
+						  }
+				   }]
+			});
+		
+			$("#tree-dl").dialog({
+				buttons:[{
+					text:"保存",
+					iconCls:"icon-save",
+					handler:function(){
+						var rid = $("#tb").datagrid("getSelected").rid;
+						var nodes = $("#tree").tree("getChecked");
+						var nids = [];
+						for(var i=0;i<nodes.length;i++){
+							var j = jQuery.inArray(nodes[i].id,nids);
+							if(j == -1){
+								nids.push(nodes[i].id);
+							}
+							var parentNode=$("#tree").tree("getParent",nodes[i].target);
+							while(parentNode != null ){
+								var k = jQuery.inArray(parentNode.id,nids);
+								if(k == -1){
+									nids.push(parentNode.id);
+								}
+								parentNode=$("#tree").tree("getParent",parentNode.target);
+							}
+						}
+						$.ajax({
+							type:"post",
+							url:"r_n/rnDelete",
+							data:{"rid":rid,"nids":nids},
+							dataType:"json",
+							traditional:true,
+							success:function(data){														
+								$("#tree-dl").dialog("close");
+							}
+						});						
+					}
+				},{
+					text:"取消",
+					iconCls:"icon-cancel",
+					handler:function(){
+						$("#tree-dl").dialog("close");
+					}
+				}]
+			});
+			
+			$("#tree-dl").dialog("close");
+			$("#dl").dialog("close");
+		});
+		function submitForm(){
+			$("#ff").form('submit',{
+				url:action,
+				onSubmit:function(){
+					var rs = $("#ff").form("validate");
+					return rs;
+				},
+				success:function(){
+					$("#dl").dialog("close");
+					$("#tb").datagrid("reload");
+				}
+			});
+		}
+		function clearForm(){
+			$("#ff").form("reset");
+		}
+	</script>
+</head>
+<body>
+	<table id="tb"></table>
+	<!-- 权限设置 -->
+	<div id="tree-dl" class="easyui-dialog" style="width:300px;height:300px;" title="权限设置">
+		<ul id="tree"></ul>
+	</div>
+	<div class="easyui-dialog" style="width:300px;height:300px;padding:10px 60px;" id="dl">
+		<form id="ff" method="post">			
+			<div style="margin-bottom:10px;">
+				<input class="easyui-textbox" style="width:100%" data-options="label:'角色名:',required:true" name="rname">
+			</div>				
+		</form>
+		<div style="text-align:center;padding:5px 0">
+			<a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()" style="width:80px">Submit</a>
+			<a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()" style="width:80px">Clear</a>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../easyui/jquery.min.js"></script>
+    <script type="text/javascript" src="../easyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../easyui/locale/easyui-lang-zh_CN.js"></script>
+    <script type="text/javascript" src="../easyui/myvalidate.js"></script>
+    <link rel="stylesheet" type="text/css" href="../easyui/themes/default/easyui.css">    
+    <link rel="stylesheet" type="text/css" href="../easyui/themes/icon.css">
+    <!-- 在easyui页面中,script执行easyui自己的方法要加入: -->
+    <script type="text/javascript" th:inline="none">
+		var action = "";
+		$(function(){
+			$("#tb").datagrid({
+				width:"100%",
+				url:"queryUsers",
+				fitColumns:true, 
+				singleSelect:true,
+				columns:[[
+				    {field:'uid',width:50,title:'用户编号'},
+				    {field:'empname',width:100,title:'员工姓名'},				    
+				    {field:'uname',width:50,title:'用户姓名'},
+				    {field:'upwd',width:100,title:'用户密码'}
+				   ]],
+				toolbar:[{text:"添加员工",
+						  iconCls:"icon-add",
+						  handler:function(){
+							  $("#ff").form("reset");
+							  $("#dl").dialog("setTitle","添加").dialog("open");
+							  action="addUsers";
+						  }
+				   }]
+			  });
+			  $("#dl").dialog("close");
+			});	
+		function submitForm(){
+			$("#ff").form('submit',{
+				url:action,
+				onSubmit:function(){
+					var rs = $("#ff").form("validate");
+					return rs;
+				},
+				success:function(){
+					$("#dl").dialog("close");
+					$("#tb").datagrid("reload");
+				}
+			});
+		}
+		function clearForm(){
+			$("#ff").form("reset");
+		}
+	</script>
+</head>
+<body>
+	<table id="tb"></table>	
+	<div class="easyui-dialog" style="width:300px;height:300px;padding:10px 60px;" id="dl">
+		<form id="ff" method="post">			
+			<div style="margin-bottom:10px;">				
+				<select class="easyui-combobox" label="用户姓名:" style="width:100%"  name="empid"
+					data-options="url:'emp/queryU',valueField:'empid',textField:'empname',required:true">
+				</select>
+			</div>	
+			<div style="margin-bottom:10px;">
+				<input class="easyui-textbox" style="width:100%" data-options="label:'用户名:',required:true" name="uname">
+			</div>	
+			<div style="margin-bottom:10px;">
+				<input class="easyui-textbox" style="width:100%" data-options="label:'用户密码:',required:true" name="upwd">
+			</div>	
+			<div style="margin-bottom:10px;">
+				<select class="easyui-combobox" label="角色:" style="width:100%"  name="rid"
+					data-options="url:'rols/queryRols',valueField:'rid',textField:'rname',required:true">
+				</select>
+			</div>							
+		</form>
+		<div style="text-align:center;padding:5px 0">
+			<a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()" style="width:80px">提交</a>
+			<a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()" style="width:80px">重置</a>
+		</div>
+	</div>
+</body>
+</html>

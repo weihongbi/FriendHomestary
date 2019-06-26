@@ -1,10 +1,12 @@
 package com.service.whb;
 
-import com.dao.whb.R_NDAO;
-import org.springframework.stereotype.Service;
+import java.io.Serializable;
 
 import javax.annotation.Resource;
-import java.io.Serializable;
+
+import org.springframework.stereotype.Service;
+
+import com.dao.whb.R_NDAO;
 
 @Service
 public class R_NService {

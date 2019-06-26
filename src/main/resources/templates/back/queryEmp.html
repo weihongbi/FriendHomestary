@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript" src="../easyui/jquery.min.js"></script>
+    <script type="text/javascript" src="../easyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../easyui/locale/easyui-lang-zh_CN.js"></script>
+    <script type="text/javascript" src="../easyui/myvalidate.js"></script>
+    <link rel="stylesheet" type="text/css" href="../easyui/themes/default/easyui.css">    
+    <link rel="stylesheet" type="text/css" href="../easyui/themes/icon.css">
+    <!-- 在easyui页面中,script执行easyui自己的方法要加入: -->
+    <script type="text/javascript" th:inline="none">
+		var action = "";
+		$(function(){
+			$("#tb").datagrid({
+				width:"100%",
+				url:"emp/queryAll",
+				fitColumns:true, 
+				singleSelect:true,
+				columns:[[
+				    {field:'empid',width:50,title:'员工编号'},
+				    {field:'empname',width:100,title:'员工姓名'},
+				    {field:'phone',width:50,title:'手机号'},
+				    {field:'idcard',width:50,title:'身份证号'},
+				    {field:'state',width:50,title:'状态',formatter:fmtState}				    
+				   ]],
+				toolbar:[{text:"添加员工",
+						  iconCls:"icon-add",
+						  handler:function(){
+							  $("#ff").form("reset");
+							  $("#dl").dialog("setTitle","添加").dialog("open");
+							  action="emp/addEmp";
+						  }
+				   },'-',{text:"删除",
+						  iconCls:"icon-remove",
+						  handler:function(){
+							var row = $("#tb").datagrid("getSelected");
+							if(row != null){
+								$.post("emp/delEmp",{"empid":row.empid},function(data){									
+									if(data==1){
+										$.messager.show({
+											title:"提示",
+											msg:"删除成功"
+										});			
+										$("#tb").datagrid("reload");
+									}else{
+										$.messager.show({
+											title:"提示",
+											msg:"删除失败"
+										});
+									}
+								});
+							}else{
+								$.messager.alert("提示","请选择要删除得数据");
+							}
+						  }
+				   }]
+			  });
+			  $("#dl").dialog("close");
+			});			
+		function fmtState(value,row,index){
+			if(value == 0){				
+				return "离职";
+			}else{
+				return "在职";
+			}
+			return "";
+		}		
+		function submitForm(){
+			$("#ff").form('submit',{
+				url:action,
+				onSubmit:function(){
+					var rs = $("#ff").form("validate");
+					return rs;
+				},
+				success:function(){
+					$("#dl").dialog("close");
+					$("#tb").datagrid("reload");
+				}
+			});
+		}
+		function clearForm(){
+			$("#ff").form("reset");
+		}
+	</script>
+</head>
+<body>
+	<table id="tb"></table>	
+	<div class="easyui-dialog" style="width:300px;height:300px;padding:10px 60px;" id="dl">
+		<form id="ff" method="post">			
+			<div style="margin-bottom:10px;">
+				<input class="easyui-textbox" style="width:100%" data-options="label:'员工姓名:',required:true" name="empname">
+			</div>	
+			<div style="margin-bottom:10px;">
+				<input class="easyui-textbox" style="width:100%" data-options="label:'手机号:',required:true" name="phone">
+			</div>	
+			<div style="margin-bottom:10px;">
+				<input class="easyui-textbox" style="width:100%" data-options="label:'身份证号:',required:true" name="idcard">
+			</div>							
+		</form>
+		<div style="text-align:center;padding:5px 0">
+			<a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()" style="width:80px">提交</a>
+			<a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()" style="width:80px">重置</a>
+		</div>
+	</div>
+</body>
+</html>

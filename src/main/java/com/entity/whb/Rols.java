@@ -11,12 +11,14 @@ public class Rols {
 		this.rid = rid;
 		this.rname = rname;
 	}
+	
 	public Integer getRid() {
 		return rid;
 	}
 	public void setRid(Integer rid) {
 		this.rid = rid;
 	}
+	
 	public String getRname() {
 		return rname;
 	}

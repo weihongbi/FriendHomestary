@@ -20,7 +20,13 @@
   		</collection>
   	</resultMap>  	
   	<select id="queryByRid" resultMap="getNav">
-  		select n.*,nn.id id1,nn.text text1,nn.iconCls iconCls1,nn.url url1,nn.oprationEid oprationEid1,nn.oprationTime oprationTime1,nn.parentId parentId1
-  		from navigation n LEFT JOIN navigation nn on n.id = nn.parentid where n.id in (SELECT nid FROM r_n WHERE rid=1) and n.parentid=0 and nn.id in (SELECT nid FROM r_n WHERE rid=#{id})
+  		select n.id,n.text,n.iconCls,n.url,n.oprationEid,n.oprationTime,n.parentId,
+  		nn.id id1,nn.text text1,nn.iconCls iconCls1,nn.url url1,nn.oprationEid oprationEid1,nn.oprationTime oprationTime1,nn.parentId parentId1
+  		from navigation n LEFT JOIN navigation nn on n.id = nn.parentid where n.id in (SELECT nid FROM r_n WHERE rid=#{id}) and n.parentid=0 and nn.id in (SELECT nid FROM r_n WHERE rid=#{id})
+  	</select>
+  	<select id="queryAll" resultMap="getNav">
+  		select n.id,n.text,n.iconCls,n.url,n.oprationEid,n.oprationTime,n.parentId,
+  		nn.id id1,nn.text text1,nn.iconCls iconCls1,nn.url url1,nn.oprationEid oprationEid1,nn.oprationTime oprationTime1,nn.parentId parentId1
+  		from navigation n LEFT JOIN navigation nn on n.id = nn.parentid where n.parentid=0
   	</select>
 </mapper>

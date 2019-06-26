@@ -1,5 +1,11 @@
 package com.entity.whb;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
 public class R_N {
 	private Integer rnid;
 	private Integer rid;
@@ -14,18 +20,22 @@ public class R_N {
 		this.rid = rid;
 		this.nid = nid;
 	}
+	@Id
+	@Column
 	public Integer getRnid() {
 		return rnid;
 	}
 	public void setRnid(Integer rnid) {
 		this.rnid = rnid;
 	}
+	@Column
 	public Integer getRid() {
 		return rid;
 	}
 	public void setRid(Integer rid) {
 		this.rid = rid;
 	}
+	@Column
 	public Integer getNid() {
 		return nid;
 	}
