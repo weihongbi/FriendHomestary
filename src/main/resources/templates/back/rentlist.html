@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>list.html</title>
+	
+	<base href="http://localhost:8081/"/>
+    <meta name="keywords" content="keyword1,keyword2,keyword3"/>
+    <meta name="description" content="this is my page"/>
+    <meta name="content-type" content="text/html; charset=UTF-8"/>
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	
+	<script type="text/javascript" src="easyui/jquery.min.js"></script>
+	<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="easyui/locale/easyui-lang-zh_CN.js"></script>
+	<script type="text/javascript" src="easyui/myvalidate.js"></script>
+	<link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css"/>
+	<link rel="stylesheet" type="text/css" href="easyui/themes/icon.css"/>
+  </head>
+  	 <script type="text/javascript">
+	  	var action = "";
+		
+		$(function(){
+			$("#dl").dialog("close");
+		});
+		
+		function del(){
+			
+			var row = $("#tb").datagrid("getSelected");
+			
+			if(row != null){
+				$.post("del",{rentid:row.rentid},function(data){
+
+					if(data==1){
+						
+						$.messager.show({
+							title:'提示',
+							msg:'成功'
+						});
+						$("#tb").datagrid("reload");
+					}else{
+						$.messager.show({
+							title:'提示',
+							msg:'失败'
+						});
+					}
+				});
+			}else{
+				$.messager.alert('提示','请选择要删的信息');
+			}
+		}
+		
+		function showDialog(str){
+			clearForm();
+			if(str == "add"){
+				$("#dl").dialog("setTitle","新增");
+				$("#dl").dialog("open");
+				action = "add";
+			}else if(str == "edit"){
+				var row = isSeleted();
+				
+				if(row){
+					$("#ff").form("load",row);
+					$("#dl").dialog("setTitle","修改").dialog("open");
+					action = "update?rentid="+row.rentid;
+				}
+			}
+		}
+		
+		function isSeleted(){
+			var row = $("#tb").datagrid("getSelected");
+			if(row == null){
+				$.messager.alert("提示","请选择要操作得数据");
+				return null;
+			}else{
+				return row;
+			}
+		}
+		function submitForm(){
+			$("#ff").form('submit',{
+				url:action,
+				onSubmit:function(){
+					
+					var rs = $("#ff").form("validate");
+					return rs;
+				},
+				success:function(){
+					$("#dl").dialog("close");
+					$("#tb").datagrid("reload");
+				}
+			});
+		}
+		
+		function clearForm(){
+			$("#ff").form("reset");
+		}
+  	</script> 
+  
+  <body>
+  
+  	<table class="easyui-datagrid" height="500px" style="width:100%" id="tb"
+   		 	data-options="url:'rentquery',fitColumns:'true',toolbar:'#tools',singleSelect:true">
+   			<thead>
+   				<tr>
+   					<th data-options="field:'rentName',width:150">出租类型</th>
+   				</tr>
+   			</thead>
+   		</table>
+   		
+   	<div id="tools">
+		<a id="btn1" href="javascript:showDialog('add')" class="easyui-linkbutton" data-options="iconCls:'icon-add'">添加</a>  
+		<a id="btn2" href="javascript:showDialog('edit')" class="easyui-linkbutton" data-options="iconCls:'icon-edit'">修改</a>  
+		<a id="btn3" href="javascript:del()" class="easyui-linkbutton" data-options="iconCls:'icon-remove'">删除</a>  
+	</div>
+	
+	
+	<div class="easyui-dialog" style="width:500px;height:300px;padding:10px 60px;" id="dl">
+		<form id="ff" method="post">
+			<div style="margin-bottom:20px">
+				<input class="easyui-textbox" style="width:100%" data-options="label:'出租类型：',required:true" name="rentName"/>
+			</div>
+		</form>
+		
+		<div style="text-align:center;padding:5px 0">
+			<a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()" style="width:80px">提交</a>
+			<a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()" style="width:80px">关闭</a>
+		</div>
+	</div>
+
+  </body>
+</html>

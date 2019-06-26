@@ -1,0 +1,829 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit">
+<meta name="keywords" content=""/>
+<meta name="description" content="" />
+<link rel="shortcut icon" href="https://www.xiaozhu.com/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="icon" href="https://www.xiaozhu.com/favicon.ico" type="image/vnd.microsoft.icon">
+<title>发布您的房间</title>        <link rel="stylesheet" type="text/css" href="//jci.xiaozhustatic1.com/e19061701/xzcss?css=base,header,footer,publishRoomV2,photoScroll,jquery-ui,nyroModal,mysite" />
+    </head>
+    <body>
+            <div class="header height56">
+                <div class="top"></div>
+                 
+<!--[if lte IE 7]>
+<div style="background:#f16b80;  width:100%; height:50px; line-height:50px; text-align:center; font-size:14px; color:#fff; font-family:"微软雅黑";>
+    温馨提示：您目前的浏览器版本过低，网站部分功能无法正常使用，建议尽快升级：
+        <a href="http://www.microsoft.com/china/windows/IE/upgrade/index.aspx" name="升级ie浏览器" id="upgrade_ie" target="_blank" style=" display:inline-block;width:154px; height:40px;  vertical-align:middle;  margin:0 18px 0 12px;_margin-top:4px;"><img src="/images/ie.jpg" width="154" height="40"/></a>
+             或安装
+        <a href="http://www.firefox.com.cn" target="_blank" name="升级火狐浏览器" id="upgrade_firefox" style="display:inline-block;width:154px; height:40px;  vertical-align:middle;  margin:0 18px 0 12px;_margin-top:4px;"><img src="/images/firefox.jpg" width="154" height="40"/></a>
+</div>
+<![endif]-->
+
+<div class="detail_wrapper">
+    <div class="detail_head clearfix">
+        <a href="http://www.xiaozhu.com" class="xz_logo_detail">小猪</a><span class="slogan_v2 slogan_black"></span>
+        <ul class="nav_R nav_commen">
+                        <input type="hidden" value="landlord" id="userCurrentRole"/>
+            <input type="hidden" value="106084124101" id="loginUserId"/>
+                        <li class="current">
+                <a href="#ongo" class="openTri_R" rel="nofollow">ufumqs</a>
+                <div class="head_pop top40">
+                    <div class="pop_column">
+                        <a class="pop_T" href="http://www.xiaozhu.com/xzweb.php?op=FangDong_Index">房东中心</a>
+                        <span>
+                            <a class="fl" href="http://www.xiaozhu.com/xz_web2/order/pages/landlord/orderList.html">订单管理</a>
+                            <a class="fr" href="http://www.xiaozhu.com/xzweb.php?op=FangDong_SettlementInfo">结算统计</a>
+                        </span>
+                        <span>
+                            <a class="fl" href="http://www.xiaozhu.com/xzweb.php?op=FangDong_ShowLetter">聊天记录</a>
+                            <a class="fr" href="http://www.xiaozhu.com/xzweb.php?op=FangDong_Comment&filterType=waitComment&fkCmtFilter=all">我的点评</a>
+                        </span>
+                        <span>
+                            <a class="fl" href="http://www.xiaozhu.com/xzweb.php?op=FangDong_MyRooms">房源信息</a>
+                            <a class="fr" href="http://www.xiaozhu.com/xzweb.php?op=FangDong_MyRentCalendarList">价格房态</a>
+                        </span>
+                        <span>
+                            <a class="fl" href="http://www.xiaozhu.com/xzweb.php?op=FD_DiaryList">短租日记</a>
+                            <a class="fr" href="http://www.xiaozhu.com/xzweb.php?op=FangDong_UserInfo">个人资料</a>
+                        </span>
+                    </div>
+                    <div class="pop_column">
+                        <a class="pop_T pop_bor" href="http://www.xiaozhu.com/xzweb.php?op=FangKe_Index">房客中心</a>
+                        <span>
+                            <a class="fl" href="http://www.xiaozhu.com/xz_web2/order/pages/lodger/list.html">我的订单</a>
+                            <a class="fr" href="http://www.xiaozhu.com/xzweb.php?op=FangKe_ShowLetter">聊天记录</a>
+                        </span>
+                        <span>
+                            <a class="fl" href="http://www.xiaozhu.com/xzweb.php?op=FangKe_Comment">我的点评</a>
+                            <a class="fr" href="http://www.xiaozhu.com/xzweb.php?op=FangKe_UserInfo">个人资料</a>
+                        </span>
+                        <span class="textCt"><a href="http://www.xiaozhu.com/logout" id="IM-Logout">退出</a></span>
+                    </div>
+                </div>
+            </li>
+                                    <li class="current">
+                <a href="#ongo" class="openTri_R">短租指南</a>
+                <div class="head_pop width_58 top40">
+                    <div class="pop_column">
+                        <span><a class="fl" href="http://www.xiaozhu.com/xzweb.php?op=Help_UserGuide&type=tenant">房客指南</a><a class="fr" href="http://www.xiaozhu.com/xzweb.php?op=Help_UserGuide&type=landlord">房东指南</a></span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#ongo" class="icon_iphone">手机小猪</a>
+                  <div class="head_pop w_120 top40">
+                   <div><img src="/images/code_pic.png" alt="小猪" title="小猪"/></div>
+                   <a href="http://www.xiaozhu.com/appdownload/fk"  target="_blank">了解更多</a>
+              </div>
+            </li>
+                        <li><a rel="nofollow" data-href="http://www.xiaozhu.com/publish" class="btn_free" id = "Pub_Btn">免费发布房源</a></li>
+                    </ul>
+    </div>
+    <div id="userlogindialog" class="login_register_box" style="display:none;">
+    <div class="w_698"> 
+        <div class="r_colsed" id="closeUserLoginDialog"><span></span></div>
+        <div class="clearfix">
+            <div class="r_main_l">
+                <ul class="r_tab clearfix">
+                    <li class="percent_50 tc cur underL1" id="generalLi">普通登录</li>
+                    <li class="percent_50 tc cur" id="mobileLi">短信快捷登录</li>
+                </ul>
+                <div id="generalLogin">
+                    <ul class="register_list">
+                        <li>
+                            <div class="h_30">&nbsp;</div>
+                            <div class="pr">
+                                <div class="r_tel_ico"></div>
+                                <input type="text" class="r_input_small" id="input-username" autocomplete="off" placeholder="手机号、邮箱" disabled="true">
+    </li>
+                        <li>
+                            <div class="h_30"><div class="r_error_tip" id="input-username-tip"><span class="icon-wrong" id=""></span>手机号未注册</div></div>
+                            <div class="pr">
+                                <div class="r_password_ico"></div>
+                                <input type="password" class="r_input_1" id="password" autocomplete="off"  placeholder="密码" disabled="true">
+                                <div class="h_30">
+                                    <div class="r_error_tip" id="password-tip"><span class="ipt-text-pass"></span></div>
+                                </div>    
+                            </div>
+                        </li>
+                        <span  style="display:none"  id="verify-show">
+                        <li>
+                            <div class="pr">
+                                <div class="r_pho_ico"></div>
+                                <input type="text" class="r_input_small" id="image-verify-code" disabled="true" autocomplete="off"  placeholder="图片验证码">
+                                <span><img class="r_code change-verify-image" width="101px" height="33px" id="img_imagecodes" title="点击更换验证码" /></span>
+                                <div class="h_30">
+                                    <div class="r_error_tip" id="image-verify-code-tip"></div>
+                                </div>
+                            </div>
+                        </li>
+                        </span>
+                    </ul>
+                    <a href="###" class="r_input mt_10" id="orgBtn">登录</a>
+                    <div class="r_login_space clearfix"><span class="fl cur "><input class="ipt-checkbox2" type="checkbox" id="setcookie" checked="checked" />自动登录</span>
+                    <span class="fr col_gray"><a href="http://www.xiaozhu.com/findpwdbyphone">忘记密码?</a></span></div>
+                </div>
+                <div id="mobileLogin" style="display:none">
+                    <ul class="register_list">
+                        <li>
+                            <div class="h_30">&nbsp;</div>
+                            <div class="pr">
+                                <div class="r_telepho_ico"></div>
+                                <input type="text" class="r_input_1" id="quick-input-mobile" autocomplete="off" placeholder="手机号" disabled="true" >
+                            </div>
+                        </li>
+                        <li>
+                            <div class="h_30">
+                                <div class="r_error_tip" id="quick-input-mobile-tip"><span class="icon-ok"></span></div>
+                            </div>
+                            <div class="pr">
+                                <div class="r_pho_ico"></div>
+                                <input type="text" class="r_input_small" id="quick-image-code" autocomplete="off" placeholder="图片验证码" disabled="true" >
+                                <span ><img class="r_code change-verify-image" width="104px" height="33px" id="img_imagecodeMobile" title="点击更换验证码" /></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="h_30">
+                                <div class="r_error_tip" id="quick-image-code-tip"></div>
+                            </div>
+                            <div class="pr">
+                                <div class="r_vali_ico"></div>
+                                <input type="text" class="r_input_small" id="quick-activate-code" autocomplete="off" placeholder="动态验证码" disabled="true" >
+                                <span class="btn have-nb"  id="quick-get-code-btn">获取动态验证码</span>    
+                                <div class="h_30">
+                                    <div class="r_error_tip"  id="quick-activate-code-tip"><span class="icon-ok"></span></div> 
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="###" class="r_input mt_10" id="orgBtnMobile">登录</a>
+                    <p class="mt_10 mt_20">＊验证即登录，未注册将自动创建小猪账号</p>
+                </div>
+            </div>
+            <div class="r_main_r">
+                <h5>合作网站账户登录</h5>
+<ul class="r_wedsitev1">
+    <li>
+    <a class="hz_qqv1" href="http://www.xiaozhu.com/xzweb.php?op=GetOpenSnsAuthUrl&snsType=qqzone&state=login&next=http%3A%2F%2Fwww.xiaozhu.com%2Fxzweb.php%3Fop%3DPub_IndexV2Step5%26roomId%3D109396690300%26step%3D5"><i></i>QQ登录</a>
+    </li>
+    <li>
+    <a class="hz_weibov1" href="http://www.xiaozhu.com/xzweb.php?op=GetOpenSnsAuthUrl&snsType=sinaweibo&state=login&next=http%3A%2F%2Fwww.xiaozhu.com%2Fxzweb.php%3Fop%3DPub_IndexV2Step5%26roomId%3D109396690300%26step%3D5"><i></i>微博登录</a>
+    </li>
+    <li>
+    <a class="hz_weixinv1" href="http://www.xiaozhu.com/xzweb.php?op=GetOpenSnsAuthUrl&snsType=weixinopen&state=login&next=http%3A%2F%2Fwww.xiaozhu.com%2Fxzweb.php%3Fop%3DPub_IndexV2Step5%26roomId%3D109396690300%26step%3D5"><i></i>微信登录</a>
+    </li>
+</ul>                <p>还没有注册？<a href="#" class="col_pink show-register-box" >注册账号&gt;&gt;</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="mobilePerfeactInfoDialog" style="display:none;">
+    <div class="w_400"> 
+        <div class="perfeact-info-content" style="display:none;">
+            <div class="r_colsed" id="mobilePerfeactInfoBtn"><span></span></div>
+        <div class="r_top_logo">
+            <p>首次登录，请完善资料后，开启小猪住宿之旅！</p>
+        </div>
+        <ul class="register_list">
+            <li>
+                <div class="h_30">
+                    <p class="r_error_tip" style="display:none;"></p>&nbsp;
+                </div>
+                <div class="pr">
+                    <div class="r_tel_ico"></div>
+                    <input id="quick-input-username" type="text" placeholder="用户名" autocomplete="off" class="r_input_1">
+                </div>
+            </li>
+            <li>
+                <div class="h_30">
+                    <p class="r_error_tip" id="quick-input-username-tip">请输入用户名</p>&nbsp;
+                </div>
+                <div class="pr">
+                    <div class="r_password_ico"></div>
+                    <input type="password" id="quick-regpassword" autocomplete="off" placeholder="密码" class="r_input_1">
+                </div>
+            </li>
+            <li>
+                <div class="h_30">
+                    <p class="r_error_tip" id="quick-regpassword-tip">请输入密码</p>&nbsp;
+                </div>
+                <div class="pr">
+                    <div class="r_num_ico"></div>
+                    <input id="quick-invitecode" type="text" autocomplete="off" placeholder="邀请码(选填)" class="r_input_1">
+                </div>
+                <div class="h_30" style="display:none;">
+                    <p id="quick-invitecode-tip" class="r_error_tip">邀请码输入有误</p>&nbsp;
+                </div>
+                <p class="col_fgray r_tip_text">使用朋友给您的邀请码注册后，均可获得300元</p>
+            </li>
+        </ul>
+        <a class="r_input" id="mobileInfoPerfeactBtn" href="#">确定</a>
+        <p class="tc mt_20">
+            <span class="check_css3 agreeResBox">
+                <input type="checkbox"  class="input_check" id="check3">
+                <label for="check3"></label>
+            </span> 我同意  <a href="http://www.xiaozhu.com/help/service" class="r-service-protocol" target="_blank">《服务协议》、</a><a href="http://www.xiaozhu.com/help/privacy" class="r-service-protocol" target="_blank">《隐私保护声明》</a></p>
+        </div>
+    </div>
+</div>
+    <div class="w_698 login_register_box "  style="display:none;" id="registerDialog">
+    <div class="r_colsed" id="closeRegiserDialog"><span></span></div>
+    <div class="clearfix">
+        <div class="r_main_l">
+            <ul class="r_tab1 clearfix">
+                <li class="fl cur">注册小猪账号</li>
+                            </ul>
+            <ul class="register_list">
+                <li>
+                    <div class="h_30">&nbsp;</div>
+
+                    <div class="pr" id="reg">
+                        <div class=" r_telepho_ico"></div>
+                        <input type="text" id="input-mobile" autocomplete="off" placeholder="手机号" class="r_input_small col_input" value="">
+                </li>
+                <li>
+                    <div class="h_30">
+                        <p class="r_error_tip" id="input-mobile-tip">请输入手机号</p>&nbsp;
+                    </div>
+                    <!--<div class="pr">-->
+                        <!--<div class="r_pho_ico"></div>-->
+                        <!--<input type="text" placeholder="图片验证码" id="reg-image-code" autocomplete="off" class="r_input_small">-->
+                        <!--<span class="r_code"><img class="change-verify-image" id="img_imagecode" title="点击更换验证码" width="101" height="33" /></span>-->
+                    <!--</div>-->
+                </li>
+                <li>
+                    <!--<div class="h_30">-->
+                        <!--<p class="r_error_tip" id="reg-image-code-tip">请输入图片验证码</p>&nbsp;-->
+                    <!--</div>-->
+                    <div class="pr">
+                        <div class="r_num_ico"></div>
+                        <input id="invitecode" type="text"  autocomplete="off" placeholder="邀请码(选填)"  class="r_input_1">
+                    </div>
+                    <div class="h_30" style="display:none;">
+                        <p id="input-invitecode-tip" class="r_error_tip">邀请码输入有误</p>&nbsp;
+                    </div>
+                    <p class="col_fgray r_tip_text">使用朋友给您的邀请码注册后，你们均可获得300元</p>
+                </li>
+               <li>
+                  <div id="safeCheck"></div>
+                  <p id="input-slidecode-tip" class="r_error_tip" style="margin-bottom: 10px">请拖动滑块完成验证</p>
+               </li>
+            </ul>
+            
+            <a href="#" id="reg-btn" class="r_input">立即注册</a>
+            <p class="mt_20">
+                <span class="check_css3 agreeResBox">
+                    <input type="checkbox"  class="input_check" id="check3">
+                    <label for="check3"></label>
+                </span>
+                我同意  <a href="http://www.xiaozhu.com/help/service" class="r-service-protocol" target="_blank">《服务协议》、</a><a href="http://www.xiaozhu.com/help/privacy" class="r-service-protocol" target="_blank">《隐私保护声明》</a></p>
+        </div>
+        <div class="r_main_r">
+            <h5>合作网站账户登录</h5>
+<ul class="r_wedsitev1">
+    <li>
+    <a class="hz_qqv1" href="http://www.xiaozhu.com/xzweb.php?op=GetOpenSnsAuthUrl&snsType=qqzone&state=login&next=http%3A%2F%2Fwww.xiaozhu.com%2Fxzweb.php%3Fop%3DPub_IndexV2Step5%26roomId%3D109396690300%26step%3D5"><i></i>QQ登录</a>
+    </li>
+    <li>
+    <a class="hz_weibov1" href="http://www.xiaozhu.com/xzweb.php?op=GetOpenSnsAuthUrl&snsType=sinaweibo&state=login&next=http%3A%2F%2Fwww.xiaozhu.com%2Fxzweb.php%3Fop%3DPub_IndexV2Step5%26roomId%3D109396690300%26step%3D5"><i></i>微博登录</a>
+    </li>
+    <li>
+    <a class="hz_weixinv1" href="http://www.xiaozhu.com/xzweb.php?op=GetOpenSnsAuthUrl&snsType=weixinopen&state=login&next=http%3A%2F%2Fwww.xiaozhu.com%2Fxzweb.php%3Fop%3DPub_IndexV2Step5%26roomId%3D109396690300%26step%3D5"><i></i>微信登录</a>
+    </li>
+</ul>            <p class="">已有账号？<a href="http://www.xiaozhu.com/login?next=http%3A%2F%2Fwww.xiaozhu.com%2Fxzweb.php%3Fop%3DPub_IndexV2Step5%26roomId%3D109396690300%26step%3D5" id="loginDialogBtn" class="col_pink logindialog">登录&gt;&gt;</a></p>
+        </div>
+    </div>
+</div>
+<div class="w_400 login_register_box" id='mobileRegisterInfoDialog' style="display:none;"> 
+    <div class="r_colsed" id="closeMobileRegisterInfoDialog"><span></span></div>
+    <div class="r_top_tit">
+        <h6>验证短信已发送至手机号码</h6>
+        <p><span id="codeRecivePhone"></span><span class="col_pink"><a href="#" id="modifyRegisterBtn">(修改)</a></span></p>
+    </div>
+    <ul class="register_list">
+        <li>
+            <div class="h_30">&nbsp;</div>
+            <div class="pr">
+                <div class="r_pho_ico"></div>
+                <input type="text" id="activate-code" placeholder="手机验证码" autocomplete="off" class="r_input_small">
+                <a href="#ongo" id="get-code-btn" class="have-nb">重新发送</a>
+            </div>
+        </li>
+        <li>
+            <div class="h_30">
+                <p id="activate-code-tip" class="r_error_tip">请输入手机验证码</p>&nbsp;
+            </div>
+            <div class="pr">
+                <div class=" r_tel_ico"></div>
+                <input id="reginput-username" type="text" placeholder="用户名" autocomplete="off" class="r_input_1">
+            </div>
+        </li>
+        <li>
+            <div class="h_30">
+                <p class="r_error_tip" id="reginput-username-tip">请输入用户名</p>&nbsp;
+            </div>
+            <div class="pr">
+                <div class="r_password_ico"></div>
+                <input type="password" id="regpassword" placeholder="密码" autocomplete="off" class="r_input_1">
+            </div>
+            <div class="h_30">
+                <p class="r_error_tip" id="regpassword-tip">请输入密码</p>&nbsp;
+            </div>
+        </li>
+    </ul>
+    <a href="#" id="regConfirmBtn" class="r_input mt_10">确认</a>
+</div>
+<div id="regSuccessDialog" class="reg_success_box login_register_box" style="display:none;">
+    <div class="">
+        <div class="r_colsed_1" id="closeRegSuccDialogBtn"><span></span></div>
+        <div id="regSuccInfo">
+        </div>
+    </div>
+</div></div>            </div>
+            <div class='h_top_box'>
+                <div class="h_step_box">
+                                        <ul class="clearfix">
+                        <li></li>                        <li></li>                        <li></li>                        <li></li>                    </ul>
+                                        <div class="h_step_cur h_pos1">
+                                                <a href="http://www.xiaozhu.com/xzweb.php?op=Pub_Index&roomId=109396690300&step=1" class="h_step1_cur"><span></span></a>
+                                                <p>房源信息</p>
+                    </div>
+                    <div class="h_step_cur h_pos2">
+                                                <a href="http://www.xiaozhu.com/xzweb.php?op=Pub_IndexV2Step2&roomId=109396690300&step=2" class="h_step2_cur"><span></span></a>
+                                                <p>房源描述</p>
+                    </div>
+                    <div class="h_step_cur h_pos3">
+                                                <a href="http://www.xiaozhu.com/xzweb.php?op=Pub_IndexV2Step3&roomId=109396690300&step=3" class="h_step3_cur"><span></span></a>
+                                                <p>配套设施</p>
+                    </div>
+                    <div class="h_step_cur h_pos4">
+                                                <a href="http://www.xiaozhu.com/xzweb.php?op=Pub_IndexV2Step4&roomId=109396690300&step=4" class="h_step4_cur"><span></span></a>
+                                                <p>真实照片</p>
+                    </div>
+                    <div class="h_step h_pos5">
+                                                <span class="h_step5_cur"></span>
+                                                <p>价格规则</p>
+                    </div>
+                </div>
+            </div>
+                         
+                 
+ 
+ 
+<input type="hidden" value="" id="newLodgeUnitDiscount">
+<input type="hidden" value="1" id="isSupportNewLodgeUnitDiscount">
+    <div class="h_wrap mt20">
+        <h4 class="h_tit">价格规则</h4>
+        <div class="h_house_info">
+            <ul>
+                <li class="clearfix pb15">
+                    <label class="type1 w_103">日价：</label>
+                    <div class="h_house_r clearfix" style="position: relative;">
+                        <div class="clearfix pb5">
+                            <div class="h_input_box textarea_price" id='dayPrice'>
+                                <span class="h_input_text">元/每晚</span>
+                                <input class='input_price' type="text" id="dayrentprice" name="dayrentprice" onafterpaste="this.value=this.value.replace(/\D/g,'')" onkeyup="this.value=this.value.replace(/\D/g,'');changeFlag = true;" maxlength="6" value=''>
+                            </div>
+                                                        <p class="h_tip_text">日价的10%将作为服务费，请酌情考虑</p>
+                                                        <p class="h_check_tip simsun" id='tip_dayrentprice' style='display:none'>请填写房源价格</p>
+                            <p class="h_check_tip" id='tip_dayPriceRange' style='display:none'>请输入1～99999以内整数金额</p>
+                        </div>
+                        <div class="clearfix" style='display:none' id='coverdayrentprice' value='no'>
+                            <div class="h_check h_check_cur" >不覆盖日历上单独设定的价格</div>
+                            <div class="h_check ml90 ">覆盖日历上所有价格（限时特价除外）</div>
+                        </div>
+                    </div>
+                </li>
+                                <li class="clearfix pb15 newRoomDiv">
+                    <label class="type1 w_103">开启新房促销：</label>
+                    <div class="h_house_r clearfix ">
+                        <ul class="h_newsales_type" id="newsales">
+                            <li style="margin: 10px 0;" class="leasetype_red_err newSalesYes " key="yes">
+                                <span class="select_leasetype "></span>
+                                <p class="h_check_tip" id="tip_newRoomsales">请完善新房促销</p>
+                                <p style="display: inline-block;margin-left: 15px;font-size: 12px;color: #757575;">
+                                    <span style="display: block;font-size: 14px;font-weight: bold;color: #212121;">参与新房促销</span>
+                                    前3单入住的房客将享受8折促销。新房促销有助于提升您在众多房源中的竞争力，并增加房源的曝光度
+                                </p>
+                            </li>
+                            <li style="margin: 10px 0;" class="leasetype_red_err newSalesNo " key="no">
+                                <span class="select_leasetype "></span>
+                                <p style="display: inline-block;margin-left: 15px;font-size: 12px;color: #757575;">
+                                    <span style="display: block;font-size: 14px;font-weight: bold;color: #212121;">不参与新房促销</span>
+                                    较其他新房源可能不具备有利的价格优势及足够的吸引力
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="clearfix pb15 newRoomDiv">
+                    <label class="w_103">&nbsp;</label>
+                    <div class="h_house_r pr clearfix">
+                        新房促销的好处<i class="yj_ico"></i>
+                        <div class="yj_online">
+                            <i class="yj_top_arrow"></i>
+                            <p>【参与新房促销的好处】<br>
+                                ～可以帮助您在房源上线初期快速聚拢人气、获取订单和积累房客评价，为您今后的经营打下可靠的基础<br>
+                                ～新房源上线后，较低的价格，能够较快的获得房客的青睐<br>
+                                ～平台将根据您给予的折后价格的力度，给予不同程度的排名支持<br>
+                                ～平台将告知搜索您周边房源的房客，预定房源可享受8折促销，此通知将进一步扩大您的房源在周边的影响力<br>
+                                【新房促销的使用规则】<br>
+                                ～房源上线后，新房促销将会持续90日，如果超过90日，则促销自动失效<br>
+                                ～参与新房促销后，前3单入住的房客将享受8折促销，超过3单则不在享受折扣促销</p>
+                        </div>
+                    </div>
+                </li>
+                                <li class="clearfix pb15">
+                   <label class="type1 w_103">押金：</label>
+
+                   <div class="clearfix hide_width">
+                      <div class="clearfix cashplegeInfo hide_width">
+                         <div class="h_check h_check_cashplede hideCash h_check_cur">不收取押金</div>
+
+                         <div class="h_house_r pr clearfix" id="cashpledge_more">
+                            <i class="yj_ico showcashpledge_tip"></i>
+                            <div class="yj_online">
+                               <i class="yj_top_arrow"></i>
+                                                               <h3>【为什么更多房东选择不收取押金？】</h3>
+                                                                                              <h4>①同等保障</h4>
+                               <p>不收取押金，不代表失去保障；小猪承诺无押金房源与押金房源享受同等赔付保障：小猪先行为房客垫付押金以支付您的损失。</p>
+                                                               <h4>②流量翻倍</h4>
+                               <p>无押金房源享受平台排名支持，增加曝光；同时提升房客好感，可获得更多订单。</p>
+                            </div>
+                         </div>
+
+                         <div class="h_check h_check_cashplede ml90 takeCash">收取押金</div>
+                      </div>
+                   </div>
+
+                    <div class="h_input_box" id="cashPledgeVal">
+                        <span class="h_input_text">元</span>
+                        <input type="text" maxlength="4" class="input_price" name="cashpledge" id="cashpledge" value="" onkeyup="$('#price_tip').hide();if(this.value==this.value2)return;if(this.value.search(/^\d*$/)==-1)this.value=(this.value2)?this.value2:'';else this.value2=this.value;" onafterpaste="if(this.value==this.value2)return;if(this.value.search(/^\d*$/)==-1)this.value=(this.value2)?this.value2:'';else this.value2=this.value;"/>
+                    </div> 
+                    <p class="h_tip_text cashpledge_tip">
+                       最高设置金额9999元
+                    </p>
+                    <p class="h_check_tip" id='tip_cashPledge' style='display:none'>请填写押金金额</p>
+                    <p class="h_check_tip" id='tip_cashRange' style='display:none'>请输入0～9999以内整数金额</p>
+                </li> 
+                <li class="clearfix pb15">
+
+                </li>
+                                <li class="clearfix pb15">
+                    <label class="type1 w_103">清洁费：</label>
+                    <div class="h_house_r clearfix">
+                        <div class="clearfix pb5">
+                            <div class="h_input_box" id='cleanFeeBox'>
+                                <span class="h_input_text">元／每单</span>
+                                <input class='input_price' type="text" id="cleanfee" name="cleanfee"
+                                    onafterpaste="this.value=this.value.replace(/\D/g,'')"
+                                    onkeyup="this.value=this.value.replace(/\D/g,'');changeFlag = true;" maxlength="3"
+                                    value='0'>
+                            </div>
+                        <p class="h_tip_text" id="cleanFeeTip" style="display: none">清洁费的10%将作为服务费，请酌情考虑。</p>
+                        <p class="h_check_tip" id='tip_cleanFee' style='display:none'>请填写清洁费</p>
+                        </div>
+                    </div>
+                </li>
+                                <li class="clearfix pb10">
+                    <label class="type1 w_103">是否允许加客：</label>
+                    <div class="h_house_r clearfix">
+                        <div class="h_house_r clearfix" id='addtenant' value='no'>
+                            <div class="h_check " >是</div>
+                            <div class="h_check ml90 h_check_cur">否</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="h_room_ms clearfix addtenanttips"  style="display:none" >
+                <li class="clearfix pb15">
+                    <label class="type1 w_103">最多加客：</label>
+                    <input type="hidden" value="1" name="addtenantnum">
+                    <div class="h_house_r">
+                        <div class="index_6 select_box fl mr10 tantnum_box" id="addtenantnumBox">
+                            <div class="s_arrow_top s_arrow_down tantnum_box"></div>
+                            <input type="text" class="tantnum_box" id="addtenantnum" name="addtenantnum" key='1' value="1人" readonly/>
+                                                        <ul class="select_list_box tantnum_box" id="addtenantnum_select" style="display:none">
+                                                                <li value="1" class="tantnum_box">1人</li>
+                                                                <li value="2" class="tantnum_box">2人</li>
+                                                                <li value="3" class="tantnum_box">3人</li>
+                                                                <li value="4" class="tantnum_box">4人</li>
+                                                                <li value="5" class="tantnum_box">5人</li>
+                                                                <li value="6" class="tantnum_box">6人</li>
+                                                                <li value="7" class="tantnum_box">7人</li>
+                                                                <li value="8" class="tantnum_box">8人</li>
+                                                                <li value="9" class="tantnum_box">9人</li>
+                                                                <li value="10" class="tantnum_box">10人</li>
+                                                                <li value="11" class="tantnum_box">大于10人</li>
+                                                            </ul>
+                        </div>
+                        <p class="h_tip_text" ></p>
+                        <p class="h_check_tip ml10 simsun" id="tip_tantnum" value="" style="display:none">最多加客人数</p>
+                    </div>
+                </li>
+                <li class="clearfix pb15">
+                    <label class="type1 w_103">加客费用：</label>
+                    <div class="h_input_box" id="addtenantpriceBox">
+                        <span class="h_input_text">元／每位每晚</span>
+                        <input class='input_price' type="text" id="addtenantprice" name="addtenantprice"
+                               onafterpaste="this.value=this.value.replace(/\D/g,'')"
+                               onkeyup="this.value=this.value.replace(/\D/g,'');changeFlag = true;" maxlength="3"
+                               value='0'>
+                    </div>
+                    <p class="h_tip_text">加客费用只做展示，请自行线下收取</p>
+                    <p class="h_check_tip" id='' style='display:none'>请填写押金金额</p>
+                    <p class="h_check_tip" id='' style='display:none'>请输入0～9999以内整数金额</p>
+                </li>
+            <label>&nbsp;</label>
+                <div class="h_room_msg1 clearfix">
+                    <p class="number_tip">100字</p>
+                    <textarea class="s_room_msg textarea_price" autoHeight="true" rows="6" placeholder="费用描述，线下自行收取。（选填）" id='addtenanttips' onkeyup='checkValsP2("addtenanttips")'></textarea>
+                </div>
+            </div>
+            <div class="h_room_ms clearfix mostaddcustom">
+                <label style="color: #959ea7;font-weight: normal;">其它额外费用<br>(选填)：</label>
+                <div class="h_room_msg1 clearfix other_fee">
+                    <p class="number_tip">2000字</p>
+                    <textarea class="room_msg textarea_price other_fee_desc" autoHeight="true" rows="6" id='addtionalprice' onkeyup='checkValsP("addtionalprice")' placeholder="对水费、电费、燃气费等其他费用有其他要求，请进行描述。" ></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" value="" id="room_type">
+    <div id="dialogNewroomSales">
+        <div class="t_pop_cancel yh" id="dialog_cancelOrder">
+            <p class="f_18 f_18_auto">新房促销将快速达成交易匹配，获得订单</p>
+            <input type="hidden" name="cancelBookOrderReason" id="cancelBookOrderReason" value="">
+            <div class="tc mt20">
+                <a class="cancelorder c_btn1" id="cancelorder" onclick="Newroomsales()">参与促销</a><a class="c_btn2" href="javascript:void(0);" onclick="closeNewroomsales();">我想靠自己</a>
+            </div>
+        </div>
+    </div>
+                <div class="h_wrap">
+ 
+ 
+ 
+ 
+                                <h4 class="h_tit">规则要求</h4>
+                <div class="h_house_info" style="padding-bottom: 10px;">
+            <ul>
+                <li class="clearfix pb15">
+                    <label class="type1 w_103">交易规则：</label>
+                    <div class="h_house_r">
+                        <div class="clearfix">
+                                                                                                                <p class="price_con lh40">房客需支付每日价格的<strong class="size_bold">100%</strong>作为每日订金。</p>
+                            <input type="hidden" id="crvp" name="crvp" value='100%' readonly>
+                                                    </div>
+                    </div>
+                </li>
+                <li class="clearfix pb15" id="oldRule">
+                    <label class="type1 w_103">房客违约责任：</label>
+                    <div class="h_house_r">
+                        <div class="process_bar mb70">
+                            <div class="green_line"></div>
+                            <div class="process_tip1 txt_1">如取消订单，订金全部退还</div>
+                            <div class="process_tip2 txt_2">如取消订单，扣除头<span class='crvaDay'>1天</span>的订金。</div>
+                            <div class="process_tip2 txt_3">如提前退房，扣除未消费的头<span class='crvaDay'>1天</span>的订金。</div>
+                            <div class="process_tip txt_4">
+                                <span class="h_point1"></span>
+                                <p>入住前<span class='crvnDay'>1天</span> 14：00</p>
+                            </div>
+                            <div class="process_tip txt_5">
+                                <span class="h_point2"></span>
+                                <p>入住当天 14：00</p>
+                            </div>
+                            <div class="process_tip txt_6">
+                                <span class="h_point3"></span>
+                                <p>退房当天 12：00</p>
+                            </div>
+                        </div>
+                                                                        <div class="clearfix">
+                            <span class="fl h_onpay">1、若距入住日中午14：00大于等于</span>
+                            <div class="select_box fl mr10" style="z-index:9">
+                                <div class="s_arrow_top s_arrow_down"></div>
+                                <input type="text"  class='crv input_price' id='crvn' placeholder="1天" value='1天' readonly />
+                                <ul class="select_list_box" style='display:none'>
+                                                                        <li>1天</li>
+                                                                        <li>2天</li>
+                                                                        <li>3天</li>
+                                                                        <li>4天</li>
+                                                                        <li>5天</li>
+                                                                        <li>6天</li>
+                                                                        <li>7天</li>
+                                                                    </ul>
+                            </div>
+                            <span class="fl h_onpay">（1*24小时），订金全额退还。</span>
+                        </div>
+                        <div class="mt10 clearfix">
+                            <span class="fl h_onpay">2、否则，扣除后续未消费的</span>
+                            <div class="select_box fl mr10">
+                                <div class="s_arrow_top s_arrow_down"></div>
+                                <input type="text" class='crv input_price' name="crva" id="crva" placeholder="1天" value='1天' readonly />
+                                <ul class="select_list_box" style='display:none'>
+                                                                        <li>1天</li>
+                                                                        <li>2天</li>
+                                                                        <li>3天</li>
+                                                                        <li>4天</li>
+                                                                        <li>5天</li>
+                                                                        <li>6天</li>
+                                                                        <li>7天</li>
+                                                                    </ul>
+                            </div>
+                            <span class="fl h_onpay">的每日订金作为违约金，并支付给房东，订金不足以实际订金为准。</span>
+                        </div>
+                        <div class="clearfix">
+                            <span class="fl h_onpay">（包含未入住和提前退房两类情况）</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="clearfix pb15 new_rule" id="newRule">
+                    <label class="type1 w_103">房客退订规则：</label>
+                    <input type="text" style="display: none" id="ruleType">
+                    <p class="h_check_tip" id="tip_newRules" style="display: none;">请选择房客退订规则</p>
+                    <div class="h_house_r clearfix rule_width">
+                        <ul class="h_newRules_type" id="newReles"></ul>
+                    </div>
+                    <div class="cont_wrap" id="cancelFree">
+                        <h3></h3>
+                        <div class="cont_width clearfix">
+                            <div class="h_radio ">开启</div>
+                            <div class="h_radio ml90">不开启</div>
+                            <input type="text" style="display: none" id="cancelFreeRadio">
+                        </div>
+                        <p></p>
+                    </div>
+                </li>
+                <li class="clearfix pb15">
+                    <label class="type1 w_103">最少入住天数：</label>
+                    <div class="h_house_r clearfix">
+                        <div class="h_input_box">
+                            <span class="h_input_text">天</span>
+                            <input type="text" class='input_price' placeholder="1" onafterpaste="this.value=this.value.replace(/\D/g,'')" onkeyup="this.value=this.value.replace(/\D/g,'');Num500(this.value,'minday');changeFlag = true;" name="minday" id="minday" value='1' maxlength='3'>
+                        </div>
+                        <p class="h_check_tip simsun" id="tip_minday" style="display:none;">最多入住天数不能小于最少入住天数</p>
+                    </div>
+                </li>
+                <li class="clearfix pb15">
+                    <label class="type1 w_103">最多入住天数：</label>
+                    <div class="h_house_r clearfix">
+                        <div class="h_input_box">
+                            <span class="h_input_text">天</span>
+                            <input type="text" class='input_price' placeholder="不限制" onafterpaste="this.value=this.value.replace(/\D/g,'')" onkeyup="this.value=this.value.replace(/\D/g,'');Num500(this.value,'maxday');changeFlag = true;" name="maxday" id="maxday" maxlength='3' value=''>
+                        </div>
+                    </div>
+                </li>
+                                <li class="clearfix pb15">
+                    <label class="type1 w_150">是否接待境外人士：</label>
+                    <div class="h_enter_r clearfix">
+                        <div class="h_enter_r clearfix" id='foreigner' value='no'>
+                            <div class="h_check " >接待</div>
+                            <div class="h_check ml90 h_check_cur">不接待</div>
+                        </div>
+                    </div>
+                </li>
+                            </ul>
+            <div class="h_room_ms clearfix" style="margin: 10px 0;  ">
+                <label style="padding-top: 0;color: #959ea7;font-weight: normal;">其他要求：</label>
+                <div class="h_room_msg1 clearfix active_black_border">
+                    <div class="msg_tip" style='display:none'>
+                        <div class="msg_tip_arrow"></div>
+                                                房客使用您的房间需要遵守的规则（如年龄段、性别、接待时间等），合理的要求可使您避免一些不必要的麻烦。
+                                                <span class="col_pink">（请不要发布联系方式）</span> 
+                    </div>
+                    <p class="number_tip">2000字</p>
+                    <textarea class="room_msg textarea_price" autoHeight="true" rows="6" placeholder="" name="userule" id="userule" onkeyup='checkValsP("userule")'></textarea>
+                </div>
+            </div>
+            <div class="h_room_ms clearfix" style="margin: 10px 0;">
+                <label style="padding-top: 0;color: #959ea7;font-weight: normal;">隐藏贴士：</label>
+                <div class="h_room_msg1 clearfix active_black_border">
+                    <div class="msg_tip" style='display:none'>
+                        <div class="msg_tip_arrow"></div>
+                        房客支付完成准备入住的时候才会看到的隐藏说明，您可以在这里填写例如Wifi密码、备用联系电话、详细上门方式等不便在房源页面公开展示的内容    。
+                    </div>
+                    <p class="number_tip">100字</p>
+                    <textarea class="s_room_msg textarea_price" autoHeight="true" rows="6" placeholder="" name='hiddentips' id='hiddentips' onkeyup='checkValsP2("hiddentips")'></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" value="" id="room_type">
+	<div class="w_960 tip_mt">
+		<!--<span class="price_select price_select_cur" id="agree"></span>-->
+        <span class="check_css3 agreeResBox">
+            <input type="checkbox"  class="input_check" id="check3">
+            <label for="check3"></label>
+        </span>
+        我已阅读并同意
+        <a href="https://www.xiaozhu.com/help/landlordRule" class="col_pink" target="_blank">《房东规则》</a>、
+        <a href="https://www.xiaozhu.com/help/auditRule" class="col_pink" target="_blank">《房源上线标准》</a>
+        <span class="red_tip" style="display:none;" id="warningtip">您未同意相关条款，不可发布房源</span>
+    </div>
+    <div class="w_960 pb20 clearfix">
+        <a href="###" class="keep_btn yh fl needUserAgree" id='room_price_submit'>确认发布</a>
+    </div>                        <div class="o_mask" id='mask'  style="display:none;"></div>
+        <div class="o_warp" id="dialog"  style="display:none;border:none;"></div>   
+        <input type="hidden" value="106085354400" id="houseId"/>
+        <input type="hidden" value="109396690300" id="roomId"/>
+        <input type="hidden" value="" id="userRole">
+        <input type="hidden" value="5" id="step">
+        <input type="hidden" value="Pub_IndexV2Step5" id="action">
+        <input type="hidden" value="" id="commercialLandlord">
+            <input type="hidden" value="109396690301" id="luId">
+
+        <div class='h_body'>
+             
+<div class="foot_v2">
+        <ul class="foot_ul">
+        <li><a class="guide" href="http://www.xiaozhu.com/xzweb.php?op=Help_UserGuide&type=tenant" target="_blank">房客指南</a></li>
+        <li><a class="guide icon_fk" href="http://www.xiaozhu.com/xzweb.php?op=Help_UserGuide&type=landlord" target="_blank">房东指南</a></li>
+        <li>
+            <span class="guide_T">关于我们</span>
+            <a href="http://www.xiaozhu.com/aboutus" target="_blank">关于小猪</a>
+            <a href="http://app.mokahr.com/apply/xiaozhu/4514" target="_blank">加入我们</a>
+            <a href="http://www.xiaozhu.com/contactus" target="_blank">联系我们</a>
+        </li>
+        <li>
+            <span class="guide_T">网站帮助</span>
+            <a href="http://www.xiaozhu.com/help/index" target="_blank" >帮助中心</a>
+            <a href="http://www.xiaozhu.com/sitemap.html" target="_blank">网站地图</a> 
+        </li>
+        <li class="width_280">
+            <span class="guide_T">网站协议</span><br/>
+            <a href="http://www.xiaozhu.com/help/service" target="_blank">服务协议</a> 
+            <a href="http://www.xiaozhu.com/help/landlordRule" target="_blank">房东规则</a>
+            <a href="http://www.xiaozhu.com/help/tenantRule" target="_blank">房客规则</a>
+            <a href="http://www.xiaozhu.com/help/auditRule" target="_blank">房源上线标准</a>
+            <a href="http://www.xiaozhu.com/help/privacy" target="_blank">隐私保护</a>
+            <a href="http://www.xiaozhu.com/help/copyright" target="_blank">版权声明</a>
+            <a href="http://www.xiaozhu.com/help/disclaimer" target="_blank">免责声明</a>
+            <a href="http://www.xiaozhu.com/help/intellectualProperty" target="_blank">知识产权声明</a>
+            <a href="http://www.xiaozhu.com/help/commentRule" target="_blank">点评发布规则</a>
+            <a href="http://www.xiaozhu.com/help/japanReservationRule" target="_blank">日本标准住宅宿泊仲介业约款</a>
+        </li>
+        <li class="bigFont online_kf">
+            <span class=""   onclick='window.open("https://yiconnect.wezhuiyi.com/chat?t=Cks3pxv2eMBfA3BZvdOhS6Pa1am5fygsIHyQRXc0D7U&uid=106084124101&customer=%7B%22cID%22%3A%22106084124101%22%7D","_blank");' ><i></i>在线客服</span>
+            <p>客服电话  400 - 010 - 7890</p>
+            <p>客服邮箱  service@xiaozhu.com</p>
+        </li>
+            </ul>
+        <dl class="link_dl">
+        <dt>城市导航</dt>
+        <dd>
+            <a target="_blank" href="//bj.xiaozhu.com/">北京短租房</a>
+            <a target="_blank" href="//sh.xiaozhu.com/">上海短租房</a>
+            <a target="_blank" href="//nj.xiaozhu.com/">南京短租房</a>
+            <a target="_blank" href="//cd.xiaozhu.com/">成都短租房</a>
+            <a target="_blank" href="//gz.xiaozhu.com/">广州短租房</a>
+            <a target="_blank" href="//cq.xiaozhu.com/">重庆短租房</a>
+            <a target="_blank" href="//wh.xiaozhu.com/">武汉短租房</a>
+            <a target="_blank" href="//dl.xiaozhu.com/">大连短租房</a>
+            <a target="_blank" href="//sanya.xiaozhu.com/">三亚短租房</a>
+            <a target="_blank" href="//lijiang.xiaozhu.com/">丽江短租房</a>
+            <a target="_blank" href="//tj.xiaozhu.com/">天津短租房</a>
+            <a target="_blank" href="//xianggang.xiaozhu.com/">香港短租房</a>
+            <a target="_blank" href="//cs.xiaozhu.com/">长沙短租房</a>
+            <a target="_blank" href="//wx.xiaozhu.com/">无锡短租房</a>
+            <a target="_blank" href="//km.xiaozhu.com/">昆明短租房</a>
+            <a target="_blank" href="//jn.xiaozhu.com/">济南短租房</a>
+            <a target="_blank" href="//xm.xiaozhu.com/">厦门短租房</a>
+            <a target="_blank" href="//qd.xiaozhu.com/">青岛短租房</a>
+            <a target="_blank" href="//zz.xiaozhu.com/">郑州短租房</a>
+            <a target="_blank" href="//xa.xiaozhu.com/">西安短租房</a>
+            <a target="_blank" href="//hz.xiaozhu.com/">杭州短租房</a>
+            <a target="_blank" href="//sz.xiaozhu.com/">深圳短租房</a>
+            <a target="_blank" href="//sy.xiaozhu.com/">沈阳短租房</a> 
+            <a target="_blank" href="//su.xiaozhu.com/">苏州短租房</a>
+        </dd>
+    </dl>
+    <dl class="link_dl">
+         
+    </dl>
+                <div class="foot_btm">许可证号：京ICP证140510号 &nbsp;&nbsp; <a href="//www.anquan.org/s/www.xiaozhu.com" |="" name="mt8SMvYyRDI92b06nuDs8dPFapllCJYidqhM1WlOoGRZ9DWpbo" rel="nofollow" target="_blank">安全联盟</a> &nbsp;&nbsp; 北京快跑信息科技有限公司 &nbsp;&nbsp; <a href="http://www.xiaozhu.com/images/yingye.jpg" |="" name="yingyezhizhao" rel="nofollow" target="_blank">营业执照号 103613118</a> <span style="display:none">  &nbsp;&nbsp; 地址：北京市海淀区知春路56号   &nbsp;&nbsp;电话：010-62961978</span>
+    </div>
+    <div style="margin:0 auto;color:#bdc3c7;">
+        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020380" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/images/govRecord_icon.png"/><p style="display:inline-block;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#bdc3c7;">京公网安备 11010802020380号</p></a>
+        &nbsp;&nbsp; 违法和不良信息举报电话：4000107890（1号转6号） &nbsp;&nbsp; 举报邮箱：jubao@xiaozhu.com
+    </div>
+</div>
+
+<input type="hidden" name="actionName" id="actionName" value="Pub_IndexV2Step5"/>
+<input type="hidden" name="xz_srf_token" id="xz_srf_token" value="96328ee4f81f2f0208d5ef62f7d530fe"/>
+
+<script type="text/javascript" src="//jci.xiaozhustatic3.com/e19061701/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="//jci.xiaozhustatic1.com/e19061701/xzjs?k=Footer&httphost=www.xiaozhu.com"></script>
+<link rel="stylesheet" type="text/css" href="//jci.xiaozhustatic1.com/e19061701/xzcss?css=jquery.mCustomScrollbar,nyroModal,uploadify,shadepage" />
+<script type="text/javascript" src="//jci.xiaozhustatic1.com/e19061701/js/jquery/lazyload.js"></script>
+<script type="text/javascript" src="http://www.xiaozhu.com/e19061701/js/webimv4/application/xzim4.js?source=xiaozhu&dm=xiaozhu.com" id="webimSource"></script>
+
+        </div>
+        <script type="text/javascript" src="//jci.xiaozhustatic1.com/e19061701/xzjs?k=Pub_IndexV2Step5&httphost=www.xiaozhu.com"></script>
+</body>
+<!-- Google Tag Manager -->
+<!-- End Google Tag Manager -->
+</html>
