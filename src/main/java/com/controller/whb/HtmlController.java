@@ -17,6 +17,10 @@ public class HtmlController {
     public String queryEmp(){
         return "back/queryEmp";
     } 
+    @RequestMapping("queryRent")
+    public String queryRent(){
+        return "back/Rent";
+    } 
     @RequestMapping("queryUsershtml")
     public String queryUsershtml(){
         return "back/queryUsers";
