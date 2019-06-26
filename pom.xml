@@ -37,5 +37,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
+		  <dependency>
+            <groupId>com.cloud</groupId>
+            <artifactId>CCP_REST_SMS_SDK_JAVA</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/static/lib/CCP_REST_SMS_SDK_JAVA_v2.6.3r.jar</systemPath>
+        </dependency>
 	</dependencies>
 </project>

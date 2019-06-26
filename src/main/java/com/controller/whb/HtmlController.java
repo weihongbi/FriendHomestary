@@ -8,15 +8,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HtmlController {
     @RequestMapping("loginhtml")
     public String loginhtml(){
-        return "/back/login";
+        return "back/login";
     }
     @RequestMapping("mainhtml")
     public String mainhtml(){
-        return "/back/main";
+        return "back/main";
     }
     //前台
     @RequestMapping("indexhtml")
     public String indexhtml(){
-        return "/front/index";
+        return "front/index";
     }
 }

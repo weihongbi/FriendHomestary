@@ -23,18 +23,20 @@ public class ShiroConfig {
         // 拦截器。匹配原则是最上面的最优先匹配
         Map<String,String> filterChainDefinitionMap = new LinkedHashMap<String,String>();
         // 配置不会被拦截的链接(匿名访问url)
-        filterChainDefinitionMap.put("/dologin", "anon");
-        filterChainDefinitionMap.put("/html/loginhtml", "anon");
-        filterChainDefinitionMap.put("/js/**", "anon");        
-        filterChainDefinitionMap.put("/css/**", "anon");  
-        filterChainDefinitionMap.put("/tree/getTreeByRid", "anon");
-        // 配置退出 过滤器,其中的具体的退出代码Shiro已经替我们实现了
-        filterChainDefinitionMap.put("/doLogout", "logout");
+		/*
+		 * filterChainDefinitionMap.put("/dologin", "anon");
+		 * filterChainDefinitionMap.put("/html/loginhtml", "anon");
+		 * filterChainDefinitionMap.put("/js/**", "anon");
+		 * filterChainDefinitionMap.put("/css/**", "anon");
+		 * filterChainDefinitionMap.put("/tree/getTreeByRid", "anon"); // 配置退出
+		 * 过滤器,其中的具体的退出代码Shiro已经替我们实现了 filterChainDefinitionMap.put("/doLogout",
+		 * "logout");
+		 */
         // 剩余请求需要身份认证
-        //filterChainDefinitionMap.put("/**", "authc");
+        filterChainDefinitionMap.put("/**", "anon");
 
         // 如果不设置默认会自动寻找Web工程根目录下的"/login.jsp"页面
-        shiroFilterFactoryBean.setLoginUrl("/html/loginhtml");
+        //shiroFilterFactoryBean.setLoginUrl("/html/loginhtml");
 
         // 未授权界面;
 //      shiroFilterFactoryBean.setUnauthorizedUrl("/403");

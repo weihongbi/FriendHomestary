@@ -3,7 +3,7 @@
 var domain = "http://jci.xiaozhustatic1.com/e19061101/www.xiaozhu.com";
 var webimIframUrl = window.location.protocol+"//xiaozhu.com/webim.html";
 var uploadImageUrl = "https://imageupload.xiaozhu.com/imgin4uploadify.php";
-var jciUrl = "http://jci.xiaozhustatic3.com/";
+var jciUrl = "http://jci.xiaozhustatic2.com/";
 var webimYUI = "{{{webimYUI}}}";
 var webimV2 = "{{{webimV2}}}";
 var client_id_youku = '16edde5f79e61324'; 
@@ -5893,7 +5893,7 @@ abroadcitys[177]=new Array('luotuoluwa','罗托鲁瓦','luotuoluwashi','rotorua'
 }
  
  
-// remotejs start from https://player.youku.com/jsapi 06-14 10:47:55 
+// remotejs start from https://player.youku.com/jsapi 06-14 09:56:24 
 /**
  * dispatch 
  * dispatch 2019-02-25

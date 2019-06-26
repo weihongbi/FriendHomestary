@@ -1,187 +1,362 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="renderer" content="webkit">
-<meta name="keywords" content=""/>
-<meta name="description" content="" />
-<link rel="shortcut icon" href="https://www.xiaozhu.com/favicon.ico" type="image/vnd.microsoft.icon">
-<link rel="icon" href="https://www.xiaozhu.com/favicon.ico" type="image/vnd.microsoft.icon">
-<title>登录-小猪</title><link rel="stylesheet" type="text/css" href="//jci.xiaozhustatic1.com/e19061101/xzcss?css=global,loginWebPage,jquery-ui" />
-</head>
-<body>
-<div class="xz-bg" style="background-image:url(https://image.xiaozhustatic1.com/00,1600,700/19,0,17,26983,1600,700,f66bb85e.jpg)">
-    <img src="https://image.xiaozhustatic1.com/00,1600,700/19,0,17,26983,1600,700,f66bb85e.jpg" />
-</div>
-<div>
-    <div class="head_bar">
-        <div class="head_bar_con">
-            <a href="http://www.xiaozhu.com" class="logo_index">小猪</a>
-            <span class="slogan_v2">居住自由主义</span>
-        </div>
-    </div>
-    <div class="r_mask"></div>
-    <div class="loginbox" style="display:none">
-    <div class="w_698" id="pageLoginDialog">
-        <div class="clearfix">
-            <div class="r_main_l">
-                <ul class="r_tab clearfix">
-                    <li class="percent_50 tc cur underL1" id="generalLi">普通登录</li>
-                    <li class="percent_50 tc cur" id="mobileLi" dialog='0' >短信快捷登录</li>
-                </ul>
-                <div id="generalLogin">
-                    <ul class="register_list">
-                        <li>
-                            <div class="h_30">
-                                                            </div>
-                            <div class="pr">
-                                <div class="r_tel_ico"></div>
-                                <input type="text" class="r_input_1" id="input-username" autocomplete="off" placeholder="手机号、邮箱">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="h_30"><div class="r_error_tip" id="input-username-tip"><span class="icon-wrong" id=""></span>手机号未注册</div></div>
-                            <div class="pr">
-                                <div class="r_password_ico"></div>
-                                <input type="password" class="r_input_1" id="password" autocomplete="off"  placeholder="密码">
-                                <div class="h_30">
-                                    <div class="r_error_tip" id="password-tip"><span class="ipt-text-pass"></span></div>
-                                </div>    
-                            </div>
-                        </li>
-                        <span  style="display:none"  id="verify-show">
-                        <li>
-                            <div class="pr">
-                                <div class="r_pho_ico"></div>
-                                <input type="text" class="r_input_small" id="image-verify-code" autocomplete="off" placeholder="图片验证码">
-                                <span class="r_code"><img src="http://www.xiaozhu.com/ajax.php?op=AJAX_PicCheckCodeShow&nocache=1560485419" onclick="resetCheckcode('img_imagecodes','image-verify-code');return false;" width="101px" height="33px" id="img_imagecodes" title="点击更换验证码" /></span>
-                                <div class="h_30">
-                                    <div class="r_error_tip" id="image-verify-code-tip"></div>
-                                </div>
-                            </div>
-                        </li>
-                        </span>
-                    </ul>
-                    <a href="#" class="r_input mt_10" id="orgBtn">登录</a>
-                    <div class="pt_20"><span class="fl cur "><input type="checkbox" id="setcookie" checked="checked" class="ipt-checkbox2" />自动登录</span>
-                    <span class="fr col_gray"><a href="http://www.xiaozhu.com/findpwdbyphone">忘记密码?</a></span></div>
-                </div>
-                <div id="mobileLogin" style="display:none">
-                    <ul class="register_list">
-                        <li>
-                            <div class="h_30">&nbsp;</div>
-                            <div class="pr">
-                                <div class="r_telepho_ico"></div>
-                                <input type="text" class="r_input_1" id="quick-input-mobile" autocomplete="off" placeholder="手机号">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="h_30">
-                                <div class="r_error_tip" id="quick-input-mobile-tip"><span class="icon-ok"></span></div>
-                            </div>
-                            <div class="pr">
-                                <div class="r_pho_ico"></div>
-                                <input type="text" class="r_input_small" id="quick-image-code"  autocomplete="off" placeholder="图片验证码">
-                                <span class="r_code"><img src="http://www.xiaozhu.com/ajax.php?op=AJAX_PicCheckCodeShow&nocache=1560485419" onclick="resetCheckcode('img_imagecodeMobile','quick-image-code');return false;" width="101px" height="33px" id="img_imagecodeMobile" title="点击更换验证码" /></span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="h_30">
-                                <div class="r_error_tip" id="quick-image-code-tip"></div>
-                            </div>
-                            <div class="pr">
-                                <div class="r_vali_ico"></div>
-                                <input type="text" class="r_input_small" id="quick-activate-code" autocomplete="off" placeholder="动态验证码">
-                                <a class="have-nb" href="javascript:;" id="quick-get-code-btn">获取动态验证码</a>    
-                                <div class="h_30">
-                                    <div class="r_error_tip"  id="quick-activate-code-tip"><span class="icon-ok"></span></div> 
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <a href="#" class="r_input mt_10" id="orgBtnMobile">登录</a>
-                    <p class="mt_10 mt_20">＊验证即登录，未注册将自动创建小猪账号</p> 
-                </div>
-            </div>
-            <input type="hidden" id="hint" value="">
-            <input type="hidden" id="htmlPage" value="1" />
-            <div class="r_main_r">
-                <h5>合作网站账户登录</h5>
-<ul class="r_wedsitev1">
-    <li>
-    <a class="hz_qqv1" href="http://www.xiaozhu.com/xzweb.php?op=GetOpenSnsAuthUrl&snsType=qqzone&state=login&next=http%3A%2F%2Fwww.xiaozhu.com%2Fxz_web2%2Forder%2Fpages%2Flodger%2ForderDetail.html%3ForderId%3D107588821000"><i></i>QQ登录</a>
-    </li>
-    <li>
-    <a class="hz_weibov1" href="http://www.xiaozhu.com/xzweb.php?op=GetOpenSnsAuthUrl&snsType=sinaweibo&state=login&next=http%3A%2F%2Fwww.xiaozhu.com%2Fxz_web2%2Forder%2Fpages%2Flodger%2ForderDetail.html%3ForderId%3D107588821000"><i></i>微博登录</a>
-    </li>
-    <li>
-    <a class="hz_weixinv1" href="http://www.xiaozhu.com/xzweb.php?op=GetOpenSnsAuthUrl&snsType=weixinopen&state=login&next=http%3A%2F%2Fwww.xiaozhu.com%2Fxz_web2%2Forder%2Fpages%2Flodger%2ForderDetail.html%3ForderId%3D107588821000"><i></i>微信登录</a>
-    </li>
-</ul>                <p>还没有注册？<a href="http://www.xiaozhu.com/register?next=http%3A%2F%2Fwww.xiaozhu.com%2Fxz_web2%2Forder%2Fpages%2Flodger%2ForderDetail.html%3ForderId%3D107588821000" class="col_pink">注册账号&gt;&gt;</a></p>
-            </div>
-        </div>
-    </div>
-    <div id="mobilePerfeactInfoDialog" style="display:none;">
-        <div class="w_400"> 
-            <div class="r_top_logo">
-                <p>首次登录，请完善资料后，开启小猪住宿之旅！</p>
-            </div>
-            <ul class="register_list">
-                <li>
-                    <div class="h_30">
-                        <p class="r_error_tip" style="display:none;"></p>&nbsp;
-                    </div>
-                    <div class="pr">
-                        <div class="r_tel_ico"></div>
-                        <input id="quick-input-username" type="text" autocomplete="off" placeholder="用户名" class="r_input_1">
-                    </div>
-                </li>
-                <li>
-                    <div class="h_30">
-                        <p class="r_error_tip" id="quick-input-username-tip">请输入用户名</p>&nbsp;
-                    </div>
-                    <div class="pr">
-                        <div class="r_password_ico"></div>
-                        <input type="password" id="quick-regpassword" autocomplete="off" placeholder="密码" class="r_input_1">
-                    </div>
-                </li>
-                <li>
-                    <div class="h_30">
-                        <p class="r_error_tip" id="quick-regpassword-tip">请输入密码</p>&nbsp;
-                    </div>
-                    <div class="pr">
-                        <div class="r_num_ico"></div>
-                        <input id="quick-invitecode" type="text" autocomplete="off" placeholder="邀请码(选填)" class="r_input_1">
-                    </div>
-                    <div class="h_30" style="display:none;">
-                        <p id="quick-invitecode-tip" class="r_error_tip">邀请码输入有误</p>&nbsp;
-                    </div>
-                    <p class="col_fgray r_tip_text">使用朋友给您的邀请码注册后，均可获得120元</p>
-                </li>
-            </ul>
-            
-            <a class="r_input" id="mobileInfoPerfeactBtn" href="#">确定</a>
-        </div>
-    </div>
-</div>
-</div>
-<input type='hidden' id="next" name="next" value="http://www.xiaozhu.com/xz_web2/order/pages/lodger/orderDetail.html?orderId=107588821000" /><input type='hidden' id="createfrom" name="createfrom" value="" />
-<input type='hidden' id="comefrom" name="comefrom" value="" />
-<input type='hidden' id="referrer" name="referrer" value="" />
-<input type='hidden' id="actionName" name="actionName" value="Front_Login" />
-<input type='hidden' id="reqactionname" name="reqactionname" value="Front_Login" />
-<input type='hidden' id="countryname" name="countryname" value="" />
-<input type='hidden' id="countrycode" name="countrycode" value="" />
-<input type='hidden' id="countryflag" name="countryflag" value="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>民宿登录</title>
+<link href="../img/login.css" rel="stylesheet" rev="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src=" ../img/jQuery1.7.js"></script>
+<script type="text/javascript" src=" ../img/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src=" ../img/jquery1.42.min.js"></script>
+<script type="text/javascript" src=" ../img/jquery.SuperSlide.js"></script>
+<script type="text/javascript" src="../img/Validform_v5.3.2_min.js"></script>
 
-<input type="hidden" name="xz_srf_token" id="xz_srf_token" value="3f10d77d2f5133b424e36414e0db323e"/>
-
+<script type="text/javascript">
+	$(document).ready(function(){
+		var $tab_li = $('#tab ul li');
+		$tab_li.hover(function(){
+			$(this).addClass('selected').siblings().removeClass('selected');
+			var index = $tab_li.index(this);
+			$('div.tab_box > div').eq(index).show().siblings().hide();
+		});	
+	});
+</script>
  
 
-<script type="text/javascript" src="//jci.xiaozhustatic1.com/e19061101/xzjs?k=Footer_LoginRegister&httphost=www.xiaozhu.com"></script> 
-<script type="text/javascript" src="//jci.xiaozhustatic1.com/e19061101/xzjs?k=Front_Login&httphost=www.xiaozhu.com"></script>
+<script type="text/javascript">
+	$(function(){
+		/*登录信息验证*/
+		$("#stu_username_hide").focus(function(){
+		 var username = $(this).val();
+		 if(username=='输入用户名'){
+		 $(this).val('');
+		 }
+		});
+		$("#stu_username_hide").focusout(function(){
+		 var username = $(this).val();
+		 if(username==''){
+		 $(this).val('输入用户名');
+		 }
+		});
+		$("#stu_password_hide").focus(function(){
+		 var password2 = $(this).val();
+		 if(password2=='输入密码'){
+		 $(this).val('');
+		 }
+		});
+		$("#stu_password_hide").focusout(function(){
+		 var password2 = $(this).val();
+		 if(password2==''){
+		 $(this).val('输入密码');
+		 }
+		});
+		$("#stu_code_hide").focus(function(){
+		 var username = $(this).val();
+		 if(username=='输入验证码'){
+		 $(this).val('');
+		 }
+		});
+		$("#stu_code_hide").focusout(function(){
+		 var username = $(this).val();
+		 if(username==''){
+		 $(this).val('输入验证码');
+		 }
+		});
+		$(".stu_login_error").Validform({
+			tiptype:function(msg,o,cssctl){
+				var objtip=$(".stu_error_box");
+				cssctl(objtip,o.type);
+				objtip.text(msg);
+			},
+			ajaxPost:true
+		});
+		/*注册信息验证*/
+		$("#cname_hide").focus(function(){
+		 var cname = $(this).val();
+		 if(cname=='输入用户名'){
+		 $(this).val('');
+		 }
+		});
+		$("#cname_hide").focusout(function(){
+		 var cname = $(this).val();
+		 if(cname==''){
+		 $(this).val('输入用户名');
+		 }
+		});
+		$("#password_hide").focus(function(){
+		 var password = $(this).val();
+		 if(password=='输入密码'){
+		 $(this).val('');
+		 }
+		});
+		$("#password_hide").focusout(function(){
+		 var password = $(this).val();
+		 if(password==''){
+		 $(this).val('输入密码');
+		 }
+		});
+		$("#idcard_hide").focus(function(){
+		 var idcard = $(this).val();
+		 if(idcard=='输入身份证'){
+		 $(this).val('');
+		 }
+		});
+		$("#idcard_hide").focusout(function(){
+		 var idcard = $(this).val();
+		 if(idcard==''){
+		 $(this).val('输入身份证');
+		 }
+		});
+		$("#phone_hide").focus(function(){
+		 var phone = $(this).val();
+		 if(phone=='输入手机号'){
+		 $(this).val('');
+		 }
+		});
+		$("#phone_hide").focusout(function(){
+		 var phone = $(this).val();
+		 if(phone==''){
+		 $(this).val('输入手机号');
+		 }
+		});
+		$("#city_hide").focus(function(){
+		 var city = $(this).val();
+		 if(city=='输入地址'){
+		 $(this).val('');
+		 }
+		});
+		$("#city_hide").focusout(function(){
+		 var city = $(this).val();
+		 if(city==''){
+		 $(this).val('输入地址');
+		 }
+		});
+		
+		$("#email_hide").focus(function(){
+		 var email = $(this).val();
+		 if(email=='输入邮箱'){
+		 $(this).val('');
+		 }
+		});
+		$("#email_hide").focusout(function(){
+		 var email = $(this).val();
+		 if(email==''){
+		 $(this).val('输入邮箱');
+		 }
+		});
+		$(".regist_error").Validform({
+			tiptype:function(msg,o,cssctl){
+				var objtip=$(".tea_error_box");
+				cssctl(objtip,o.type);
+				objtip.text(msg);
+			},
+			ajaxPost:true
+		});
+		/*忘记密码*/
+		$("#sec_username_hide").focus(function(){
+		 var username = $(this).val();
+		 if(username=='输入手机号'){
+		 $(this).val('');
+		 }
+		});
+		$("#sec_username_hide").focusout(function(){
+		 var username = $(this).val();
+		 if(username==''){
+		 $(this).val('输入手机号');
+		 }
+		});
+		$("#sec_password_hide").focus(function(){
+		 var username = $(this).val();
+		 if(username=='输入验证码'){
+		 $(this).val('');
+		 }
+		});
+		$("#sec_password_hide").focusout(function(){
+		 var username = $(this).val();
+		 if(username==''){
+		 $(this).val('输入验证码');
+		 }
+		});
+		
+		$(".sec_login_error").Validform({
+			tiptype:function(msg,o,cssctl){
+				var objtip=$(".sec_error_box");
+				cssctl(objtip,o.type);
+				objtip.text(msg);
+			},
+			ajaxPost:true
+		});
+		});
+		</script>
+		<script type="text/javascript">
+		$(function(){
+			$(".screenbg ul li").each(function(){
+				$(this).css("opacity","0");
+			});
+			$(".screenbg ul li:first").css("opacity","1");
+			var index = 0;
+			var t;
+			var li = $(".screenbg ul li");	
+			var number = li.size();
+			function change(index){
+				li.css("visibility","visible");
+				li.eq(index).siblings().animate({opacity:0},3000);
+				li.eq(index).animate({opacity:1},3000);
+			}
+			function show(){
+				index = index + 1;
+				if(index<=number-1){
+					change(index);
+				}else{
+					index = 0;
+					change(index);
+				}
+			}
+			t = setInterval(show,8000);
+			//根据窗口宽度生成图片宽度
+			var width = $(window).width();
+			$(".screenbg ul img").css("width",width+"px");
+	});
+</script>
+</head>
+
+<body>
+<div id="tab">
+  <ul class="tab_menu">
+    <li class="selected">登录</li>
+    <li>注册</li>
+    <li>手机号登录</li>
+  </ul>
+  <div class="tab_box"> 
+    <!-- 登录开始 -->
+    <div>
+      <div class="stu_error_box"></div>
+      <form action="../cust/userlogin" method="post">
+        <div id="username">
+          <label>用户名：</label>
+          <input type="text" id="stu_username_hide" name="cname" value="输入用户名" nullmsg="用户名不能为空"  sucmsg="用户名号验证通过！"/>
+        
+        </div>
+        <div id="password2">
+          <label>密&nbsp;&nbsp;&nbsp;码：</label>
+          <input type="password" id="stu_password_hide" name="password" value="输入密码" nullmsg="密码不能为空！"  sucmsg="密码验证通过！"/>
+        </div>        
+        <!-- <div id="remember">
+          <input type="checkbox" name="remember">
+          <label>记住密码</label>
+        </div> -->
+        <div id="login">
+          <button type="submit">登录</button>
+        </div>
+      </form>
+    </div>
+   <!-- 登录结束-->
+   <!-- 注册开始-->
+    <div class="hide">
+     <div class="tea_error_box"></div>
+      <form action="../cust/custadd" method="post" enctype="multipart/form-data" >
+        <div id="cname">
+	          <label>用户名：</label>
+	          <input type="text" id="cname_hide" name="cname" value="输入用户名" nullmsg="用户名不能为空！"/>
+         
+        </div>
+        <div id="password">
+	          <label>密&nbsp;&nbsp;&nbsp;码：</label>
+	          <input type="password" id="password_hide" name="password" value="输入密码" nullmsg="密码不能为空！" />
+        </div>
+        <div id="idcard">
+	          <label>身份证:</label>
+	          <input type="text" id="idcard_hide" name="idcard" value="输入身份证" nullmsg="身份证不能为空！" datatype="card" errormsg="身份证必须是18位！" sucmsg="身份证验证通过！"/>
+        </div>
+         <div id="phone">
+	          <label>手机号:</label>
+	          <input type="text" id="phone_hide" name="phone" value="输入手机号" nullmsg="手机号不能为空！" datatype="m" errormsg="手机号必须是11位！" sucmsg="手机号验证通过！"/>
+        </div>
+      
+        <div id="city">
+	          <label>居住地:</label>
+	          <input type="text" id="city_hide" name="city" value="输入地址" nullmsg="地址不能为空！" />
+        </div>
+         <div id="picture">
+	          <label>头像:</label>
+	          <input type="file" id="picture_hide" name="p" />头像
+        </div>
+         <div id="email">
+	          <label>邮箱:</label>
+	          <input type="text" id="email_hide" name="email" value="输入邮箱" nullmsg="邮箱不能为空！" />
+        </div>
+         <div id="sex">
+	          <label>性别:</label>
+	          <input type="radio" name="sex" value="男"/>男
+	          <input type="radio" name="sex" value="女" checked/>女
+        </div>
+        <div id="login">
+          <button type="submit">注册</button>
+        </div>
+      </form>
+    </div>
+     <!-- 结束-->
+     <!-- 忘记密码开始-->
+    <div class="hide">
+    <div class="sec_error_box"></div>
+      <form action="../cust/fHtml" method="post">
+        <div id="username">
+          <label>手机号：</label>
+          <input type="text" id="iphone" name="iphone" value="输入手机号" nullmsg="手机号不能为空！" datatype="m" />
+          
+        </div>
+        <div id="code">
+          <input type="text" id="yzm" name="yzm" onblur="f2()" value="输入验证码" nullmsg="验证码不能为空！" />
+          <input class="yanzhengma" type="button" onclick="yz()" value="发送验证码"/>
+         </div>
+        <div id="login">
+          <button type="submit">登录</button>
+        </div>
+      </form>
+    </div>
+     <!-- 教务登录结束-->
+  </div>
+</div>
+<div class="screenbg">
+  <ul>
+    <li><a href="javascript:;"><img src=" ../img/0.jpg"></a></li>
+    <li><a href="javascript:;"><img src=" ../img/1.jpg"></a></li>
+    <li><a href="javascript:;"><img src=" ../img/2.jpg"></a></li>
+  </ul>
+</div>
+<script type="text/javascript">
+        function yz(){
+            //向目标Controller发起请求
+            $.ajax({
+                url:"../cust/getYzm?iphone="+document.getElementById("iphone").value,
+                dataType:"JSON",
+                type:"post",
+                success:function(data){
+
+                 },
+                error:function(data2){
+
+                }
+        });
+    }
+    function f2(){ //判断输入的验证码是否正确
+        if(document.getElementById("yzm").value!=null || document.getElementById("yzm").value!=""){
+            $.ajax({
+                url:"../cust/yanzhengma?yzm="+document.getElementById("yzm").value,
+                dataType:"json",
+                type:"POST",
+                success:function(data){
+                    if(data.message!="success"){
+                        document.getElementById("yzm").value="";
+                        alert("验证码输入错误！");
+                    }
+                },
+                error:function(data){
+
+                }
+            });
+        }
+    }
+    </script>
 </body>
-<!-- Google Tag Manager -->
-<!-- End Google Tag Manager --></html>
+</html>
+
