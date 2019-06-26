@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td>编号</td>
+        <td>用户名</td>
+        <td>密码</td>
+        <td>身份证</td>
+        <td>头像</td>
+        <td>操作</td>
+    </tr>
+
+    <tr th:each="a:${list}">
+        <td th:text="${a.Apartmentsid}"></td>
+        <td th:text="${a.bedroom}"></td>
+        <td th:text="${a.parlor}"></td>
+        <td th:text="${a.toilet}"></td>
+        <td th:text="${a.cookhouse}"></td>
+        <td th:text="${a.balcony}"></td>
+        <td>
+            <a th:href="@{/update(id=${a.Apartmentsid})}">修改</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

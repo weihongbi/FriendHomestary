@@ -1,0 +1,43 @@
+<html><head><meta http-equiv=Content-Type content='text/html; charset=utf-8'></head>
+<html>
+<body>
+<script type="text/javascript">document.domain="";</script>
+<script language="JavaScript" type="text/JavaScript">
+
+function callbackMessage(msg)
+{
+    var messageId = this.name+'_message';
+/*    alert(messageId); alert(msg); return;*/
+    var msgE = parent.document.getElementById(messageId);
+
+    var cc=msgE.style.color;
+    if (cc=="#ff0000" || cc=="rgb(255, 0, 0)")
+        msgE.style.color="#0000ff";
+    else
+        msgE.style.color="#ff0000";
+
+    msgE.style.fontWeight = "bold";
+    msgE.style.display = "inline-block";
+    msgE.innerHTML = msg;
+}
+
+function jumpLocation(targetDoc, url)
+{
+    targetDoc.location.href=url;
+}
+
+function refreshLocation(location)
+{
+    if (location.href.charAt(location.href.length-1) == "#")
+        location.href = location.href.substring(0,location.href.length-1);
+    else
+        location.href = location.href;
+}
+
+
+    jumpLocation(parent.document, 'http://www.xiaozhu.com/login?&next=http%3A%2F%2Fwww.xiaozhu.com%2Fxzweb.php%3Fop%3DFangDong_FlashBook')
+
+</script>
+</body>
+<!-- Google Tag Manager -->
+<!-- End Google Tag Manager --></html>

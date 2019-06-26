@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td>编号</td>
+        <td>用户名</td>
+        <td>密码</td>
+        <td>身份证</td>
+        <td>头像</td>
+        <td>操作</td>
+    </tr>
+
+    <tr th:each="h:${list}">
+        <td th:text="${h.hid}"></td>
+        <td th:text="${h.homedid}"></td>
+        <td th:text="${h.parlor}"></td>
+        <td th:text="${h.toilet}"></td>
+        <td th:text="${h.cookhouse}"></td>
+        <td th:text="${h.balcony}"></td>
+        <td>
+            <a th:href="@{/update(id=${h.Apartmentsid})}">修改</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

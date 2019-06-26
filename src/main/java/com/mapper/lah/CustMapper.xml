@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd" >
+<mapper namespace="com.dao.lah.customerDao">
+	<select id="login" parameterType="com.entity.lah.Customers" resultType="com.entity.lah.Customers">
+		select * from customers 
+		where cname=#{cname} and password=#{password}
+	</select>
+	<insert id="doadd" parameterType="com.entity.lah.Customers">
+		INSERT INTO `house`.`customers` 
+	(`cname`, `password`, `idcard`, `phone`, `city`, `picture`, `email`, `sex`)
+	values(#{cname},#{password},#{idcard},#{phone},
+	#{city},#{picture},#{email},#{sex})
+	</insert>
+</mapper>

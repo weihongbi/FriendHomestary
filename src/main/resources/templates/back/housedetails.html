@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="easyui/jquery.min.js"></script>
+	<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="easyui/locale/easyui-lang-zh_CN.js"></script>
+	<script type="text/javascript" src="easyui/myvalidate.js"></script>
+	<link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
+	<script type="text/javascript">
+	// 初始化datagrid数据表格
+	$(function(){
+		
+	$("#dg").datagrid({
+			width:"100%",
+			height:"100%",
+			url:'hdetails/query',
+			fitColumns:true,
+			singleSelect:true,
+			pagination:true,
+			pageList:[2,5,10,15,20],
+			pageSize:2,
+			pageNumber:1,
+			iconCls: 'icon-edit',
+			onClickCell: onClickCell,
+			onAfterEdit:onAfterEdit,
+			
+			columns:[[
+			    {field:'homedid',width:50,title:'编号'},
+			    {field:'provinceId',width:100,title:'省',formatter:fmtPname},
+			    {field:'cityid',width:100,title:'市',formatter:fmtCname},
+			    {field:'areaid',width:100,title:'景点'},
+			    {field:'houseTypeId',width:100,title:'景点价格',editor:'textbox'},
+			    {field:'rentid',width:100,title:'景点路线',formatter:fmtRname},
+			    {field:'Apartmentsid',width:100,title:'内容',editor:'textbox'},
+			    {field:'area',width:100,title:'开放时间',editor:'datebox'},
+			    {field:'toiletTypeId',width:100,title:'景区图片',formatter:imgFormatter},
+			    {field:'bedid',width:100,title:'景点类型',formatter:fmtSname},
+			    {field:'livablePeople',width:100,title:'旅游类型',formatter:fmtTname},
+			    {field:'together',width:100,title:'员工',formatter:fmtEname}
+			 ]],
+		toolbar:[{text:"新增",
+					iconCls:"icon-add",
+					// 处理
+					handler:function(){
+						 $("#ff").form("reset");
+						$("#dl").dialog("setTitle","新增");
+						$("#dl").dialog("open");
+						action = "scenic/scenicadd";
+					}
+			   },{text:"删除",
+					  iconCls:"icon-remove",
+					  handler:function(){
+						var row = $("#dg").datagrid("getSelected");
+						if(row != null){
+							$.post("scenic/scenicdel",{"scenicid":row.scenicid},function(data){
+								if(data==1){
+									$.messager.show({
+										title:"提示",
+										msg:"删除成功"
+									});
+									// 刷新数据表格
+									$("#dg").datagrid("reload");
+								}else{
+									$.messager.show({
+										title:"提示",
+										msg:"删除失败"
+									});
+								}
+							});
+						}else{
+							$.messager.alert("提示","请选择要删除得数据");
+						}
+					  }
+			   }]
+		});
+	
+		$("#dl").dialog("close");
+
+
+});
+	function fmtPname(value,row,index){
+		if(value != null){
+			return value.province;
+		}
+		return "";
+	}
+	function fmtRname(value,row,index){
+		if(value != null){
+			return value.routeName;
+		}
+		return "";
+	}
+	function fmtCname(value,row,index){
+		if(value != null){
+			return value.city;
+		}
+		return "";
+	}
+	function fmtAname(value,row,index){
+		if(value != null){
+			return value.area;
+		}
+		return "";
+	}
+	function fmtTname(value,row,index){
+		if(value != null){
+			return value.travename;
+		}
+		return "";
+	}
+	function fmtEname(value,row,index){
+		if(value != null){
+			return value.empname;
+		}
+		return "";
+	}
+	function fmtSname(value,row,index){
+		if(value != null){
+			return value.scenictypename;
+		}
+		return "";
+	}
+	</script>
+</head>
+
+<body>
+<table id="dg" >
+   <!--  <tr>
+        <td>编号</td>
+        <td>省份</td>
+        <td>城市</td>
+        <td>区</td>
+        <td>房屋类型</td>
+        <td>出租类型</td>
+        <td>房屋户型</td>
+        <td>出租面积</td>
+        <td>卫生间类型</td>
+        <td>床铺信息</td>
+        <td>宜居人数</td>
+        <td>与房东是否在一起</td>
+        <td>相同房源</td>
+        <td>操作</td>
+    </tr>
+
+    <tr th:each="hd:${list}">
+        <td th:text="${hd.homedid}"></td>
+        <td th:text="${hd.provinceId}"></td>
+        <td th:text="${hd.cityid}"></td>
+        <td th:text="${hd.areaid}"></td>
+        <td th:text="${hd.houseTypeId}"></td>
+        <td th:text="${hd.apartmentsid}"></td>
+        <td th:text="${hd.toiletTypeId}"></td>
+        <td th:text="${hd.livablePeople}"></td>
+        <td th:text="${hd.together}"></td>
+        <td th:text="${hd.identicalHouse}"></td>
+        <td>
+            <a th:href="@{/update(id=${hd.homedid})}">修改</a>
+        </td>
+    </tr> -->
+</table>
+</body>
+</html>
